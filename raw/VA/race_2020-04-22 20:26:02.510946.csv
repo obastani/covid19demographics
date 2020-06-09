@@ -1,0 +1,134 @@
+Report Date,Number of Hospitalizations,Number of Deaths,Health District Name,Race,Number of Cases
+4/22/2020,3,1,Central Virginia,Not Reported,67
+4/22/2020,37,8,Loudoun,White,228
+4/22/2020,30,3,Thomas Jefferson,Black,77
+4/22/2020,0,0,West Piedmont,Black,1
+4/22/2020,22,3,Portsmouth,Black,53
+4/22/2020,0,0,Roanoke,Other,1
+4/22/2020,16,1,Chesapeake,White,67
+4/22/2020,25,2,Rappahannock,Not Reported,158
+4/22/2020,1,0,Thomas Jefferson,Other,19
+4/22/2020,16,4,Chesterfield,Black,110
+4/22/2020,4,0,Portsmouth,White,24
+4/22/2020,0,0,Rappahannock Rapidan,Black,3
+4/22/2020,10,3,Alexandria,Not Reported,168
+4/22/2020,1,0,Lord Fairfax,Not Reported,10
+4/22/2020,0,0,Lenowisco,Other,1
+4/22/2020,25,3,Alexandria,Black,78
+4/22/2020,1,0,Mount Rogers,Not Reported,3
+4/22/2020,3,0,Rappahannock Rapidan,Other,7
+4/22/2020,17,1,Norfolk,Black,71
+4/22/2020,4,0,Three Rivers,White,25
+4/22/2020,6,0,Southside,Black,20
+4/22/2020,13,4,Mount Rogers,White,53
+4/22/2020,5,0,Loudoun,Not Reported,131
+4/22/2020,14,4,Chesterfield,White,76
+4/22/2020,13,2,Virginia Beach,Other,33
+4/22/2020,17,0,Lord Fairfax,White,180
+4/22/2020,25,6,Alexandria,White,164
+4/22/2020,5,0,Alexandria,Other,64
+4/22/2020,8,0,Southside,Not Reported,45
+4/22/2020,4,0,Central Shenandoah,Other,87
+4/22/2020,0,0,Central Virginia,Other,1
+4/22/2020,57,14,Fairfax,Not Reported,753
+4/22/2020,11,3,Alleghany,White,53
+4/22/2020,3,0,Roanoke,Black,5
+4/22/2020,14,2,Western Tidewater,White,79
+4/22/2020,0,0,Thomas Jefferson,Not Reported,15
+4/22/2020,1,0,New River,Black,3
+4/22/2020,7,1,Southside,White,18
+4/22/2020,7,0,Rappahannock Rapidan,Not Reported,105
+4/22/2020,0,0,Roanoke,Not Reported,6
+4/22/2020,6,1,Peninsula,Other,11
+4/22/2020,0,0,West Piedmont,Not Reported,1
+4/22/2020,2,0,Portsmouth,Other,5
+4/22/2020,48,3,Fairfax,Black,160
+4/22/2020,6,1,Chickahominy,Not Reported,95
+4/22/2020,37,3,Prince William,Other,176
+4/22/2020,11,2,Pittsylvania-Danville,White,19
+4/22/2020,2,0,Virginia Beach,Not Reported,39
+4/22/2020,4,1,Peninsula,Not Reported,50
+4/22/2020,1,0,Mount Rogers,Other,2
+4/22/2020,3,1,Henrico,Not Reported,95
+4/22/2020,1,1,Lenowisco,Not Reported,9
+4/22/2020,4,0,Loudoun,Black,34
+4/22/2020,23,4,Western Tidewater,Black,100
+4/22/2020,1,0,Hampton,Other,3
+4/22/2020,8,2,Rappahannock Rapidan,White,49
+4/22/2020,3,0,Lord Fairfax,Other,20
+4/22/2020,3,0,West Piedmont,White,24
+4/22/2020,28,8,Central Shenandoah,White,269
+4/22/2020,4,0,Hampton,White,20
+4/22/2020,0,0,Norfolk,Not Reported,11
+4/22/2020,15,3,Crater,Black,62
+4/22/2020,15,1,Loudoun,Other,82
+4/22/2020,3,0,Richmond,Other,14
+4/22/2020,1,0,Chickahominy,Other,4
+4/22/2020,2,1,Central Shenandoah,Black,29
+4/22/2020,31,10,Richmond,Black,150
+4/22/2020,27,4,Rappahannock,White,92
+4/22/2020,20,1,Hampton,Black,62
+4/22/2020,2,0,Central Shenandoah,Not Reported,140
+4/22/2020,0,0,Eastern Shore,Not Reported,1
+4/22/2020,0,0,Alleghany,Black,4
+4/22/2020,34,6,Arlington,Other,66
+4/22/2020,1,0,Western Tidewater,Other,8
+4/22/2020,3,0,Three Rivers,Black,37
+4/22/2020,7,4,Crater,White,21
+4/22/2020,11,1,Virginia Beach,Black,60
+4/22/2020,1,0,Norfolk,Other,7
+4/22/2020,12,7,Arlington,Black,33
+4/22/2020,15,7,Thomas Jefferson,White,123
+4/22/2020,49,5,Arlington,Not Reported,477
+4/22/2020,2,2,Henrico,Other,31
+4/22/2020,1,0,Three Rivers,Other,3
+4/22/2020,6,0,Prince William,Not Reported,508
+4/22/2020,25,3,Peninsula,Black,67
+4/22/2020,0,0,Lord Fairfax,Black,7
+4/22/2020,16,6,Chickahominy,White,67
+4/22/2020,6,0,New River,White,36
+4/22/2020,0,0,Chesterfield,Other,13
+4/22/2020,1,1,West Piedmont,Other,2
+4/22/2020,1,0,Hampton,Not Reported,12
+4/22/2020,34,5,Virginia Beach,White,181
+4/22/2020,1,0,Cumberland Plateau,White,10
+4/22/2020,1,0,New River,Not Reported,27
+4/22/2020,2,1,Three Rivers,Not Reported,39
+4/22/2020,11,2,Norfolk,White,37
+4/22/2020,0,0,Piedmont,Other,1
+4/22/2020,13,1,Eastern Shore,Black,43
+4/22/2020,1,0,Western Tidewater,Not Reported,62
+4/22/2020,2,0,Pittsylvania-Danville,Not Reported,9
+4/22/2020,4,0,Pittsylvania-Danville,Black,10
+4/22/2020,0,0,Eastern Shore,Other,2
+4/22/2020,20,2,Chesapeake,Black,58
+4/22/2020,2,0,Alleghany,Not Reported,15
+4/22/2020,14,3,Rappahannock,Black,46
+4/22/2020,4,1,Central Virginia,White,22
+4/22/2020,21,6,Arlington,White,87
+4/22/2020,1,2,Piedmont,White,20
+4/22/2020,9,1,Lenowisco,White,22
+4/22/2020,1,0,Chesapeake,Not Reported,41
+4/22/2020,12,4,Chickahominy,Black,25
+4/22/2020,142,41,Fairfax,White,685
+4/22/2020,61,15,Peninsula,White,183
+4/22/2020,0,0,Southside,Other,11
+4/22/2020,162,10,Fairfax,Other,708
+4/22/2020,2,1,Portsmouth,Not Reported,11
+4/22/2020,55,37,Henrico,Black,295
+4/22/2020,5,0,Richmond,White,57
+4/22/2020,0,0,Central Virginia,Black,3
+4/22/2020,0,0,Alleghany,Other,1
+4/22/2020,2,0,Piedmont,Not Reported,24
+4/22/2020,29,8,Prince William,Black,141
+4/22/2020,3,0,Eastern Shore,White,21
+4/22/2020,2,0,Roanoke,White,15
+4/22/2020,4,2,Crater,Not Reported,56
+4/22/2020,2,2,Chesapeake,Other,14
+4/22/2020,0,0,Cumberland Plateau,Black,8
+4/22/2020,2,0,Richmond,Not Reported,29
+4/22/2020,9,0,Rappahannock,Other,14
+4/22/2020,36,42,Henrico,White,263
+4/22/2020,13,1,Piedmont,Black,45
+4/22/2020,50,7,Prince William,White,250
+4/22/2020,0,1,Chesterfield,Not Reported,203

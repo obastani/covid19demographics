@@ -1,0 +1,2025 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="mapp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- State Of Michigan - Wed Apr 08 18:55:48 2020 -->
+<!-- e-Michigan Portal - Process #3, Server www -->
+
+<link rel="canonical" href="https://www.michigan.gov/coronavirus/0,9753,7-406-98163_98173_99225---,00.html" />
+		<title>Coronavirus - Lab Testing</title>
+		<meta name='DESCRIPTION' content="Description: Coronavirus - Lab Testing">
+		<meta name='KEYWORDS' content="No Keywords">
+		
+	
+<base target="_top">
+
+	<!-- global scripts BOOTSTRAP -->
+	<!-- bow-scripts include -->
+
+
+<!-- CSS -->
+<link type="text/css" rel='stylesheet' type='text/css' href='/css/fullcalendar.css' />
+<link type="text/css" rel="stylesheet" href="/font-som-icons/css/somicons.min.css?20170525100940" />
+<link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/jquery.bxslider.css" />
+
+<!-- javascript -->
+<!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script -->
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/fullcalendar.js" type="text/javascript"></script>
+<script src="/js/jquery.bxslider.js"></script>
+<script src="/js/jquery.rwdImageMaps.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/js/additional-methods.js"></script>
+<script src="/js/responsiveComponents.js"></script>
+<script src="/js/jquery.matchHeight-min.js"></script>
+<!-- [if (lt IE 9)]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('time');
+</script>
+<script src="/js/respond.js"></script>
+<link href="/css/migov_ie8_OLD.css" rel="stylesheet" media="all" />
+<![endif] -->
+	 <script type="text/javascript" src="/js/bow-general.js?v=1565985739"></script>
+
+	<link href='/css/body-theme-coronavirus.css?v=1583354301' type='text/css' rel='stylesheet' />
+	<!-- Agency Header do not include the globalcss file --><!--/ Agency Header--><script src="/js/underscorejslib.js?v=1493914450"></script>
+<script src="/js/angular_1_6.js?v=1493914427"></script>
+<script src="/js/angular_1_6_sanitize.js?v=1493914426"></script>
+<script src="/js/angular_1_6_animate.js?v=1493914426"></script>
+<script src="/js/angular_1_6_aria.js?v=1493914426"></script>
+<script src="/js/angular_1_6_touch.js?v=1493914427"></script>
+
+<script src="/js/angucomplete-alt.js?v=1545075608"></script>
+<script src="/js/bootstrapUIangular.js?v=1493914448"></script>
+
+<script type="text/javascript">
+window.navPath = '/agency/leftFullNav/0,,406,00.html';
+window.loadedData = [];
+$('body').addClass('matching-heights-processing');
+var mapp = angular.module('mapp',['ngSanitize','ngAnimate','ui.bootstrap','ngAria','angucomplete-alt','ngTouch']);
+</script>
+<script src='/js/angular_custom_factories.js?v=1502904335'></script>
+<script src='/js/angular_custom_filters.js?v=1506702035'></script>
+<script src='/js/SearchComponentAngular.js?v=1545075601'></script>
+<script src='/js/angularSelectList.js?v=1564771391'></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="/js/gtm.js?v=1501512057"></script>
+</head>
+<body class="agy-coronavirus has-offcanvas-menu off-canvas-center  bow-theme-1 horz-menu full-horz-menu1 body-theme-coronavirus matching-heights-processing">
+<div role='navigation' aria-label='skip nav'>
+<noscript>
+<div class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Browsers that can not handle javascript will not be able to access some features of this site. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<style type="text/css">
+body.matching-heights-processing:before,body.matching-heights-processing:after {
+content:'';
+height:0px;
+width:0px;
+}
+</style>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-WTW7M9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="noAdBlock" style="display:none;" class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Some functions of this site are disabled for browsers blocking jQuery. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<div id='_TopOfPage'></div>
+<script>
+			function doAnalyticsGo(sndx) {
+				var dest = sndx.options[sndx.selectedIndex].value;
+				if (dest == 0) {
+					alert('Please make a selection.');
+					return false;
+				} else {
+					document.location.href=dest;
+					return false;
+				}
+			}
+		</script><a href='#main' data-target-id='main' class='sr-only sr-only-focusable jump-to-id'>Skip to main content</a>
+</div>
+
+
+<!--START DIV CONTAINER-->
+<div id='main-mobile-canvas-container' class=''>
+	<div id='temp-toggler-mobile-menu' class='text-center toggle-mobile-menu-controls'>
+		<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+			<span class='fa fa-3x fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-3x fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>MENU
+		</a>
+	</div>
+	<div class='offcanvas-left toggle-mobile-menu-controls' id='mobile-canvas-menu-container'>
+		<div class="mobile-canvas-nav-header" >
+			<div class="mobile-canvas-menu-logo-block">
+				<div id='mobileLogoBlock'>
+					<a href='/coronavirus'>
+						<img class="img-responsive" src="/images/som/final_logo_migov_white_526452_7.png" alt="Description: Coronavirus " />
+					</a>
+				</div>
+				<div id='mobileSiteTitle'>
+					<a href='/coronavirus'>
+						<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div> </a>
+				</div>
+			</div>
+			<div class="inner-mobile-menu-toggle">
+				<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link btn btn-accent-black'><span class='fa fa-2x fa-bars mobile-menu-closed-icon'></span><span class='fa fa-2x fa-times mobile-menu-showing-icon'></span></a>
+			</div>
+		</div>
+		<div class='site-extra-text bg bg-primary-1'>Description: Coronavirus </div>
+		<div class='mobile-search-block bg bg-primary-1 padding-bottom-10'>
+			<div class="searchComponentDiv" id="searchComponentDiv_9910101010101" ng-controller="searchComponentController" ng-init="init(9910101010101)">
+				<div ng-if="loadedData">
+					<form ng-submit="submitFormLocal()" class="submit-override">
+						<div class="clearfix">
+							<div class="" angucomplete-alt id="searchInput_9910101010101"
+							  placeholder=""
+							  pause="10" 
+							  selected-object="optionChanged" 
+							  local-data="people"
+							  local-search="localSearch"
+							  title-field="name"
+							  description-field="twitter"
+							  minlength="1" 
+							  input-class="form-control form-control" 
+							  input-changed="inputChanged" 
+							  match-class="highlight">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script>		
+				window.loadedData[9910101010101] = [];
+				window.loadedData[9910101010101]["GSA_COLLECTION"] = "coronavirus";
+				
+				window.loadedData[9910101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+				window.loadedData[9910101010101]["subcategories"] = [];			
+			</script>
+		</div>
+		<div id="containerMainMobileLinks"></div>
+		<div class="branding-bar-links-block">
+			<nav class="mobile-branding-links" aria-label="mobile global menu">
+				<ul id='m_bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li></ul>  </nav>
+		</div>
+	</div>
+	<script type="text/javascript">
+	window.agencySitePathCSS = 'coronavirus';
+	//window.agencySitePathCSS = window.location.pathname;
+	window.agencyText = 'Description:~Coronavirus';
+	//window.agencyText = document.getElementsByTagName("title")[0].innerHTML;
+	window.siteClient = window.agencySitePathCSS;
+	// Task 44300 - WEX
+	//window.default_collection = window.agencySitePathCSS == 'som' ? '' : window.agencySitePathCSS;
+	window.default_collection = 'som';
+	window.gsasearch = true;
+	window.usagovCollection = 'mi-'+window.agencySitePathCSS;
+
+	$('document').ready(function(){
+		$('.site-search-form').submit(function(e){
+			e.preventDefault();
+			siteSearchForm($(this));
+		});
+		$('#noAdBlock').hide();
+	});
+	</script>
+</div>
+
+<div id='container' class='container-fluid'>
+<div id="topMenuSearchContainer" class="search-extended">
+	<div class="searchComponentDiv padding-top-20 padding-bottom-20" id="searchComponentDiv_10101010101" ng-controller="searchComponentController" ng-init="init(10101010101)">
+		<div ng-if="loadedData">
+			<form ng-submit="submitFormLocal()" class="submit-override">
+				<div class="container">
+					<div class="col-xs-11" angucomplete-alt id="searchInput_10101010101"
+					  placeholder=""
+					  pause="10" 
+					  selected-object="optionChanged" 
+					  local-data="people"
+					  local-search="localSearch"
+					  title-field="name"
+					  description-field="twitter"
+					  minlength="1" 
+					  input-class="form-control form-control" 
+					  input-changed="inputChanged" 
+					  match-class="highlight">
+					</div>
+					<div class="col-xs-1 bg bg-accent-black">
+						<a href="#" onclick="$('body').removeClass('show-search-form');$('#top-right-search-bar').focus(); return false;" title="Close Search Panel" class="fa-2x">
+							<span class="fa fa-remove"></span> 
+							<span class="sr-only">Close Search Box</span>
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>		
+		window.loadedData[10101010101] = [];
+		window.loadedData[10101010101]["GSA_COLLECTION"] = "coronavirus";
+		window.loadedData[10101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+		window.loadedData[10101010101]["subcategories"] = [];
+	</script>
+</div>
+<!-- agencyHeaderNavPath agencyCreateHeaderNavP3 -->
+
+	<!--div id="bannerArea" role='banner'--><!-- HEADER 1.1 Live --><div id='bannerArea' role='banner'><div id='superTop'><!-- agency banner text -->
+			<div class='col-sm-3 col-xs-12 sub-agency-mi-global-logo'><a href='/'><img src='/bootstrap/images/migov_brandingbar_2017.png' alt='Michigan.gov Home' class='img-responsive' /></a></div>
+			<div class='col-sm-9 col-xs-12'><ul id='bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li><li id='top-right-search-bar' style='display:none;'>
+			<a href='#topMenuSearchContainer' aria-haspopup='true' title='Search Mi.gov' class='top-header-search-link' data-search-field-id=''>
+                <span>Search</span>
+            </a>
+			</li></ul></div></div><div id='siteBanner'><!-- agency banner text -->
+			<div class='col-xs-12 visible-xs-block sub-agency-global-tag'>Official Website of <a href='/' title='return to Michigan.gov'>Michigan.gov</a></div>
+			<div id='headerRow'>
+			<div class='header-site-title-text'>
+				<a class='site-title-link' accesskey='1' href='/coronavirus/' title='Coronavirus - Description: Coronavirus '>
+					<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div>
+				</a>
+			</div>
+			<div class='header-nav-block'><nav class='main-navigation' role='navigation' aria-label='main navigation'><ul id='nav' class='nav-main'>
+			<!-- State Of Michigan - Mon Apr 06 15:15:56 2020 -->
+			
+	<!-- e-Michigan Portal - Process #2 -->
+<!-- Begin Global Nav section --><!-- End Global Nav section -->
+
+		<!-- Begin Responsive Navigation -->
+		<li  id='98178' class='id-98178 has-subs'>
+		<a class='lvl1' title="Resources" href='/coronavirus/0,9753,7-406-98178---,00.html'>Resources</a>
+		<a title="show sub link for Resources" href='#ul_98178' data-target-list='ul_98144' class='toggle-sub-list' style='display:none;'></a>
+
+
+			<ul id='ul_98178' class='sub-list'>
+			<li  id='98155' class='id-98155 has-subs'>
+			<a class='lvl2' title="Resources, For Residents" href='/coronavirus/0,9753,7-406-98178_98155---,00.html'>For Residents</a>
+			<a title="show sub link for For Residents" href='#ul_98155' data-target-list='ul_98178' class='toggle-sub-list' style='display:none;'></a>
+
+
+				<ul id='ul_98155' class='sub-list'>
+				<li  id='98841' class='id-98841 '>
+				<a class='lvl3' title="Resources, For Residents, Household Health" href='/coronavirus/0,9753,7-406-98178_98155_98841---,00.html'>Household Health</a>
+
+			</li>
+			</ul>
+			</li>
+			<li  id='98156' class='id-98156 '>
+			<a class='lvl2' title="Resources, For Health Professionals" href='/coronavirus/0,9753,7-406-98178_98156---,00.html'>For Health Professionals</a>
+
+			</li>
+			<li  id='98157' class='id-98157 '>
+			<a class='lvl2' title="Resources, For Childcare" href='/coronavirus/0,9753,7-406-98178_98157---,00.html'>For Childcare</a>
+
+			</li>
+			<li  id='98541' class='id-98541 '>
+			<a class='lvl2' title="Resources, Alternate Languages" href='/coronavirus/0,9753,7-406-98178_98541---,00.html'>Alternate Languages</a>
+
+			</li>
+			<li  id='98737' class='id-98737 '>
+			<a class='lvl2' title="Resources, Guidance for Business" href='/coronavirus/0,9753,7-406-98178_98737---,00.html'>Guidance for Business</a>
+
+			</li>
+			<li  id='98179' class='id-98179 '>
+			<a class='lvl2' title="Resources, For Employers & Workers" href='/coronavirus/0,9753,7-406-98178_98179---,00.html'>For Employers & Workers</a>
+
+			</li>
+			<li  id='98558' class='id-98558 '>
+			<a class='lvl2' title="Resources, For Schools and Colleges" href='/coronavirus/0,9753,7-406-98178_98558---,00.html'>For Schools and Colleges</a>
+
+			</li>
+			<li  id='98281' class='id-98281 '>
+			<a class='lvl2' title="Resources, Communications Resources" href='/coronavirus/0,9753,7-406-98178_98281---,00.html'>Communications Resources</a>
+
+			</li>
+			<li  id='98455' class='id-98455 '>
+			<a class='lvl2' title="Resources, Executive Orders & Directives" href='/coronavirus/0,9753,7-406-98178_98455---,00.html'>Executive Orders & Directives</a>
+
+		</li>
+		</ul>
+		</li>
+		<li  id='98158' class='id-98158 '>
+		<a class='lvl1' title="Press Releases" href='/coronavirus/0,9753,7-406-98158---,00.html'>Press Releases</a>
+
+		</li>
+		<li  id='98414' class='id-98414 '>
+		<a class='lvl1' title="Video Updates" href='/coronavirus/0,9753,7-406-98414---,00.html'>Video Updates</a>
+
+		</li>
+		</ul>
+		<ul id='desktopMobileButton' style='display:none;'>
+		<li><a aria-haspopup='true' href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+				<span class='fa fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>
+				<!--<div class='clearfix'>MENU</div>-->
+			</a></li>
+		</ul>
+	</nav>
+	</div>
+	<!-- End Flyout Navigation --><!-- Left Links --><!-- End Left Links --></div></div><div class='siteBannerTxt'>Description: Coronavirus </div>
+	<div id="horzMenuSubLinksBlock_container" class="container"><div id="horzMenuSubLinksRow"><div id="horzMenuSubLinksBlockBreadCrumb"></div></div><div id="horzMenuSubLinksBlock"></div></div></div>
+			<div id='topNavSearch'>
+<!-- SEARCH --><form id='searchform' onsubmit="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			<input accesskey='s' type='TEXT' autocomplete='off' id='query' name='q' placeholder='Search' title='Search'>
+			<input id='go' type='submit' value='search' name='button' onClick="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			</form><!-- /SEARCH --></div><!-- LEFTNAV agencyCreateLeftNavRD -->
+<!-- bodyWrapper -->
+<div id='bodyWrapper'>
+
+	<!-- contentWrapper -->
+<div id='contentWrapper'>
+	<!-- main --><div id='main' class='DW page' role='main'>
+	<div id='breadcrumbContainer'><div id='breadcrumb' role='navigation' aria-label='breadcrumbs'><span style='display: none' id='breadcrumblabel'>You are here</span><ol class='breadcrumb' aria-labelledby='breadcrumblabel'><li><a href='/coronavirus/'>Coronavirus</a></li> <li><a href='/coronavirus/0,9753,7-406-98163_98173---,00.html' title='Michigan Data'>Michigan Data</a></li> <li><a href='/coronavirus/0,9753,7-406-98163_98173_99225---,00.html' title='Lab Testing'>Lab Testing</a></li></ol></div></div>
+	
+		      <div class='page-header sr-only'><h1>Lab Testing</h1></div>
+
+	<!-- Body Begin -->
+		
+			  <!-- State Of Michigan - Wed Apr 08 18:55:50 2020 -->
+			<div class='row row-eq-height content-block-section'>
+									<div id='inPageSubNav' data-category-sib='98173'></div>
+									<div class='page-content-block'><!-- BEGIN MAIN CONTENT AREA ROW --><div class='row row-eq-height'><div class='row-eq-height col-sm-5 '><!-- ID COMPONENT_115558 --><!-- Begin CDA Create Content HTML -->
+		<div class='fullContent'><h2 id='TITLETXT_525003' class='TITLETEXT'>Number of Coronavirus Laboratory Tests and Percent Positive By Date of Lab Message, State of Michigan and Preparedness Regions</h2><!-- BODY -->
+			<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="340">
+	<caption><strong>State of Michigan</strong></caption>
+	<colgroup>
+		<col />
+		<col span="4" />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 84px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">100.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">134</td>
+			<td style="text-align: center;">625</td>
+			<td style="text-align: center;">759</td>
+			<td style="text-align: center;">17.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">144</td>
+			<td style="text-align: center;">558</td>
+			<td style="text-align: center;">702</td>
+			<td style="text-align: center;">20.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">157</td>
+			<td style="text-align: center;">555</td>
+			<td style="text-align: center;">712</td>
+			<td style="text-align: center;">22.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">244</td>
+			<td style="text-align: center;">960</td>
+			<td style="text-align: center;">1,204</td>
+			<td style="text-align: center;">20.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">270</td>
+			<td style="text-align: center;">948</td>
+			<td style="text-align: center;">1,218</td>
+			<td style="text-align: center;">22.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">28</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">44</td>
+			<td style="text-align: center;">63.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">360</td>
+			<td style="text-align: center;">981</td>
+			<td style="text-align: center;">1,341</td>
+			<td style="text-align: center;">26.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">539</td>
+			<td style="text-align: center;">1,091</td>
+			<td style="text-align: center;">1,630</td>
+			<td style="text-align: center;">33.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">501</td>
+			<td style="text-align: center;">1,709</td>
+			<td style="text-align: center;">2,210</td>
+			<td style="text-align: center;">22.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">845</td>
+			<td style="text-align: center;">2,735</td>
+			<td style="text-align: center;">3,580</td>
+			<td style="text-align: center;">23.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">1,015</td>
+			<td style="text-align: center;">2,331</td>
+			<td style="text-align: center;">3,346</td>
+			<td style="text-align: center;">30.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">847</td>
+			<td style="text-align: center;">1,535</td>
+			<td style="text-align: center;">2,382</td>
+			<td style="text-align: center;">35.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">834</td>
+			<td style="text-align: center;">1,481</td>
+			<td style="text-align: center;">2,315</td>
+			<td style="text-align: center;">36.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">1,702</td>
+			<td style="text-align: center;">5,492</td>
+			<td style="text-align: center;">7,194</td>
+			<td style="text-align: center;">23.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">1,482</td>
+			<td style="text-align: center;">2,754</td>
+			<td style="text-align: center;">4,236</td>
+			<td style="text-align: center;">35.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">2,121</td>
+			<td style="text-align: center;">3,146</td>
+			<td style="text-align: center;">5,267</td>
+			<td style="text-align: center;">40.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">1,893</td>
+			<td style="text-align: center;">2,919</td>
+			<td style="text-align: center;">4,812</td>
+			<td style="text-align: center;">39.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">2,036</td>
+			<td style="text-align: center;">3,150</td>
+			<td style="text-align: center;">5,186</td>
+			<td style="text-align: center;">39.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">2,326</td>
+			<td style="text-align: center;">3,276</td>
+			<td style="text-align: center;">5,602</td>
+			<td style="text-align: center;">41.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">1,676</td>
+			<td style="text-align: center;">2,707</td>
+			<td style="text-align: center;">4,383</td>
+			<td style="text-align: center;">38.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">1,824</td>
+			<td style="text-align: center;">2,620</td>
+			<td style="text-align: center;">4,444</td>
+			<td style="text-align: center;">41.0%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="436">
+	<caption><strong>Region 1</strong></caption>
+	<colgroup>
+		<col />
+		<col span="3" />
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 80px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 91px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">100.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">8.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">20</td>
+			<td style="text-align: center;">22</td>
+			<td style="text-align: center;">9.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">30</td>
+			<td style="text-align: center;">10.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">103</td>
+			<td style="text-align: center;">105</td>
+			<td style="text-align: center;">1.9%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">97</td>
+			<td style="text-align: center;">103</td>
+			<td style="text-align: center;">5.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">100.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">62</td>
+			<td style="text-align: center;">69</td>
+			<td style="text-align: center;">10.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">100</td>
+			<td style="text-align: center;">113</td>
+			<td style="text-align: center;">11.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">18</td>
+			<td style="text-align: center;">263</td>
+			<td style="text-align: center;">281</td>
+			<td style="text-align: center;">6.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">496</td>
+			<td style="text-align: center;">506</td>
+			<td style="text-align: center;">2.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">346</td>
+			<td style="text-align: center;">369</td>
+			<td style="text-align: center;">6.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">34</td>
+			<td style="text-align: center;">317</td>
+			<td style="text-align: center;">351</td>
+			<td style="text-align: center;">9.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">34</td>
+			<td style="text-align: center;">206</td>
+			<td style="text-align: center;">240</td>
+			<td style="text-align: center;">14.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">60</td>
+			<td style="text-align: center;">560</td>
+			<td style="text-align: center;">620</td>
+			<td style="text-align: center;">9.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">64</td>
+			<td style="text-align: center;">436</td>
+			<td style="text-align: center;">500</td>
+			<td style="text-align: center;">12.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">46</td>
+			<td style="text-align: center;">334</td>
+			<td style="text-align: center;">380</td>
+			<td style="text-align: center;">12.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">63</td>
+			<td style="text-align: center;">369</td>
+			<td style="text-align: center;">432</td>
+			<td style="text-align: center;">14.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">422</td>
+			<td style="text-align: center;">493</td>
+			<td style="text-align: center;">14.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">24</td>
+			<td style="text-align: center;">147</td>
+			<td style="text-align: center;">171</td>
+			<td style="text-align: center;">14.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">36</td>
+			<td style="text-align: center;">325</td>
+			<td style="text-align: center;">361</td>
+			<td style="text-align: center;">10.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">50</td>
+			<td style="text-align: center;">312</td>
+			<td style="text-align: center;">362</td>
+			<td style="text-align: center;">13.8%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="330">
+	<caption><strong>Region 2 North</strong></caption>
+	<colgroup>
+		<col />
+		<col span="4" />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 75px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">74</td>
+			<td style="text-align: center;">368</td>
+			<td style="text-align: center;">442</td>
+			<td style="text-align: center;">16.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">204</td>
+			<td style="text-align: center;">275</td>
+			<td style="text-align: center;">25.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">66</td>
+			<td style="text-align: center;">223</td>
+			<td style="text-align: center;">289</td>
+			<td style="text-align: center;">22.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">92</td>
+			<td style="text-align: center;">265</td>
+			<td style="text-align: center;">357</td>
+			<td style="text-align: center;">25.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">98</td>
+			<td style="text-align: center;">201</td>
+			<td style="text-align: center;">299</td>
+			<td style="text-align: center;">32.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">46.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">119</td>
+			<td style="text-align: center;">219</td>
+			<td style="text-align: center;">338</td>
+			<td style="text-align: center;">35.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">190</td>
+			<td style="text-align: center;">284</td>
+			<td style="text-align: center;">474</td>
+			<td style="text-align: center;">40.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">163</td>
+			<td style="text-align: center;">290</td>
+			<td style="text-align: center;">453</td>
+			<td style="text-align: center;">36.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">277</td>
+			<td style="text-align: center;">448</td>
+			<td style="text-align: center;">725</td>
+			<td style="text-align: center;">38.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">351</td>
+			<td style="text-align: center;">433</td>
+			<td style="text-align: center;">784</td>
+			<td style="text-align: center;">44.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">283</td>
+			<td style="text-align: center;">288</td>
+			<td style="text-align: center;">571</td>
+			<td style="text-align: center;">49.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">262</td>
+			<td style="text-align: center;">292</td>
+			<td style="text-align: center;">554</td>
+			<td style="text-align: center;">47.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">415</td>
+			<td style="text-align: center;">789</td>
+			<td style="text-align: center;">1204</td>
+			<td style="text-align: center;">34.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">473</td>
+			<td style="text-align: center;">534</td>
+			<td style="text-align: center;">1007</td>
+			<td style="text-align: center;">47.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">802</td>
+			<td style="text-align: center;">918</td>
+			<td style="text-align: center;">1720</td>
+			<td style="text-align: center;">46.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">596</td>
+			<td style="text-align: center;">684</td>
+			<td style="text-align: center;">1280</td>
+			<td style="text-align: center;">46.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">605</td>
+			<td style="text-align: center;">663</td>
+			<td style="text-align: center;">1268</td>
+			<td style="text-align: center;">47.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">765</td>
+			<td style="text-align: center;">927</td>
+			<td style="text-align: center;">1692</td>
+			<td style="text-align: center;">45.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">533</td>
+			<td style="text-align: center;">621</td>
+			<td style="text-align: center;">1154</td>
+			<td style="text-align: center;">46.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">592</td>
+			<td style="text-align: center;">700</td>
+			<td style="text-align: center;">1292</td>
+			<td style="text-align: center;">45.8%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="327">
+	<caption><strong>Region 2 South</strong></caption>
+	<colgroup>
+		<col />
+		<col span="4" />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 71px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">53</td>
+			<td style="text-align: center;">136</td>
+			<td style="text-align: center;">189</td>
+			<td style="text-align: center;">28.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">60</td>
+			<td style="text-align: center;">166</td>
+			<td style="text-align: center;">226</td>
+			<td style="text-align: center;">26.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">76</td>
+			<td style="text-align: center;">143</td>
+			<td style="text-align: center;">219</td>
+			<td style="text-align: center;">34.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">126</td>
+			<td style="text-align: center;">262</td>
+			<td style="text-align: center;">388</td>
+			<td style="text-align: center;">32.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">137</td>
+			<td style="text-align: center;">320</td>
+			<td style="text-align: center;">457</td>
+			<td style="text-align: center;">30.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">58.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">174</td>
+			<td style="text-align: center;">207</td>
+			<td style="text-align: center;">381</td>
+			<td style="text-align: center;">45.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">276</td>
+			<td style="text-align: center;">212</td>
+			<td style="text-align: center;">488</td>
+			<td style="text-align: center;">56.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">266</td>
+			<td style="text-align: center;">385</td>
+			<td style="text-align: center;">651</td>
+			<td style="text-align: center;">40.9%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">393</td>
+			<td style="text-align: center;">471</td>
+			<td style="text-align: center;">864</td>
+			<td style="text-align: center;">45.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">486</td>
+			<td style="text-align: center;">512</td>
+			<td style="text-align: center;">998</td>
+			<td style="text-align: center;">48.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">432</td>
+			<td style="text-align: center;">280</td>
+			<td style="text-align: center;">712</td>
+			<td style="text-align: center;">60.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">424</td>
+			<td style="text-align: center;">289</td>
+			<td style="text-align: center;">713</td>
+			<td style="text-align: center;">59.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">824</td>
+			<td style="text-align: center;">1050</td>
+			<td style="text-align: center;">1874</td>
+			<td style="text-align: center;">44.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">681</td>
+			<td style="text-align: center;">597</td>
+			<td style="text-align: center;">1278</td>
+			<td style="text-align: center;">53.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">930</td>
+			<td style="text-align: center;">577</td>
+			<td style="text-align: center;">1507</td>
+			<td style="text-align: center;">61.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">907</td>
+			<td style="text-align: center;">700</td>
+			<td style="text-align: center;">1607</td>
+			<td style="text-align: center;">56.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">981</td>
+			<td style="text-align: center;">660</td>
+			<td style="text-align: center;">1641</td>
+			<td style="text-align: center;">59.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">1186</td>
+			<td style="text-align: center;">1116</td>
+			<td style="text-align: center;">2302</td>
+			<td style="text-align: center;">51.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">801</td>
+			<td style="text-align: center;">715</td>
+			<td style="text-align: center;">1516</td>
+			<td style="text-align: center;">52.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">899</td>
+			<td style="text-align: center;">718</td>
+			<td style="text-align: center;">1617</td>
+			<td style="text-align: center;">55.6%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="325">
+	<caption><strong>Region 3</strong></caption>
+	<colgroup>
+		<col />
+		<col span="4" />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 69px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">65</td>
+			<td style="text-align: center;">66</td>
+			<td style="text-align: center;">1.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">57</td>
+			<td style="text-align: center;">60</td>
+			<td style="text-align: center;">5.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">82</td>
+			<td style="text-align: center;">87</td>
+			<td style="text-align: center;">5.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">9</td>
+			<td style="text-align: center;">45</td>
+			<td style="text-align: center;">54</td>
+			<td style="text-align: center;">16.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">100.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">80</td>
+			<td style="text-align: center;">92</td>
+			<td style="text-align: center;">13.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">24</td>
+			<td style="text-align: center;">133</td>
+			<td style="text-align: center;">157</td>
+			<td style="text-align: center;">15.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">22</td>
+			<td style="text-align: center;">115</td>
+			<td style="text-align: center;">137</td>
+			<td style="text-align: center;">16.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">54</td>
+			<td style="text-align: center;">256</td>
+			<td style="text-align: center;">310</td>
+			<td style="text-align: center;">17.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">26</td>
+			<td style="text-align: center;">126</td>
+			<td style="text-align: center;">152</td>
+			<td style="text-align: center;">17.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">38</td>
+			<td style="text-align: center;">140</td>
+			<td style="text-align: center;">178</td>
+			<td style="text-align: center;">21.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">38</td>
+			<td style="text-align: center;">173</td>
+			<td style="text-align: center;">211</td>
+			<td style="text-align: center;">18.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">302</td>
+			<td style="text-align: center;">373</td>
+			<td style="text-align: center;">19.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">66</td>
+			<td style="text-align: center;">188</td>
+			<td style="text-align: center;">254</td>
+			<td style="text-align: center;">26.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">200</td>
+			<td style="text-align: center;">483</td>
+			<td style="text-align: center;">683</td>
+			<td style="text-align: center;">29.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">178</td>
+			<td style="text-align: center;">345</td>
+			<td style="text-align: center;">523</td>
+			<td style="text-align: center;">34.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">109</td>
+			<td style="text-align: center;">317</td>
+			<td style="text-align: center;">426</td>
+			<td style="text-align: center;">25.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">105</td>
+			<td style="text-align: center;">174</td>
+			<td style="text-align: center;">279</td>
+			<td style="text-align: center;">37.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">85</td>
+			<td style="text-align: center;">194</td>
+			<td style="text-align: center;">279</td>
+			<td style="text-align: center;">30.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">78</td>
+			<td style="text-align: center;">199</td>
+			<td style="text-align: center;">277</td>
+			<td style="text-align: center;">28.2%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="325">
+	<caption><strong>Region 5</strong></caption>
+	<colgroup>
+		<col />
+		<col span="4" />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 69px; text-align: center;">Date</th>
+			<th scope="col" style="width: 64px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 64px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">11</td>
+			<td style="text-align: center;">11</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">34</td>
+			<td style="text-align: center;">38</td>
+			<td style="text-align: center;">10.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">31</td>
+			<td style="text-align: center;">34</td>
+			<td style="text-align: center;">8.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">33.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">30</td>
+			<td style="text-align: center;">10.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">8</td>
+			<td style="text-align: center;">47</td>
+			<td style="text-align: center;">55</td>
+			<td style="text-align: center;">14.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">166</td>
+			<td style="text-align: center;">176</td>
+			<td style="text-align: center;">5.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">18</td>
+			<td style="text-align: center;">168</td>
+			<td style="text-align: center;">186</td>
+			<td style="text-align: center;">9.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">90</td>
+			<td style="text-align: center;">103</td>
+			<td style="text-align: center;">12.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">20</td>
+			<td style="text-align: center;">167</td>
+			<td style="text-align: center;">187</td>
+			<td style="text-align: center;">10.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">140</td>
+			<td style="text-align: center;">163</td>
+			<td style="text-align: center;">14.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">83</td>
+			<td style="text-align: center;">98</td>
+			<td style="text-align: center;">15.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">34</td>
+			<td style="text-align: center;">245</td>
+			<td style="text-align: center;">279</td>
+			<td style="text-align: center;">12.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">124</td>
+			<td style="text-align: center;">147</td>
+			<td style="text-align: center;">15.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">33</td>
+			<td style="text-align: center;">198</td>
+			<td style="text-align: center;">231</td>
+			<td style="text-align: center;">14.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">25</td>
+			<td style="text-align: center;">205</td>
+			<td style="text-align: center;">230</td>
+			<td style="text-align: center;">10.9%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">41</td>
+			<td style="text-align: center;">262</td>
+			<td style="text-align: center;">303</td>
+			<td style="text-align: center;">13.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">35</td>
+			<td style="text-align: center;">213</td>
+			<td style="text-align: center;">248</td>
+			<td style="text-align: center;">14.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">152</td>
+			<td style="text-align: center;">167</td>
+			<td style="text-align: center;">9.0%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="284">
+	<caption><strong>Region 6</strong></caption>
+	<colgroup>
+		<col />
+		<col />
+		<col />
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 68px; text-align: center;">Date</th>
+			<th scope="col" style="width: 57px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 63px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 39px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 57px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">&nbsp;</td>
+			<td style="text-align: center;">30</td>
+			<td style="text-align: center;">30</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">8.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">28</td>
+			<td style="text-align: center;">32</td>
+			<td style="text-align: center;">12.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">54</td>
+			<td style="text-align: center;">66</td>
+			<td style="text-align: center;">18.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">76</td>
+			<td style="text-align: center;">82</td>
+			<td style="text-align: center;">7.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">100.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">56</td>
+			<td style="text-align: center;">72</td>
+			<td style="text-align: center;">22.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">80</td>
+			<td style="text-align: center;">90</td>
+			<td style="text-align: center;">11.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">217</td>
+			<td style="text-align: center;">229</td>
+			<td style="text-align: center;">5.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">287</td>
+			<td style="text-align: center;">297</td>
+			<td style="text-align: center;">3.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">184</td>
+			<td style="text-align: center;">196</td>
+			<td style="text-align: center;">6.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">137</td>
+			<td style="text-align: center;">153</td>
+			<td style="text-align: center;">10.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">178</td>
+			<td style="text-align: center;">190</td>
+			<td style="text-align: center;">6.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">39</td>
+			<td style="text-align: center;">186</td>
+			<td style="text-align: center;">225</td>
+			<td style="text-align: center;">17.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">263</td>
+			<td style="text-align: center;">278</td>
+			<td style="text-align: center;">5.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">17</td>
+			<td style="text-align: center;">220</td>
+			<td style="text-align: center;">237</td>
+			<td style="text-align: center;">7.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">208</td>
+			<td style="text-align: center;">221</td>
+			<td style="text-align: center;">5.9%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">189</td>
+			<td style="text-align: center;">201</td>
+			<td style="text-align: center;">6.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">167</td>
+			<td style="text-align: center;">188</td>
+			<td style="text-align: center;">11.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">26</td>
+			<td style="text-align: center;">173</td>
+			<td style="text-align: center;">199</td>
+			<td style="text-align: center;">13.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">14</td>
+			<td style="text-align: center;">105</td>
+			<td style="text-align: center;">119</td>
+			<td style="text-align: center;">11.8%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="284">
+	<caption><strong>Region 7</strong></caption>
+	<colgroup>
+		<col />
+		<col />
+		<col />
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 68px; text-align: center;">Date</th>
+			<th scope="col" style="width: 57px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 63px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 39px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 57px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">29</td>
+			<td style="text-align: center;">29</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">29</td>
+			<td style="text-align: center;">29</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">79</td>
+			<td style="text-align: center;">80</td>
+			<td style="text-align: center;">1.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">31</td>
+			<td style="text-align: center;">33</td>
+			<td style="text-align: center;">6.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">55</td>
+			<td style="text-align: center;">61</td>
+			<td style="text-align: center;">9.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">48</td>
+			<td style="text-align: center;">52</td>
+			<td style="text-align: center;">7.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">37</td>
+			<td style="text-align: center;">38</td>
+			<td style="text-align: center;">2.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">66</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">7.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">11</td>
+			<td style="text-align: center;">43</td>
+			<td style="text-align: center;">54</td>
+			<td style="text-align: center;">20.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">28</td>
+			<td style="text-align: center;">30</td>
+			<td style="text-align: center;">6.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">8</td>
+			<td style="text-align: center;">67</td>
+			<td style="text-align: center;">75</td>
+			<td style="text-align: center;">10.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">54</td>
+			<td style="text-align: center;">57</td>
+			<td style="text-align: center;">5.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">35</td>
+			<td style="text-align: center;">40</td>
+			<td style="text-align: center;">12.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">43</td>
+			<td style="text-align: center;">45</td>
+			<td style="text-align: center;">4.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">8</td>
+			<td style="text-align: center;">39</td>
+			<td style="text-align: center;">47</td>
+			<td style="text-align: center;">17.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">48</td>
+			<td style="text-align: center;">51</td>
+			<td style="text-align: center;">5.9%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">65</td>
+			<td style="text-align: center;">80</td>
+			<td style="text-align: center;">18.8%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">11</td>
+			<td style="text-align: center;">25</td>
+			<td style="text-align: center;">36</td>
+			<td style="text-align: center;">30.6%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="284">
+	<caption><strong>Region 8</strong></caption>
+	<colgroup>
+		<col />
+		<col />
+		<col />
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+		<tr height="60">
+			<th height="60" scope="col" style="height: 60px; width: 68px; text-align: center;">Date</th>
+			<th scope="col" style="width: 57px; text-align: center;">Positive Tests</th>
+			<th scope="col" style="width: 63px; text-align: center;">Negative Tests</th>
+			<th scope="col" style="width: 39px; text-align: center;">Total Tests</th>
+			<th scope="col" style="width: 57px; text-align: center;">% Positive Tests</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/16/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">#DIV/0!</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/17/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/18/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">9</td>
+			<td style="text-align: center;">9</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/19/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/20/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/21/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/22/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/23/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/24/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">74</td>
+			<td style="text-align: center;">4.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/25/2020</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">26</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">3.7%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/26/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">57</td>
+			<td style="text-align: center;">59</td>
+			<td style="text-align: center;">3.4%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/27/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">10</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/28/2020</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">18</td>
+			<td style="text-align: center;">18</td>
+			<td style="text-align: center;">0.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/29/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">25</td>
+			<td style="text-align: center;">16.0%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/30/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">32</td>
+			<td style="text-align: center;">36</td>
+			<td style="text-align: center;">11.1%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">3/31/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">24</td>
+			<td style="text-align: center;">12.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/1/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">59</td>
+			<td style="text-align: center;">65</td>
+			<td style="text-align: center;">9.2%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/2/2020</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">57</td>
+			<td style="text-align: center;">61</td>
+			<td style="text-align: center;">6.6%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/3/2020</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">86</td>
+			<td style="text-align: center;">91</td>
+			<td style="text-align: center;">5.5%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/4/2020</td>
+			<td style="text-align: center;">6</td>
+			<td style="text-align: center;">76</td>
+			<td style="text-align: center;">82</td>
+			<td style="text-align: center;">7.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/5/2020</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">44</td>
+			<td style="text-align: center;">46</td>
+			<td style="text-align: center;">4.3%</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">4/6/2020</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">68</td>
+			<td style="text-align: center;">71</td>
+			<td style="text-align: center;">4.2%</td>
+		</tr>
+	</tbody>
+</table>
+
+			
+		
+			</div><!-- /End CDA Create Content--><!-- /ID COMPONENT_115558 --></div><div class='row-eq-height col-sm-7 '><!-- ID COMPONENT_115557 -->
+	<!-- BEGIN CDA Generic Content Display --><div id='comp_115557' class='comp list'  >
+		<!-- displayContent RD 001 --><!--PAGEWATCH--><!-- open table RD -->  <ul class='contentList NONE '><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Michigan</span></span><span class='shortdesc'><p><img alt="Total Tests Statewide" src="/images/coronavirus/Total_Tests_Statewide_2020-04-08_17-56-20_686417_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Statewide" src="/images/coronavirus/Cumulative_Tests_2020-04-08_17-57-18_686418_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 1</span></span><span class='shortdesc'><p><img alt="Total Tests Region 1" src="/images/coronavirus/Total_Tests_Region_1_686415_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 1" src="/images/coronavirus/Cumulative_Tests_Region_1_686416_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 2</span></span><span class='shortdesc'><p><img alt="Total Tests Region 2 North" src="/images/coronavirus/Total_Tests_Region_2_North_686419_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 2N" src="/images/coronavirus/Cumulative_Tests_Region_2N_686420_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 2 South</span></span><span class='shortdesc'><p><img alt="Total Tests Region 2 South" src="/images/coronavirus/Total_Tests_Region_2_South_686421_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 2 South" src="/images/coronavirus/Cumulative_Tests_Region_2S_686422_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 3</span></span><span class='shortdesc'><p><img alt="Total Tests Region 3" src="/images/coronavirus/Total_Tests_Region_3_686423_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 3" src="/images/coronavirus/Cumulative_Tests_Region_3_686424_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 5</span></span><span class='shortdesc'><p><img alt="Total Tests Region 5" src="/images/coronavirus/Total_Tests_Region_5_686425_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 5" src="/images/coronavirus/Cumulative_Tests_Region_5_686426_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 6</span></span><span class='shortdesc'><p><img alt="Total Tests Region 6" src="/images/coronavirus/Total_Tests_Region_6_686427_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 6" src="/images/coronavirus/Cumulative_Tests_Region_6_686428_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 7</span></span><span class='shortdesc'><p><img alt="Total Tests Region 7" src="/images/coronavirus/Total_Tests_Region_7_686429_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 7" src="/images/coronavirus/Cumulative_Tests_Region_7_686430_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li><li class='contentItem' style=''><span class='inner'><span class='contentBlock '><span class='bodylinks'><span class="sr-only">Lab Testing Data Region 1</span></span><span class='shortdesc'><p><img alt="Total Tests Region 8" src="/images/coronavirus/Total_Tests_Region_8_686431_7.jpg" style="width: 100%; height: 100%;" /></p>
+
+<p><img alt="Cumulative Tests Region 8" src="/images/coronavirus/Cumulative_Tests_Region_8_686432_7.jpg" style="width: 100%; height: 100%;" /></p>
+</span></span></span></li>
+				</ul><!--/PAGEWATCH--><!-- /displayContent RD 001 --></div> <!-- END CDA Generic Content Display --><!-- /ID COMPONENT_115557 --></div></div></div>
+									</div><!-- END MAIN CONTENT AREA ROW --> <!-- Body End -->
+	</div>
+	
+		  
+		<!-- START RIGHT_NAV 98144__98144__99225 ~ 7-406-98144__98144__99225--- ~ 7-406-98144__98144__99225--- -->
+		
+
+<!-- State Of Michigan - Wed Apr 08 18:55:50 2020 -->
+
+<!-- BEGIN RIGHTNAV HTML CODE  -->
+
+<!-- Agency category --><!-- Begin Global Nav section RD --><!-- End Global Nav section RD --><!-- End My Interests/RightNav Links/Related Content/Right Links -->
+<!-- Cache Debug Info
+
+-->
+ <!-- END RIGHT_NAV -->
+		<!-- /div -->
+		 </div><!-- /contentWrapper -->
+	</div><!-- /bodyWrapper -->
+<!-- BOTTOMNAV -->
+<!-- BEGIN FOOTER RD -->
+<div id="footerArea" role="contentinfo" style="clear: both">
+
+	<!-- begin expanded footer --><div id='expandedFooter'><div id='cat_98152' class='footer_1'><h2>brandarea</h2><ul><li><a href='/som'><img src="/images/som/somFooterLogoBOW2015_491229_7.png" alt="Michigan.gov"></a></li></ul></div><div id='agencylinks' class='footer_1'><ul></ul></div><div id='policylinks' class='footer_1'><ul><li><a href='/'>Michigan.gov Home</a></li><li><a href='/adaform'>ADA</a></li><li><a href='/minewswire'>Michigan News</a></li><li><a href='/coronavirus/0,9753,7-406--281460--,00.html'>Policies</a></li></ul></div></div><br><span class='copyright'><br>Copyright 2020 State of Michigan</span><!-- end expanded footer --><script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.querySelector('body').classList.remove('matching-heights-processing');
+	document.getElementById("noAdBlock").style.display = "block";
+}
+</script>
+
+</div>
+<!--END DIV CONTAINER-->
+</div>
+
+<!-- Mega Menu Block -->
+<div id="megaMenuBlock">
+	<div id="megaMenuSubLinksBlock_container">
+		<div class="container">
+			<div class="col-xs-3">
+				<div id="megaMenuLogoBlock" >
+					<a href='/coronavirus'>
+						<img src="/images/som/final_logo_migov_white_526452_7.png" class="img-responsive logo" alt="Description: Coronavirus " />
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div id="megaMenuSubLinksBlockBreadCrumb"></div>
+				<div id="megaMenuSubLinksBlock"></div>
+			</div>
+		</div>
+	</div>
+	<div id="megaMenuSearchBlock"></div>
+</div>
+<style type="text/css">
+
+</style>
+<!-- stmiws101.prdcloud.fms.ibmcloud.com rjp NT -->
+</body>
+</html>

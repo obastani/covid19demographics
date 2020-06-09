@@ -1,0 +1,2343 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="mapp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- State Of Michigan - Fri May 08 15:20:45 2020 -->
+<!-- e-Michigan Portal - Process #7, Server www -->
+
+<link rel="canonical" href="https://www.michigan.gov/coronavirus/0,9753,7-406-98159-523641--,00.html" />
+		<title>Coronavirus - Statewide Available PPE and Bed Tracking</title>
+		<meta name='DESCRIPTION' content="Description: Coronavirus - ">
+		<meta name='KEYWORDS' content="No Keywords">
+		
+	
+<base target="_top">
+
+	<!-- global scripts BOOTSTRAP -->
+	<!-- bow-scripts include -->
+
+
+<!-- CSS -->
+<link type="text/css" rel='stylesheet' type='text/css' href='/css/fullcalendar.css' />
+<link type="text/css" rel="stylesheet" href="/font-som-icons/css/somicons.min.css?20170525100940" />
+<link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/jquery.bxslider.css" />
+
+<!-- javascript -->
+<!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script -->
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/fullcalendar.js" type="text/javascript"></script>
+<script src="/js/jquery.bxslider.js"></script>
+<script src="/js/jquery.rwdImageMaps.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/js/additional-methods.js"></script>
+<script src="/js/responsiveComponents.js"></script>
+<script src="/js/jquery.matchHeight-min.js"></script>
+<!-- [if (lt IE 9)]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('time');
+</script>
+<script src="/js/respond.js"></script>
+<link href="/css/migov_ie8_OLD.css" rel="stylesheet" media="all" />
+<![endif] -->
+	 <script type="text/javascript" src="/js/bow-general.js?v=1565985739"></script>
+
+	<link href='/css/body-theme-coronavirus.css?v=1586455230' type='text/css' rel='stylesheet' />
+	<!-- Agency Header do not include the globalcss file -->
+<script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
+<script src="/coronavirus/chatbot.js"></script>
+<link type="text/css" rel="stylesheet" href="/coronavirus/Chatbot.css" />
+<!--/ Agency Header--><script src="/js/underscorejslib.js?v=1493914450"></script>
+<script src="/js/angular_1_6.js?v=1493914427"></script>
+<script src="/js/angular_1_6_sanitize.js?v=1493914426"></script>
+<script src="/js/angular_1_6_animate.js?v=1493914426"></script>
+<script src="/js/angular_1_6_aria.js?v=1493914426"></script>
+<script src="/js/angular_1_6_touch.js?v=1493914427"></script>
+
+<script src="/js/angucomplete-alt.js?v=1545075608"></script>
+<script src="/js/bootstrapUIangular.js?v=1493914448"></script>
+
+<script type="text/javascript">
+window.navPath = '/agency/leftFullNav/0,,406,00.html';
+window.loadedData = [];
+$('body').addClass('matching-heights-processing');
+var mapp = angular.module('mapp',['ngSanitize','ngAnimate','ui.bootstrap','ngAria','angucomplete-alt','ngTouch']);
+</script>
+<script src='/js/angular_custom_factories.js?v=1502904335'></script>
+<script src='/js/angular_custom_filters.js?v=1506702035'></script>
+<script src='/js/SearchComponentAngular.js?v=1545075601'></script>
+<script src='/js/angularSelectList.js?v=1564771391'></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="/js/gtm.js?v=1501512057"></script>
+</head>
+<body class="agy-coronavirus has-offcanvas-menu off-canvas-center  bow-theme-1 horz-menu full-horz-menu1 body-theme-coronavirus matching-heights-processing">
+<div role='navigation' aria-label='skip nav'>
+<noscript>
+<div class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Browsers that can not handle javascript will not be able to access some features of this site. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<style type="text/css">
+body.matching-heights-processing:before,body.matching-heights-processing:after {
+content:'';
+height:0px;
+width:0px;
+}
+</style>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-WTW7M9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="noAdBlock" style="display:none;" class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Some functions of this site are disabled for browsers blocking jQuery. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<div id='_TopOfPage'></div>
+<script>
+			function doAnalyticsGo(sndx) {
+				var dest = sndx.options[sndx.selectedIndex].value;
+				if (dest == 0) {
+					alert('Please make a selection.');
+					return false;
+				} else {
+					document.location.href=dest;
+					return false;
+				}
+			}
+		</script><a href='#main' data-target-id='main' class='sr-only sr-only-focusable jump-to-id'>Skip to main content</a>
+</div>
+
+
+<!--START DIV CONTAINER-->
+<div id='main-mobile-canvas-container' class=''>
+	<div id='temp-toggler-mobile-menu' class='text-center toggle-mobile-menu-controls'>
+		<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+			<span class='fa fa-3x fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-3x fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>MENU
+		</a>
+	</div>
+	<div class='offcanvas-left toggle-mobile-menu-controls' id='mobile-canvas-menu-container'>
+		<div class="mobile-canvas-nav-header" >
+			<div class="mobile-canvas-menu-logo-block">
+				<div id='mobileLogoBlock'>
+					<a href='/coronavirus'>
+						<img class="img-responsive" src="/images/som/final_logo_migov_white_526452_7.png" alt="Description: Coronavirus " />
+					</a>
+				</div>
+				<div id='mobileSiteTitle'>
+					<a href='/coronavirus'>
+						<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div> </a>
+				</div>
+			</div>
+			<div class="inner-mobile-menu-toggle">
+				<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link btn btn-accent-black'><span class='fa fa-2x fa-bars mobile-menu-closed-icon'></span><span class='fa fa-2x fa-times mobile-menu-showing-icon'></span></a>
+			</div>
+		</div>
+		<div class='site-extra-text bg bg-primary-1'>Description: Coronavirus </div>
+		<div class='mobile-search-block bg bg-primary-1 padding-bottom-10'>
+			<div class="searchComponentDiv" id="searchComponentDiv_9910101010101" ng-controller="searchComponentController" ng-init="init(9910101010101)">
+				<div ng-if="loadedData">
+					<form ng-submit="submitFormLocal()" class="submit-override">
+						<div class="clearfix">
+							<div class="" angucomplete-alt id="searchInput_9910101010101"
+							  placeholder=""
+							  pause="10" 
+							  selected-object="optionChanged" 
+							  local-data="people"
+							  local-search="localSearch"
+							  title-field="name"
+							  description-field="twitter"
+							  minlength="1" 
+							  input-class="form-control form-control" 
+							  input-changed="inputChanged" 
+							  match-class="highlight">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script>		
+				window.loadedData[9910101010101] = [];
+				window.loadedData[9910101010101]["GSA_COLLECTION"] = "coronavirus";
+				
+				window.loadedData[9910101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+				window.loadedData[9910101010101]["subcategories"] = [];			
+			</script>
+		</div>
+		<div id="containerMainMobileLinks"></div>
+		<div class="branding-bar-links-block">
+			<nav class="mobile-branding-links" aria-label="mobile global menu">
+				<ul id='m_bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98810---,00.html' title='FAQ'>FAQ</a></li><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li></ul>  </nav>
+		</div>
+	</div>
+	<script type="text/javascript">
+	window.agencySitePathCSS = 'coronavirus';
+	//window.agencySitePathCSS = window.location.pathname;
+	window.agencyText = 'Description:~Coronavirus';
+	//window.agencyText = document.getElementsByTagName("title")[0].innerHTML;
+	window.siteClient = window.agencySitePathCSS;
+	// Task 44300 - WEX
+	//window.default_collection = window.agencySitePathCSS == 'som' ? '' : window.agencySitePathCSS;
+	window.default_collection = 'som';
+	window.gsasearch = true;
+	window.usagovCollection = 'mi-'+window.agencySitePathCSS;
+
+	$('document').ready(function(){
+		$('.site-search-form').submit(function(e){
+			e.preventDefault();
+			siteSearchForm($(this));
+		});
+		$('#noAdBlock').hide();
+	});
+	</script>
+</div>
+
+<div id='container' class='container-fluid'>
+<div id="topMenuSearchContainer" class="search-extended">
+	<div class="searchComponentDiv padding-top-20 padding-bottom-20" id="searchComponentDiv_10101010101" ng-controller="searchComponentController" ng-init="init(10101010101)">
+		<div ng-if="loadedData">
+			<form ng-submit="submitFormLocal()" class="submit-override">
+				<div class="container">
+					<div class="col-xs-11" angucomplete-alt id="searchInput_10101010101"
+					  placeholder=""
+					  pause="10" 
+					  selected-object="optionChanged" 
+					  local-data="people"
+					  local-search="localSearch"
+					  title-field="name"
+					  description-field="twitter"
+					  minlength="1" 
+					  input-class="form-control form-control" 
+					  input-changed="inputChanged" 
+					  match-class="highlight">
+					</div>
+					<div class="col-xs-1 bg bg-accent-black">
+						<a href="#" onclick="$('body').removeClass('show-search-form');$('#top-right-search-bar').focus(); return false;" title="Close Search Panel" class="fa-2x">
+							<span class="fa fa-remove"></span> 
+							<span class="sr-only">Close Search Box</span>
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>		
+		window.loadedData[10101010101] = [];
+		window.loadedData[10101010101]["GSA_COLLECTION"] = "coronavirus";
+		window.loadedData[10101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+		window.loadedData[10101010101]["subcategories"] = [];
+	</script>
+</div>
+<!-- agencyHeaderNavPath agencyCreateHeaderNavP3 -->
+
+	<!--div id="bannerArea" role='banner'--><!-- HEADER 1.1 Live --><div id='bannerArea' role='banner'><div id='superTop'><!-- agency banner text -->
+			<div class='col-sm-3 col-xs-12 sub-agency-mi-global-logo'><a href='/'><img src='/bootstrap/images/migov_brandingbar_2017.png' alt='Michigan.gov Home' class='img-responsive' /></a></div>
+			<div class='col-sm-9 col-xs-12'><ul id='bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98810---,00.html' title='FAQ'>FAQ</a></li><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li><li id='top-right-search-bar' style='display:none;'>
+			<a href='#topMenuSearchContainer' aria-haspopup='true' title='Search Mi.gov' class='top-header-search-link' data-search-field-id=''>
+                <span>Search</span>
+            </a>
+			</li></ul></div></div><div id='siteBanner'><!-- agency banner text -->
+			<div class='col-xs-12 visible-xs-block sub-agency-global-tag'>Official Website of <a href='/' title='return to Michigan.gov'>Michigan.gov</a></div>
+			<div id='headerRow'>
+			<div class='header-site-title-text'>
+				<a class='site-title-link' accesskey='1' href='/coronavirus/' title='Coronavirus - Description: Coronavirus '>
+					<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div>
+				</a>
+			</div>
+			<div class='header-nav-block'><nav class='main-navigation' role='navigation' aria-label='main navigation'><ul id='nav' class='nav-main'>
+			<!-- State Of Michigan - Thu May 07 18:39:58 2020 -->
+			
+	<!-- e-Michigan Portal - Process #6 -->
+<!-- Begin Global Nav section --><!-- End Global Nav section -->
+
+		<!-- Begin Responsive Navigation -->
+		<li  id='98178' class='id-98178 has-subs'>
+		<a class='lvl1' title="Resources" href='/coronavirus/0,9753,7-406-98178---,00.html'>Resources</a>
+		<a title="show sub link for Resources" href='#ul_98178' data-target-list='ul_98144' class='toggle-sub-list' style='display:none;'></a>
+
+
+			<ul id='ul_98178' class='sub-list'>
+			<li  id='98155' class='id-98155 has-subs'>
+			<a class='lvl2' title="Resources, For Residents" href='/coronavirus/0,9753,7-406-98178_98155---,00.html'>For Residents</a>
+			<a title="show sub link for For Residents" href='#ul_98155' data-target-list='ul_98178' class='toggle-sub-list' style='display:none;'></a>
+
+
+				<ul id='ul_98155' class='sub-list'>
+				<li  id='98841' class='id-98841 '>
+				<a class='lvl3' title="Resources, For Residents, Household Health" href='/coronavirus/0,9753,7-406-98178_98155_98841---,00.html'>Household Health</a>
+
+			</li>
+			</ul>
+			</li>
+			<li  id='98156' class='id-98156 '>
+			<a class='lvl2' title="Resources, For Health Professionals" href='/coronavirus/0,9753,7-406-98178_98156---,00.html'>For Health Professionals</a>
+
+			</li>
+			<li  id='98157' class='id-98157 '>
+			<a class='lvl2' title="Resources, For Childcare" href='/coronavirus/0,9753,7-406-98178_98157---,00.html'>For Childcare</a>
+
+			</li>
+			<li  id='98541' class='id-98541 '>
+			<a class='lvl2' title="Resources, Alternate Languages" href='/coronavirus/0,9753,7-406-98178_98541---,00.html'>Alternate Languages</a>
+
+			</li>
+			<li  id='98737' class='id-98737 '>
+			<a class='lvl2' title="Resources, Guidance for Business" href='/coronavirus/0,9753,7-406-98178_98737---,00.html'>Guidance for Business</a>
+
+			</li>
+			<li  id='98179' class='id-98179 '>
+			<a class='lvl2' title="Resources, For Employers & Workers" href='/coronavirus/0,9753,7-406-98178_98179---,00.html'>For Employers & Workers</a>
+
+			</li>
+			<li  id='98558' class='id-98558 '>
+			<a class='lvl2' title="Resources, For Schools and Colleges" href='/coronavirus/0,9753,7-406-98178_98558---,00.html'>For Schools and Colleges</a>
+
+			</li>
+			<li  id='99557' class='id-99557 '>
+			<a class='lvl2' title="Resources, Mental Health Resources" href='/coronavirus/0,9753,7-406-98178_99557---,00.html'>Mental Health Resources</a>
+
+			</li>
+			<li  id='98281' class='id-98281 '>
+			<a class='lvl2' title="Resources, Communications Resources" href='/coronavirus/0,9753,7-406-98178_98281---,00.html'>Communications Resources</a>
+
+			</li>
+			<li  id='98455' class='id-98455 '>
+			<a class='lvl2' title="Resources, Executive Orders & Directives" href='/coronavirus/0,9753,7-406-98178_98455---,00.html'>Executive Orders & Directives</a>
+
+		</li>
+		</ul>
+		</li>
+		<li  id='98158' class='id-98158 '>
+		<a class='lvl1' title="Press Releases" href='/coronavirus/0,9753,7-406-98158---,00.html'>Press Releases</a>
+
+		</li>
+		<li  id='99329' class='id-99329 '>
+		<a class='lvl1' title="Volunteer" href='/coronavirus/0,9753,7-406-98178_98811---,00.html'>Volunteer</a>
+
+		</li>
+		<li  id='99423' class='id-99423 '>
+		<a class='lvl1' title="Donate" href='/coronavirus/0,9753,7-406-98178_98811---,00.html#block-3_115140'>Donate</a>
+
+		</li>
+		<li  id='98414' class='id-98414 '>
+		<a class='lvl1' title="Video Updates" href='/coronavirus/0,9753,7-406-98414---,00.html'>Video Updates</a>
+
+		</li>
+		</ul>
+		<ul id='desktopMobileButton' style='display:none;'>
+		<li><a aria-haspopup='true' href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+				<span class='fa fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>
+				<!--<div class='clearfix'>MENU</div>-->
+			</a></li>
+		</ul>
+	</nav>
+	</div>
+	<!-- End Flyout Navigation --><!-- Left Links --><!-- End Left Links --></div></div><div class='siteBannerTxt'>Description: Coronavirus </div>
+	<div id="horzMenuSubLinksBlock_container" class="container"><div id="horzMenuSubLinksRow"><div id="horzMenuSubLinksBlockBreadCrumb"></div></div><div id="horzMenuSubLinksBlock"></div></div></div>
+			<div id='topNavSearch'>
+<!-- SEARCH --><form id='searchform' onsubmit="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			<input accesskey='s' type='TEXT' autocomplete='off' id='query' name='q' placeholder='Search' title='Search'>
+			<input id='go' type='submit' value='search' name='button' onClick="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			</form><!-- /SEARCH --></div><!-- LEFTNAV agencyCreateLeftNavRD -->
+<!-- bodyWrapper -->
+<div id='bodyWrapper'>
+
+	<!-- contentWrapper -->
+<div id='contentWrapper'>
+	<!-- main --><div id='main' class='TW page' role='main'>
+	<div id='breadcrumbContainer'><div id='breadcrumb' role='navigation' aria-label='breadcrumbs'><span style='display: none' id='breadcrumblabel'>You are here</span><ol class='breadcrumb' aria-labelledby='breadcrumblabel'><li><a href='/coronavirus/'>Coronavirus</a></li></ol></div></div>
+	
+		  
+		     <div class='page-header sr-only'><h1>Statewide Available PPE and Bed Tracking</h1></div>
+ <!-- Body Begin -->
+	<!-- State Of Michigan - Mon May 11 18:13:56 2020 -->
+			<!-- Begin CDA Create Content HTML -->
+		<div class='fullContent'><h2 id='TITLETXT_523641' class='TITLETEXT'>Statewide Available PPE and Bed Tracking</h2><!-- BODY -->
+			<div style="clear:both;">
+<div style="clear:both;">
+<div style="clear:both;">
+<div style="clear:both;">
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="990">
+	<caption><strong>Statewide Available Bed Tracking for COVID-19* 05/11/2020** </strong></caption>
+	<thead>
+		<tr>
+			<th scope="col" style="width: 51px; height: 74px;">
+			<p style="text-align: center;">&nbsp;</p>
+			</th>
+			<th scope="col" style="width: 56px; height: 74px;">
+			<p style="text-align: center;"><strong>Total </strong></p>
+
+			<p style="text-align: center;"><strong>Number of </strong></p>
+
+			<p style="text-align: center;"><strong>Hospital Beds </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 74px;">
+			<p style="margin-left: 4.9pt; text-align: center;"><strong>Hospital </strong></p>
+
+			<p style="text-align: center;"><strong>Inpatient Beds </strong></p>
+			</th>
+			<th scope="col" style="width: 61px; height: 74px;">
+			<p style="margin-left: 5.2pt; text-align: center;"><strong>Hospital </strong></p>
+
+			<p style="text-align: center;"><strong>Inpatient Bed </strong></p>
+
+			<p style="margin-left: 3.25pt; text-align: center;"><strong>Occupied </strong></p>
+			</th>
+			<th scope="col" style="width: 45px; height: 74px;">
+			<p style="text-align: center;"><strong>ICU Beds </strong></p>
+			</th>
+			<th scope="col" style="width: 57px; height: 74px;">
+			<p style="text-align: center;"><strong>ICU Bed Occupied </strong></p>
+			</th>
+			<th scope="col" style="width: 54px; height: 74px;">
+			<p style="margin-left: 1.45pt; text-align: center;"><strong>Negative </strong></p>
+
+			<p style="margin-left: 1.9pt; text-align: center;"><strong>Pressure </strong></p>
+
+			<p style="text-align: center;"><strong>Isolation Total </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 74px;">
+			<p style="margin-left: 3.65pt; text-align: center;"><strong>Negative </strong></p>
+
+			<p style="margin-left: 4.1pt; text-align: center;"><strong>Pressure </strong></p>
+
+			<p style="margin-left: 4.1pt; text-align: center;"><strong>Isolation </strong></p>
+
+			<p style="margin-left: 3.05pt; text-align: center;"><strong>Available </strong></p>
+			</th>
+			<th scope="col" style="width: 61px; height: 74px;">
+			<p style="text-align: center;"><strong>Total Ventilators </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 74px;">
+			<p style="text-align: center;"><strong>Available Ventilators </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 74px;">
+			<p style="text-align: center;"><strong>Available </strong></p>
+
+			<p style="text-align: center;"><strong>Operating Room </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 74px;">
+			<p style="text-align: center;"><strong>Available </strong></p>
+
+			<p style="text-align: center;"><strong>Adult </strong></p>
+
+			<p style="margin-left: 3.75pt; text-align: center;"><strong>Med/Surg </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 74px;">
+			<p style="text-align: center;"><strong>Available Burn Care </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 74px;">
+			<p style="text-align: center;"><strong>Available Pediatric </strong></p>
+			</th>
+			<th scope="col" style="width: 54px; height: 74px;">
+			<p style="text-align: center;"><strong>Available Psych. </strong></p>
+			</th>
+			<th scope="col" style="width: 54px; height: 74px;">
+			<p style="text-align: center;"><strong>Total </strong></p>
+
+			<p style="margin-left: 3.25pt; text-align: center;"><strong>Morgue </strong></p>
+
+			<p style="margin-left: 2.2pt; text-align: center;"><strong>Capacity </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 74px;">
+			<p style="margin-left: 5.55pt; text-align: center;"><strong>Morgue </strong></p>
+
+			<p style="margin-left: 3.05pt; text-align: center;"><strong>Available </strong></p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 1</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">1687</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">1461</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">898</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.3pt; text-align: center;">196</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">130</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">215</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">152</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">229</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">182</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">38</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">258</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">32</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">50</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">55</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">30</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="text-align: center;">Region 2N</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">5041</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">4762</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">2996</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.25pt; text-align: center;">499</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">355</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">371</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">156</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">746</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">516</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">59</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">642</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">72</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">81</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">228</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">155</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="text-align: center;">Region 2S</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">7272</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">6359</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">4424</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 3.5pt; text-align: center;">1088</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">744</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">579</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">165</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">1382</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">840</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">72</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">978</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">13</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">107</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">53</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">605</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">428</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 3</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">2911</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">2347</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">1478</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.25pt; text-align: center;">375</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">250</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">258</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">119</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">352</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">233</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">71</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">613</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">1</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">140</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">34</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">112</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">63</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 5</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">2127</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">1518</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">1016</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.3pt; text-align: center;">189</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">107</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">269</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">152</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">222</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">167</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">49</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">501</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">10</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">57</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">80</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">34</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">25</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 6</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">2662</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">2316</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">1196</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.25pt; text-align: center;">407</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">261</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">219</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">110</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">454</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">364</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">91</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">712</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">45</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">89</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">20</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">114</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">92</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 7</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="margin-left: 7.45pt; text-align: center;">1001</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">974</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">436</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="margin-left: 6.3pt; text-align: center;">106</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">45</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">171</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">133</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">95</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">80</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">36</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">319</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">28</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">16</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">30</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">28</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:33px;">
+			<p style="margin-left: 0.7pt; text-align: center;">Region 8</p>
+			</td>
+			<td style="width:56px;height:33px;">
+			<p style="text-align: center;">721</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">614</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">214</p>
+			</td>
+			<td style="width:45px;height:33px;">
+			<p style="text-align: center;">59</p>
+			</td>
+			<td style="width:57px;height:33px;">
+			<p style="text-align: center;">32</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">109</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">89</p>
+			</td>
+			<td style="width:61px;height:33px;">
+			<p style="text-align: center;">96</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">93</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">37</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">277</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">16</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">41</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">18</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">31</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">30</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:51px;height:30px;">
+			<p style="text-align: center;"><strong>Total </strong></p>
+			</td>
+			<td style="width:56px;height:30px;">
+			<p style="margin-left: 3.25pt; text-align: center;"><strong>23,422</strong></p>
+			</td>
+			<td style="width:60px;height:30px;">
+			<p style="margin-left: 5.05pt; text-align: center;"><strong>20,351</strong></p>
+			</td>
+			<td style="width:61px;height:30px;">
+			<p style="margin-left: 5.3pt; text-align: center;"><strong>12,658</strong></p>
+			</td>
+			<td style="width:45px;height:30px;">
+			<p style="margin-left: 2.1pt; text-align: center;"><strong>2,919</strong></p>
+			</td>
+			<td style="width:57px;height:30px;">
+			<p style="margin-left: 6.5pt; text-align: center;"><strong>1,924</strong></p>
+			</td>
+			<td style="width:54px;height:30px;">
+			<p style="margin-left: 5.55pt; text-align: center;"><strong>2,191</strong></p>
+			</td>
+			<td style="width:60px;height:30px;">
+			<p style="text-align: center;"><strong>1,076</strong></p>
+			</td>
+			<td style="width:61px;height:30px;">
+			<p style="text-align: center;"><strong>3,576</strong></p>
+			</td>
+			<td style="width:66px;height:30px;">
+			<p style="text-align: center;"><strong>2,475</strong></p>
+			</td>
+			<td style="width:66px;height:30px;">
+			<p style="text-align: center;"><strong>453</strong></p>
+			</td>
+			<td style="width:66px;height:30px;">
+			<p style="text-align: center;"><strong>4,300</strong></p>
+			</td>
+			<td style="width:60px;height:30px;">
+			<p style="text-align: center;"><strong>85</strong></p>
+			</td>
+			<td style="width:60px;height:30px;">
+			<p style="text-align: center;"><strong>566</strong></p>
+			</td>
+			<td style="width:54px;height:30px;">
+			<p style="text-align: center;"><strong>352</strong></p>
+			</td>
+			<td style="width:54px;height:30px;">
+			<p style="margin-left: 5.55pt; text-align: center;"><strong>1,209</strong></p>
+			</td>
+			<td style="width:60px;height:30px;">
+			<p style="text-align: center;"><strong>851</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>*94.55% response rate<br />
+** Data is preliminary and subject to change.</p>
+
+<p>&nbsp;</p>
+</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<caption>
+	<p><strong>COVID-19 Metrics</strong></p>
+	</caption>
+	<thead>
+		<tr>
+			<th scope="col" style="text-align: center;">HCC Region</th>
+			<th scope="col" style="text-align: center;">Region 1</th>
+			<th scope="col" style="text-align: center;">Region 2 North</th>
+			<th scope="col" style="text-align: center;">Region 2 South</th>
+			<th scope="col" style="text-align: center;">Region 3</th>
+			<th scope="col" style="text-align: center;">Region 5</th>
+			<th scope="col" style="text-align: center;">Region 6</th>
+			<th scope="col" style="text-align: center;">Region 7</th>
+			<th scope="col" style="text-align: center;">Region 8</th>
+			<th scope="col" style="text-align: center;">Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;"># of ED Discharges</td>
+			<td style="text-align: center;">50</td>
+			<td style="text-align: center;">39</td>
+			<td style="text-align: center;">85</td>
+			<td style="text-align: center;">50</td>
+			<td style="text-align: center;">43</td>
+			<td style="text-align: center;">72</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">13</td>
+			<td style="text-align: center;">365</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># In Critical Care</td>
+			<td style="text-align: center;">21</td>
+			<td style="text-align: center;">184</td>
+			<td style="text-align: center;">320</td>
+			<td style="text-align: center;">87</td>
+			<td style="text-align: center;">20</td>
+			<td style="text-align: center;">46</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">684</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># on Ventilators</td>
+			<td style="text-align: center;">19</td>
+			<td style="text-align: center;">150</td>
+			<td style="text-align: center;">281</td>
+			<td style="text-align: center;">51</td>
+			<td style="text-align: center;">16</td>
+			<td style="text-align: center;">27</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">544</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># of Inpatients</td>
+			<td style="text-align: center;">61</td>
+			<td style="text-align: center;">396</td>
+			<td style="text-align: center;">634</td>
+			<td style="text-align: center;">149</td>
+			<td style="text-align: center;">61</td>
+			<td style="text-align: center;">120</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">1422</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</div>
+</div>
+
+<div style="clear:both;">
+<div style="clear: both;">&nbsp;
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="987">
+	<caption><strong>Statewide Hospital Available PPE Tracking for COVID-19* 05/11/2020** </strong></caption>
+	<thead>
+		<tr>
+			<th scope="col" style="width: 54px; height: 45px;">
+			<p style="text-align: center;">&nbsp;</p>
+			</th>
+			<th scope="col" style="width: 54px; height: 45px;">
+			<p style="margin-left: 3.15pt; text-align: center;"><strong>CAPRs </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 45px;">
+			<p style="text-align: center;"><strong>Coveralls </strong></p>
+			</th>
+			<th scope="col" style="width: 78px; height: 45px;">
+			<p style="text-align: center;"><strong>Elastomeric Respirator </strong></p>
+			</th>
+			<th scope="col" style="width: 78px; height: 45px;">
+			<p style="margin-left: 2.05pt; text-align: center;"><strong>Elastomeric </strong></p>
+
+			<p style="text-align: center;"><strong>Respirator Filters </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 45px;">
+			<p style="text-align: center;"><strong>Face Shields </strong></p>
+			</th>
+			<th scope="col" style="width: 82px; height: 45px;">
+			<p style="text-align: center;"><strong>Gloves </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 45px;">
+			<p style="text-align: center;"><strong>Goggles </strong></p>
+			</th>
+			<th scope="col" style="width: 78px; height: 45px;">
+			<p style="text-align: center;"><strong>N95 </strong></p>
+
+			<p style="text-align: center;"><strong>Respirator Masks </strong></p>
+			</th>
+			<th scope="col" style="width: 60px; height: 45px;">
+			<p style="text-align: center;"><strong>PAPR </strong></p>
+
+			<p style="margin-left: 0.15pt; text-align: center;"><strong>Batteries </strong></p>
+			</th>
+			<th scope="col" style="width: 48px; height: 45px;">
+			<p style="margin-left: 2.55pt; text-align: center;"><strong>PAPR </strong></p>
+
+			<p style="text-align: center;"><strong>Filters </strong></p>
+			</th>
+			<th scope="col" style="width: 48px; height: 45px;">
+			<p style="margin-left: 0.75pt; text-align: center;"><strong>PAPRs </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 45px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Gowns </strong></p>
+			</th>
+			<th scope="col" style="width: 66px; height: 45px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Isolation </strong></p>
+
+			<p style="text-align: center;"><strong>Gowns </strong></p>
+			</th>
+			<th scope="col" style="width: 78px; height: 45px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Masks/ </strong></p>
+
+			<p style="text-align: center;"><strong>Facemasks </strong></p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 1</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">50</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.85pt; text-align: center;">30,096</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">77</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">21</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.25pt; text-align: center;">133,572</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">1,579,200</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">5,845</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">91,593</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">216</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">411</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">167</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">21,562</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.15pt; text-align: center;">110,393</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="margin-left: 1.6pt; text-align: center;">1,095,952</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="margin-left: 8.85pt; text-align: center;">Region 2N</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">145</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.85pt; text-align: center;">10,397</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">24</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">73</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.25pt; text-align: center;">145,250</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">6,084,837</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">20,800</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">214,768</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">372</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">557</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">318</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">75,825</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.15pt; text-align: center;">149,851</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">505,424</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 2S</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">109</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.85pt; text-align: center;">29,107</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">7</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">1,836</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.25pt; text-align: center;">288,449</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">4,763,661</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">18,024</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">520,702</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">803</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="margin-left: 0.05pt; text-align: center;">1,326</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">911</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">47,640</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.15pt; text-align: center;">260,250</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="margin-left: 1.6pt; text-align: center;">1,781,199</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 3</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">273</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">3,219</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">8</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">12</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">92,406</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">4,638,002</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">34,135</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">157,353</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">209</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">412</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">158</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">18,822</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.15pt; text-align: center;">136,859</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">787,425</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 5</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">157</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">1,923</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">23</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">40</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">19,790</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">1,520,812</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">8,453</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">47,106</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">258</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">314</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">174</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">9,897</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.9pt; text-align: center;">39,962</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">144,338</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 6</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">136</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">1,695</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">14</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">36</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 1.25pt; text-align: center;">114,060</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 0.1pt; text-align: center;">23,408,035</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">41,768</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">316,941</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">402</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">915</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">371</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">61,193</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.9pt; text-align: center;">59,620</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="margin-left: 1.6pt; text-align: center;">4,443,230</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 7</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">46</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">3,084</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">92,715</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">4,394,121</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">9,684</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">51,940</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">260</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">234</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">178</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">20,937</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.9pt; text-align: center;">28,785</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">607,666</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">Region 8</p>
+			</td>
+			<td style="width:54px;height:33px;">
+			<p style="text-align: center;">4</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">2,266</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">45</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">197</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">24,945</p>
+			</td>
+			<td style="width:82px;height:33px;">
+			<p style="margin-left: 2.9pt; text-align: center;">2,107,831</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="text-align: center;">1,208</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">69,185</p>
+			</td>
+			<td style="width:60px;height:33px;">
+			<p style="text-align: center;">146</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">351</p>
+			</td>
+			<td style="width:48px;height:33px;">
+			<p style="text-align: center;">153</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 4pt; text-align: center;">10,986</p>
+			</td>
+			<td style="width:66px;height:33px;">
+			<p style="margin-left: 3.9pt; text-align: center;">41,243</p>
+			</td>
+			<td style="width:78px;height:33px;">
+			<p style="text-align: center;">244,433</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:54px;height:19px;">
+			<p style="text-align: center;">Total</p>
+			</td>
+			<td style="width:54px;height:19px;">
+			<p style="text-align: center;"><strong>920</strong></p>
+			</td>
+			<td style="width:66px;height:19px;">
+			<p style="margin-left: 3.85pt; text-align: center;"><strong>81,787</strong></p>
+			</td>
+			<td style="width:78px;height:19px;">
+			<p style="text-align: center;"><strong>198</strong></p>
+			</td>
+			<td style="width:78px;height:19px;">
+			<p style="text-align: center;"><strong>2,215</strong></p>
+			</td>
+			<td style="width:66px;height:19px;">
+			<p style="margin-left: 1.25pt; text-align: center;"><strong>911,187</strong></p>
+			</td>
+			<td style="width:82px;height:19px;">
+			<p style="text-align: center;"><strong>48,496,499</strong></p>
+			</td>
+			<td style="width:66px;height:19px;">
+			<p style="margin-left: 1.25pt; text-align: center;"><strong>139,917</strong></p>
+			</td>
+			<td style="width:78px;height:19px;">
+			<p style="margin-left: 1.4pt; text-align: center;"><strong>1,469,588</strong></p>
+			</td>
+			<td style="width:60px;height:19px;">
+			<p style="text-align: center;"><strong>2,666</strong></p>
+			</td>
+			<td style="width:48px;height:19px;">
+			<p style="margin-left: 0.05pt; text-align: center;"><strong>4,520</strong></p>
+			</td>
+			<td style="width:48px;height:19px;">
+			<p style="margin-left: 0.05pt; text-align: center;"><strong>2,430</strong></p>
+			</td>
+			<td style="width:66px;height:19px;">
+			<p style="margin-left: 1.25pt; text-align: center;"><strong>266,862</strong></p>
+			</td>
+			<td style="width:66px;height:19px;">
+			<p style="margin-left: 1.15pt; text-align: center;"><strong>826,963</strong></p>
+			</td>
+			<td style="width:78px;height:19px;">
+			<p style="margin-left: 1.45pt; text-align: center;"><strong>9,609,667</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>*85% Reporting<br />
+**Data is preliminary and subject to change.</p>
+</div>
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+
+<div style="clear:both;">&nbsp;</div>
+</div>
+
+<ul>
+	<li>Data is self-reported by hospitals daily to the EM Resource System per <a href="/documents/coronavirus/MDHHS_epidemic_reporting_order_and_instructions_684709_7.pdf">MDHHS Director Robert Gordon&rsquo;s Emergency Order</a>.</li>
+	<li>Changes in inventory numbers have likely occurred since reporting was completed.</li>
+	<li>This information will be updated daily by 7 p.m.</li>
+	<li>Information about Healthcare Coalition Regions is available on the <a href="/mdhhs/0,5885,7-339-71548_54783_54826_56171-237197--,00.html#hcc">MDHHS website</a>.</li>
+</ul>
+
+<p><strong>Region1</strong> &ndash; Clinton, Eaton, Gratiot, Hillsdale, Ingham, Jackson, Lenawee, Livingston and Shiawassee counties.<br />
+<strong>Region 2S</strong> &ndash; City of Detroit and Monroe, Washtenaw and Wayne counties.<br />
+<strong>Region 2N</strong> - Macomb, Oakland and St. Clair counties.<br />
+<strong>Region 3</strong> - Saginaw, Alcona, Iosco, Ogemaw, Arenac, Gladwin, Midland, Bay, Genesee, Tuscola, Lapeer, Sanilac and Huron counties.<br />
+<strong>Region 5</strong> - Allegan, Barry, Calhoun, Branch, St. Joseph, Cass, Berrien, Van Buren and Kalamazoo counties.<br />
+<strong>Region 6</strong> - Clare, Ionia, Isabella, Kent, Lake, Mason, Mecosta, Montcalm, Muskegon, Newaygo, Oceana, Osceola and Ottawa counties.<br />
+<strong>Region 7</strong> - Manistee, Wexford, Missaukee, Roscommon, Benzie, Leelanau, Grand Traverse, Kalkaska, Crawford, Oscoda, Antrim, Otsego, Montmorency, Alpena, Presque Ilse, Cheboygan, Emmet and Charlevoix counties.<br />
+<strong>Region 8</strong> - Chippewa, Mackinac, Luce, Schoolcraft, Delta, Alger, Marquette, Dickinson, Menominee, Baraga, Iron, Gogebic, Ontonagon, Houghton and Keweenaw counties.</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="582">
+	<caption><strong>PPE Days On Hand as of 05/11/2020</strong></caption>
+	<colgroup>
+		<col span="6" />
+		<col />
+	</colgroup>
+	<thead>
+		<tr height="20">
+			<th height="20" scope="col" style="height: 20px; width: 64px; text-align: center;">Health System/Hospital</th>
+			<th scope="col" style="width: 64px; text-align: center;">N95 Masks&nbsp;</th>
+			<th scope="col" style="width: 64px; text-align: center;">Surgical Masks&nbsp;</th>
+			<th scope="col" style="width: 64px; text-align: center;">Surgical Gowns&nbsp;</th>
+			<th scope="col" style="width: 64px; text-align: center;">Shields&nbsp;</th>
+			<th scope="col" style="width: 64px; text-align: center;">Gloves&nbsp;</th>
+			<th scope="col" style="width: 199px; text-align: center;">System/Independent</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Ascension</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Aspirus</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Baraga County Memorial Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Beaumont</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Bronson</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Covenant</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Deckerville Community Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Detroit Medical Center</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Dickinson Memorial Health Care System</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Eaton Rapids Medical Center</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Harbor Beach Community Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Helen Newberry Joy Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Henry Ford Health System</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Hills and Dales General Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Hillsdale Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Holland Community Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Hurley Medical Center</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Kalkaska Memorial Health Center</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Mackinac Straits Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Marlette Regional Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">McKenzie Memorial Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">McLaren</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Memorial Healthcare</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Metro</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Michigan Medicine</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">MidMichigan Health</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Munising Memorial Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Munson Health System</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">North Ottawa Community Hosp</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Oaklawn Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">OSF St. Francis Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Pontiac General Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Prime Health</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">ProMedica</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Scheurer Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Schoolcraft Memorial Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Sheridan Community Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Sparrow Health System</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Spectrum</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Straith Hospital</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Sturgis Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Three Rivers Health</td>
+			<td style="text-align: center;">0-6 days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">Trinity</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">15-21 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">UP Health</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">7-14 days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Health System</td>
+		</tr>
+		<tr height="20">
+			<td height="20" style="height: 20px; text-align: center;">War Memorial Hospital</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">21+ days</td>
+			<td style="text-align: center;">Independent</td>
+		</tr>
+	</tbody>
+</table>
+
+<p ms="" style="font-family: sans-serif, Arial, Verdana, " trebuchet="">&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="256">
+	<caption><strong>Patient Census as of 05/11/2020</strong></caption>
+	<colgroup>
+		<col span="4" style="width:48pt" width="64" />
+	</colgroup>
+	<thead>
+		<tr height="20" style="height:15.0pt">
+			<th height="20" scope="col" style="height: 15pt; width: 48pt; text-align: center;" width="64">Health System/Hospital</th>
+			<th scope="col" style="width: 48pt; text-align: center;" width="64">COVID-19 Patients</th>
+			<th scope="col" style="width: 48pt; text-align: center;" width="64">COVID-19 Patients in ICU</th>
+			<th scope="col" style="width: 48pt; text-align: center;" width="64">Bed Occupancy</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Ascension</td>
+			<td style="text-align: center;">218</td>
+			<td style="text-align: center;">63</td>
+			<td class="xl63" style="text-align: center;">63%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Aspirus</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">1</td>
+			<td class="xl63" style="text-align: center;">16%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Baraga County Memorial Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">47%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Beaumont</td>
+			<td style="text-align: center;">322</td>
+			<td style="text-align: center;">185</td>
+			<td class="xl63" style="text-align: center;">70%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Bronson</td>
+			<td style="text-align: center;">31</td>
+			<td style="text-align: center;">10</td>
+			<td class="xl63" style="text-align: center;">61%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Covenant</td>
+			<td style="text-align: center;">61</td>
+			<td style="text-align: center;">20</td>
+			<td class="xl63" style="text-align: center;">70%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Deckerville Community Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">17%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Detroit Medical Center</td>
+			<td style="text-align: center;">174</td>
+			<td style="text-align: center;">82</td>
+			<td class="xl63" style="text-align: center;">79%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Dickinson Memorial Health Care System</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td class="xl63" style="text-align: center;">13%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Eaton Rapids Medical Center</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">0%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Harbor Beach Community Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">7%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Helen Newberry Joy Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">8%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Henry Ford Health System</td>
+			<td style="text-align: center;">230</td>
+			<td style="text-align: center;">75</td>
+			<td class="xl63" style="text-align: center;">58%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Hills and Dales General Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">22%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Hillsdale Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">35%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Holland Community Hospital</td>
+			<td style="text-align: center;">14</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">64%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Hurley Medical Center</td>
+			<td style="text-align: center;">28</td>
+			<td style="text-align: center;">21</td>
+			<td class="xl63" style="text-align: center;">64%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Kalkaska Memorial Health Center</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">0%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Mackinac Straits Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">13%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Marlette Regional Hospital</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">24%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">McKenzie Memorial Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">0%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">McLaren</td>
+			<td style="text-align: center;">147</td>
+			<td style="text-align: center;">50</td>
+			<td class="xl63" style="text-align: center;">65%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Memorial Healthcare</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">3</td>
+			<td class="xl63" style="text-align: center;">30%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Metro</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">2</td>
+			<td class="xl63" style="text-align: center;">38%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Michigan Medicine</td>
+			<td style="text-align: center;">75</td>
+			<td style="text-align: center;">43</td>
+			<td class="xl63" style="text-align: center;">76%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">MidMichigan Health</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">4</td>
+			<td class="xl63" style="text-align: center;">34%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Munising Memorial Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">14%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Munson Health System</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td class="xl63" style="text-align: center;">48%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">North Ottawa Community Hosp</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">20%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Oaklawn Hospital</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">2</td>
+			<td class="xl63" style="text-align: center;">29%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">OSF St. Francis Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">9%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Pontiac General Hospital</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">13%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Prime Health</td>
+			<td style="text-align: center;">26</td>
+			<td style="text-align: center;">8</td>
+			<td class="xl63" style="text-align: center;">65%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">ProMedica</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">4</td>
+			<td class="xl63" style="text-align: center;">61%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Scheurer Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">18%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Schoolcraft Memorial Hospital</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">50%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Sheridan Community Hospital</td>
+			<td style="text-align: center;">2</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">7%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Sparrow Health System</td>
+			<td style="text-align: center;">23</td>
+			<td style="text-align: center;">6</td>
+			<td class="xl63" style="text-align: center;">60%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Spectrum</td>
+			<td style="text-align: center;">74</td>
+			<td style="text-align: center;">18</td>
+			<td class="xl63" style="text-align: center;">53%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Straith Hospital</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">21%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Sturgis Hospital</td>
+			<td style="text-align: center;">8</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">88%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Three Rivers Health</td>
+			<td style="text-align: center;">0</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">32%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Trinity</td>
+			<td style="text-align: center;">201</td>
+			<td style="text-align: center;">67</td>
+			<td class="xl63" style="text-align: center;">72%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">UP Health</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">0</td>
+			<td class="xl63" style="text-align: center;">56%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">War Memorial Hospital</td>
+			<td style="text-align: center;">1</td>
+			<td style="text-align: center;">1</td>
+			<td class="xl63" style="text-align: center;">23%</td>
+		</tr>
+		<tr height="20" style="height:15.0pt">
+			<td height="20" style="height: 15pt; text-align: center;">Grand Total</td>
+			<td class="xl64" style="text-align: center;">1,685</td>
+			<td style="text-align: center;">667</td>
+			<td class="xl63" style="text-align: center;">61%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p ms="" style="font-family: sans-serif, Arial, Verdana, " trebuchet="">This information has been compiled by the Michigan Health &amp; Hospital Association (MHA) on behalf of the Michigan Department of Health &amp; Human Services (MDHHS). The data is from the state of Michigan&#39;s EMResource data system. Hospitals are required to enter data into EMResource. The data reflects the status in the hospital or health system from the previous 48 hour period.<strong style="color: inherit; font-family: inherit; font-size: 1.1em;">General Information:</strong><strong><a href="https://public.tableau.com/profile/mhapublic#!/vizhome/COVIDPublicDashboard/PleaseRead">Tableau Dashboard of Health System/Hospital Data</a></strong></p>
+
+<p>The information is aggregated by health system for those hospitals that are part of a health system. This is because systems are centrally tracking and distributing personal protection equipment (PPE) amongst their various facilities and looking at patient surge and load from a system perspective. Non-system hospitals are identified as individual hospitals.</p>
+
+<p>The data reflects the status in health systems and hospitals 48 hours prior to the time that the data was posted to this website.</p>
+
+<h5 ms="" style="font-family: sans-serif, Arial, Verdana, " trebuchet=""><strong>Data Dictionary:</strong></h5>
+
+<p><strong>PPE Days on Hand</strong>&nbsp;- This is a calculation based on a number of factors including the amount of PPE, the number of COVID-19 patients, beds, industry standard usage and conservation techniques.</p>
+
+<p><strong>COVID-19 Patients</strong>&nbsp;&ndash; Confirmed positive patients, as well as patients who are currently pending and under investigation (PUI). This includes COVID-19 patients in the ICU.</p>
+
+<p><strong>COVID-19 Patients in ICU</strong>&nbsp;- Confirmed postive patients and suspected patients in intensive care unit (ICU).</p>
+
+<p><strong>Bed Occupancy</strong>&nbsp;- The percentage of staffed inpatient beds occupied by any patient regardless of COVID-19 status. This includes surge or overlow beds.</p>
+
+<h5 ms="" style="font-family: sans-serif, Arial, Verdana, " trebuchet=""><strong>Navigation:</strong></h5>
+
+<p>There are three data tabs that display information:</p>
+
+<p><strong>Dashboard</strong>&nbsp;- PPE status and Patient Census for a specific health system or hospital</p>
+
+<p><strong>Patient Census</strong>&nbsp;- Patient census for all health systems/hospitals in Michigan</p>
+
+<p><strong>PPE</strong>&nbsp;- Personal protective equipment status for all health systems/hospitals in Michigan</p>
+
+			
+		
+			</div><!-- /End CDA Create Content--><!-- Body End --></div><!-- /main -->
+	</div><!-- /contentWrapper -->
+</div><!-- /bodyWrapper -->
+<!-- BOTTOMNAV -->
+<!-- BEGIN FOOTER RD -->
+<div id="footerArea" role="contentinfo" style="clear: both">
+
+	<!-- begin expanded footer --><div id='expandedFooter'><div id='cat_98152' class='footer_1'><h2>brandarea</h2><ul><li><a href='/som'><img src="/images/som/somFooterLogoBOW2015_491229_7.png" alt="Michigan.gov"></a></li></ul></div><div id='agencylinks' class='footer_1'><ul></ul></div><div id='policylinks' class='footer_1'><ul><li><a href='/'>Michigan.gov Home</a></li><li><a href='/adaform'>ADA</a></li><li><a href='/minewswire'>Michigan News</a></li><li><a href='/coronavirus/0,9753,7-406--281460--,00.html'>Policies</a></li></ul></div><span class='disclaimer'><!-- This is the button text to be pasted into the content item because our WISIWYG destroys it and the classes and styles are different after it is loaded, so you can't grab it from the developer tools -->
+<button type="button" class="chatLauncher" style="display: none;">
+  <div>
+    <img src="/coronavirus/ChatBotRobin.png" alt="Robin COVID Questions Chatbot">
+    <span class="wacFullButtonText">
+      <strong>Have questions?</strong>
+      <div>Chat with Robin</div>
+    </span>
+  </div>
+</button></span></div><br><span class='copyright'><br>Copyright 2020 State of Michigan</span><!-- end expanded footer --><script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.querySelector('body').classList.remove('matching-heights-processing');
+	document.getElementById("noAdBlock").style.display = "block";
+}
+</script>
+
+</div>
+<!--END DIV CONTAINER-->
+</div>
+
+<!-- Mega Menu Block -->
+<div id="megaMenuBlock">
+	<div id="megaMenuSubLinksBlock_container">
+		<div class="container">
+			<div class="col-xs-3">
+				<div id="megaMenuLogoBlock" >
+					<a href='/coronavirus'>
+						<img src="/images/som/final_logo_migov_white_526452_7.png" class="img-responsive logo" alt="Description: Coronavirus " />
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div id="megaMenuSubLinksBlockBreadCrumb"></div>
+				<div id="megaMenuSubLinksBlock"></div>
+			</div>
+		</div>
+	</div>
+	<div id="megaMenuSearchBlock"></div>
+</div>
+<style type="text/css">
+
+</style>
+<!-- stmiws103 rjp NT -->
+</body>
+</html>

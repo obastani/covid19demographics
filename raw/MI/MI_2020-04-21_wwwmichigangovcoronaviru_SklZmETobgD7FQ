@@ -1,0 +1,1869 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="mapp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- State Of Michigan - Thu Apr 16 14:52:53 2020 -->
+<!-- e-Michigan Portal - Process #8, Server www -->
+
+<link rel="canonical" href="https://www.michigan.gov/coronavirus/0,9753,7-406-98159-523641--,00.html" />
+		<title>Coronavirus - Statewide Available PPE and Bed Tracking</title>
+		<meta name='DESCRIPTION' content="Description: Coronavirus - ">
+		<meta name='KEYWORDS' content="No Keywords">
+		
+	
+<base target="_top">
+
+	<!-- global scripts BOOTSTRAP -->
+	<!-- bow-scripts include -->
+
+
+<!-- CSS -->
+<link type="text/css" rel='stylesheet' type='text/css' href='/css/fullcalendar.css' />
+<link type="text/css" rel="stylesheet" href="/font-som-icons/css/somicons.min.css?20170525100940" />
+<link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/jquery.bxslider.css" />
+
+<!-- javascript -->
+<!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script -->
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/fullcalendar.js" type="text/javascript"></script>
+<script src="/js/jquery.bxslider.js"></script>
+<script src="/js/jquery.rwdImageMaps.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/js/additional-methods.js"></script>
+<script src="/js/responsiveComponents.js"></script>
+<script src="/js/jquery.matchHeight-min.js"></script>
+<!-- [if (lt IE 9)]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('time');
+</script>
+<script src="/js/respond.js"></script>
+<link href="/css/migov_ie8_OLD.css" rel="stylesheet" media="all" />
+<![endif] -->
+	 <script type="text/javascript" src="/js/bow-general.js?v=1565985739"></script>
+
+	<link href='/css/body-theme-coronavirus.css?v=1586455230' type='text/css' rel='stylesheet' />
+	<!-- Agency Header do not include the globalcss file --><!--/ Agency Header--><script src="/js/underscorejslib.js?v=1493914450"></script>
+<script src="/js/angular_1_6.js?v=1493914427"></script>
+<script src="/js/angular_1_6_sanitize.js?v=1493914426"></script>
+<script src="/js/angular_1_6_animate.js?v=1493914426"></script>
+<script src="/js/angular_1_6_aria.js?v=1493914426"></script>
+<script src="/js/angular_1_6_touch.js?v=1493914427"></script>
+
+<script src="/js/angucomplete-alt.js?v=1545075608"></script>
+<script src="/js/bootstrapUIangular.js?v=1493914448"></script>
+
+<script type="text/javascript">
+window.navPath = '/agency/leftFullNav/0,,406,00.html';
+window.loadedData = [];
+$('body').addClass('matching-heights-processing');
+var mapp = angular.module('mapp',['ngSanitize','ngAnimate','ui.bootstrap','ngAria','angucomplete-alt','ngTouch']);
+</script>
+<script src='/js/angular_custom_factories.js?v=1502904335'></script>
+<script src='/js/angular_custom_filters.js?v=1506702035'></script>
+<script src='/js/SearchComponentAngular.js?v=1545075601'></script>
+<script src='/js/angularSelectList.js?v=1564771391'></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="/js/gtm.js?v=1501512057"></script>
+</head>
+<body class="agy-coronavirus has-offcanvas-menu off-canvas-center  bow-theme-1 horz-menu full-horz-menu1 body-theme-coronavirus matching-heights-processing">
+<div role='navigation' aria-label='skip nav'>
+<noscript>
+<div class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Browsers that can not handle javascript will not be able to access some features of this site. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<style type="text/css">
+body.matching-heights-processing:before,body.matching-heights-processing:after {
+content:'';
+height:0px;
+width:0px;
+}
+</style>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-WTW7M9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="noAdBlock" style="display:none;" class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Some functions of this site are disabled for browsers blocking jQuery. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<div id='_TopOfPage'></div>
+<script>
+			function doAnalyticsGo(sndx) {
+				var dest = sndx.options[sndx.selectedIndex].value;
+				if (dest == 0) {
+					alert('Please make a selection.');
+					return false;
+				} else {
+					document.location.href=dest;
+					return false;
+				}
+			}
+		</script><a href='#main' data-target-id='main' class='sr-only sr-only-focusable jump-to-id'>Skip to main content</a>
+</div>
+
+
+<!--START DIV CONTAINER-->
+<div id='main-mobile-canvas-container' class=''>
+	<div id='temp-toggler-mobile-menu' class='text-center toggle-mobile-menu-controls'>
+		<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+			<span class='fa fa-3x fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-3x fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>MENU
+		</a>
+	</div>
+	<div class='offcanvas-left toggle-mobile-menu-controls' id='mobile-canvas-menu-container'>
+		<div class="mobile-canvas-nav-header" >
+			<div class="mobile-canvas-menu-logo-block">
+				<div id='mobileLogoBlock'>
+					<a href='/coronavirus'>
+						<img class="img-responsive" src="/images/som/final_logo_migov_white_526452_7.png" alt="Description: Coronavirus " />
+					</a>
+				</div>
+				<div id='mobileSiteTitle'>
+					<a href='/coronavirus'>
+						<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div> </a>
+				</div>
+			</div>
+			<div class="inner-mobile-menu-toggle">
+				<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link btn btn-accent-black'><span class='fa fa-2x fa-bars mobile-menu-closed-icon'></span><span class='fa fa-2x fa-times mobile-menu-showing-icon'></span></a>
+			</div>
+		</div>
+		<div class='site-extra-text bg bg-primary-1'>Description: Coronavirus </div>
+		<div class='mobile-search-block bg bg-primary-1 padding-bottom-10'>
+			<div class="searchComponentDiv" id="searchComponentDiv_9910101010101" ng-controller="searchComponentController" ng-init="init(9910101010101)">
+				<div ng-if="loadedData">
+					<form ng-submit="submitFormLocal()" class="submit-override">
+						<div class="clearfix">
+							<div class="" angucomplete-alt id="searchInput_9910101010101"
+							  placeholder=""
+							  pause="10" 
+							  selected-object="optionChanged" 
+							  local-data="people"
+							  local-search="localSearch"
+							  title-field="name"
+							  description-field="twitter"
+							  minlength="1" 
+							  input-class="form-control form-control" 
+							  input-changed="inputChanged" 
+							  match-class="highlight">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script>		
+				window.loadedData[9910101010101] = [];
+				window.loadedData[9910101010101]["GSA_COLLECTION"] = "coronavirus";
+				
+				window.loadedData[9910101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+				window.loadedData[9910101010101]["subcategories"] = [];			
+			</script>
+		</div>
+		<div id="containerMainMobileLinks"></div>
+		<div class="branding-bar-links-block">
+			<nav class="mobile-branding-links" aria-label="mobile global menu">
+				<ul id='m_bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98810---,00.html' title='FAQ'>FAQ</a></li><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li></ul>  </nav>
+		</div>
+	</div>
+	<script type="text/javascript">
+	window.agencySitePathCSS = 'coronavirus';
+	//window.agencySitePathCSS = window.location.pathname;
+	window.agencyText = 'Description:~Coronavirus';
+	//window.agencyText = document.getElementsByTagName("title")[0].innerHTML;
+	window.siteClient = window.agencySitePathCSS;
+	// Task 44300 - WEX
+	//window.default_collection = window.agencySitePathCSS == 'som' ? '' : window.agencySitePathCSS;
+	window.default_collection = 'som';
+	window.gsasearch = true;
+	window.usagovCollection = 'mi-'+window.agencySitePathCSS;
+
+	$('document').ready(function(){
+		$('.site-search-form').submit(function(e){
+			e.preventDefault();
+			siteSearchForm($(this));
+		});
+		$('#noAdBlock').hide();
+	});
+	</script>
+</div>
+
+<div id='container' class='container-fluid'>
+<div id="topMenuSearchContainer" class="search-extended">
+	<div class="searchComponentDiv padding-top-20 padding-bottom-20" id="searchComponentDiv_10101010101" ng-controller="searchComponentController" ng-init="init(10101010101)">
+		<div ng-if="loadedData">
+			<form ng-submit="submitFormLocal()" class="submit-override">
+				<div class="container">
+					<div class="col-xs-11" angucomplete-alt id="searchInput_10101010101"
+					  placeholder=""
+					  pause="10" 
+					  selected-object="optionChanged" 
+					  local-data="people"
+					  local-search="localSearch"
+					  title-field="name"
+					  description-field="twitter"
+					  minlength="1" 
+					  input-class="form-control form-control" 
+					  input-changed="inputChanged" 
+					  match-class="highlight">
+					</div>
+					<div class="col-xs-1 bg bg-accent-black">
+						<a href="#" onclick="$('body').removeClass('show-search-form');$('#top-right-search-bar').focus(); return false;" title="Close Search Panel" class="fa-2x">
+							<span class="fa fa-remove"></span> 
+							<span class="sr-only">Close Search Box</span>
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>		
+		window.loadedData[10101010101] = [];
+		window.loadedData[10101010101]["GSA_COLLECTION"] = "coronavirus";
+		window.loadedData[10101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+		window.loadedData[10101010101]["subcategories"] = [];
+	</script>
+</div>
+<!-- agencyHeaderNavPath agencyCreateHeaderNavP3 -->
+
+	<!--div id="bannerArea" role='banner'--><!-- HEADER 1.1 Live --><div id='bannerArea' role='banner'><div id='superTop'><!-- agency banner text -->
+			<div class='col-sm-3 col-xs-12 sub-agency-mi-global-logo'><a href='/'><img src='/bootstrap/images/migov_brandingbar_2017.png' alt='Michigan.gov Home' class='img-responsive' /></a></div>
+			<div class='col-sm-9 col-xs-12'><ul id='bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98810---,00.html' title='FAQ'>FAQ</a></li><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li><li id='top-right-search-bar' style='display:none;'>
+			<a href='#topMenuSearchContainer' aria-haspopup='true' title='Search Mi.gov' class='top-header-search-link' data-search-field-id=''>
+                <span>Search</span>
+            </a>
+			</li></ul></div></div><div id='siteBanner'><!-- agency banner text -->
+			<div class='col-xs-12 visible-xs-block sub-agency-global-tag'>Official Website of <a href='/' title='return to Michigan.gov'>Michigan.gov</a></div>
+			<div id='headerRow'>
+			<div class='header-site-title-text'>
+				<a class='site-title-link' accesskey='1' href='/coronavirus/' title='Coronavirus - Description: Coronavirus '>
+					<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div>
+				</a>
+			</div>
+			<div class='header-nav-block'><nav class='main-navigation' role='navigation' aria-label='main navigation'><ul id='nav' class='nav-main'>
+			<!-- State Of Michigan - Fri Apr 17 10:01:53 2020 -->
+			
+	<!-- e-Michigan Portal - Process #8 -->
+<!-- Begin Global Nav section --><!-- End Global Nav section -->
+
+		<!-- Begin Responsive Navigation -->
+		<li  id='98178' class='id-98178 has-subs'>
+		<a class='lvl1' title="Resources" href='/coronavirus/0,9753,7-406-98178---,00.html'>Resources</a>
+		<a title="show sub link for Resources" href='#ul_98178' data-target-list='ul_98144' class='toggle-sub-list' style='display:none;'></a>
+
+
+			<ul id='ul_98178' class='sub-list'>
+			<li  id='98155' class='id-98155 has-subs'>
+			<a class='lvl2' title="Resources, For Residents" href='/coronavirus/0,9753,7-406-98178_98155---,00.html'>For Residents</a>
+			<a title="show sub link for For Residents" href='#ul_98155' data-target-list='ul_98178' class='toggle-sub-list' style='display:none;'></a>
+
+
+				<ul id='ul_98155' class='sub-list'>
+				<li  id='98841' class='id-98841 '>
+				<a class='lvl3' title="Resources, For Residents, Household Health" href='/coronavirus/0,9753,7-406-98178_98155_98841---,00.html'>Household Health</a>
+
+			</li>
+			</ul>
+			</li>
+			<li  id='98156' class='id-98156 '>
+			<a class='lvl2' title="Resources, For Health Professionals" href='/coronavirus/0,9753,7-406-98178_98156---,00.html'>For Health Professionals</a>
+
+			</li>
+			<li  id='98157' class='id-98157 '>
+			<a class='lvl2' title="Resources, For Childcare" href='/coronavirus/0,9753,7-406-98178_98157---,00.html'>For Childcare</a>
+
+			</li>
+			<li  id='98541' class='id-98541 '>
+			<a class='lvl2' title="Resources, Alternate Languages" href='/coronavirus/0,9753,7-406-98178_98541---,00.html'>Alternate Languages</a>
+
+			</li>
+			<li  id='98737' class='id-98737 '>
+			<a class='lvl2' title="Resources, Guidance for Business" href='/coronavirus/0,9753,7-406-98178_98737---,00.html'>Guidance for Business</a>
+
+			</li>
+			<li  id='98179' class='id-98179 has-subs'>
+			<a class='lvl2' title="Resources, For Employers & Workers" href='/coronavirus/0,9753,7-406-98178_98179---,00.html'>For Employers & Workers</a>
+			<a title="show sub link for For Employers & Workers" href='#ul_98179' data-target-list='ul_98178' class='toggle-sub-list' style='display:none;'></a>
+
+
+				<ul id='ul_98179' class='sub-list'>
+				<li  id='99535' class='id-99535 '>
+				<a class='lvl3' title="Resources, For Employers & Workers, Intro" href='/coronavirus/0,9753,7-406-98178_98179_99535---,00.html'>Intro</a>
+
+			</li>
+			</ul>
+			</li>
+			<li  id='98558' class='id-98558 '>
+			<a class='lvl2' title="Resources, For Schools and Colleges" href='/coronavirus/0,9753,7-406-98178_98558---,00.html'>For Schools and Colleges</a>
+
+			</li>
+			<li  id='98281' class='id-98281 '>
+			<a class='lvl2' title="Resources, Communications Resources" href='/coronavirus/0,9753,7-406-98178_98281---,00.html'>Communications Resources</a>
+
+			</li>
+			<li  id='98455' class='id-98455 '>
+			<a class='lvl2' title="Resources, Executive Orders & Directives" href='/coronavirus/0,9753,7-406-98178_98455---,00.html'>Executive Orders & Directives</a>
+
+		</li>
+		</ul>
+		</li>
+		<li  id='98158' class='id-98158 '>
+		<a class='lvl1' title="Press Releases" href='/coronavirus/0,9753,7-406-98158---,00.html'>Press Releases</a>
+
+		</li>
+		<li  id='99329' class='id-99329 '>
+		<a class='lvl1' title="Volunteer" href='/coronavirus/0,9753,7-406-98178_98811---,00.html'>Volunteer</a>
+
+		</li>
+		<li  id='99423' class='id-99423 '>
+		<a class='lvl1' title="Donate" href='/coronavirus/0,9753,7-406-98178_98811---,00.html#block-3_115140'>Donate</a>
+
+		</li>
+		<li  id='98414' class='id-98414 '>
+		<a class='lvl1' title="Video Updates" href='/coronavirus/0,9753,7-406-98414---,00.html'>Video Updates</a>
+
+		</li>
+		</ul>
+		<ul id='desktopMobileButton' style='display:none;'>
+		<li><a aria-haspopup='true' href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+				<span class='fa fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>
+				<!--<div class='clearfix'>MENU</div>-->
+			</a></li>
+		</ul>
+	</nav>
+	</div>
+	<!-- End Flyout Navigation --><!-- Left Links --><!-- End Left Links --></div></div><div class='siteBannerTxt'>Description: Coronavirus </div>
+	<div id="horzMenuSubLinksBlock_container" class="container"><div id="horzMenuSubLinksRow"><div id="horzMenuSubLinksBlockBreadCrumb"></div></div><div id="horzMenuSubLinksBlock"></div></div></div>
+			<div id='topNavSearch'>
+<!-- SEARCH --><form id='searchform' onsubmit="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			<input accesskey='s' type='TEXT' autocomplete='off' id='query' name='q' placeholder='Search' title='Search'>
+			<input id='go' type='submit' value='search' name='button' onClick="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			</form><!-- /SEARCH --></div><!-- LEFTNAV agencyCreateLeftNavRD -->
+<!-- bodyWrapper -->
+<div id='bodyWrapper'>
+
+	<!-- contentWrapper -->
+<div id='contentWrapper'>
+	<!-- main --><div id='main' class='TW page' role='main'>
+	<div id='breadcrumbContainer'><div id='breadcrumb' role='navigation' aria-label='breadcrumbs'><span style='display: none' id='breadcrumblabel'>You are here</span><ol class='breadcrumb' aria-labelledby='breadcrumblabel'><li><a href='/coronavirus/'>Coronavirus</a></li></ol></div></div>
+	
+		  
+		     <div class='page-header sr-only'><h1>Statewide Available PPE and Bed Tracking</h1></div>
+ <!-- Body Begin -->
+	<!-- State Of Michigan - Tue Apr 21 20:16:02 2020 -->
+			<!-- Begin CDA Create Content HTML -->
+		<div class='fullContent'><h2 id='TITLETXT_523641' class='TITLETEXT'>Statewide Available PPE and Bed Tracking</h2><!-- BODY -->
+			<div style="clear:both;">
+<div style="clear:both;">
+<div style="clear:both;">
+<div style="clear:both;">
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="668">
+	<caption><strong>Statewide Available Bed Tracking for COVID-19* 04/21/2020 </strong></caption>
+	<thead>
+		<tr>
+			<th scope="col" style="width: 125px; height: 37px;">
+			<p style="text-align: center;"><strong>Regions</strong></p>
+			</th>
+			<th scope="col" style="width: 72px; height: 37px;">
+			<p style="margin-left: 2.5pt; text-align: center;">Region 1</p>
+			</th>
+			<th scope="col" style="width: 72px; height: 37px;">
+			<p style="text-align: center;">Region 2 North</p>
+			</th>
+			<th scope="col" style="width: 72px; height: 37px;">
+			<p style="text-align: center;">Region 2 South</p>
+			</th>
+			<th scope="col" style="width: 60px; height: 37px;">
+			<p style="text-align: center;">Region 3</p>
+			</th>
+			<th scope="col" style="width: 60px; height: 37px;">
+			<p style="text-align: center;">Region 5</p>
+			</th>
+			<th scope="col" style="width: 60px; height: 37px;">
+			<p style="text-align: center;">Region 6</p>
+			</th>
+			<th scope="col" style="width: 60px; height: 37px;">
+			<p style="text-align: center;">Region 7</p>
+			</th>
+			<th scope="col" style="width: 60px; height: 37px;">
+			<p style="text-align: center;">Region 8</p>
+			</th>
+			<th scope="col" style="width: 66px; height: 37px;">
+			<p style="margin-left: 4.9pt; text-align: center;">TOTAL</p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Total Number of Hospital Beds</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">1818</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">5303</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">7023</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">3160</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">2185</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">2753</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">965</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">702</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">23909</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Hospital Inpatient Beds</strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">1428</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">5004</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">6441</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">2108</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">1580</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">1940</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">940</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">497</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">19938</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Hospital Inpatient Bed Occupancy</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">798</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">3090</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">4186</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">1387</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">1012</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">1025</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">406</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">202</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">12106</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:20px;">
+			<p style="text-align: center;"><strong>ICU Beds</strong></p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">185</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">527</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">1267</p>
+			</td>
+			<td style="width:60px;height:20px;">
+			<p style="text-align: center;">363</p>
+			</td>
+			<td style="width:60px;height:20px;">
+			<p style="text-align: center;">173</p>
+			</td>
+			<td style="width:60px;height:20px;">
+			<p style="text-align: center;">388</p>
+			</td>
+			<td style="width:60px;height:20px;">
+			<p style="text-align: center;">76</p>
+			</td>
+			<td style="width:60px;height:20px;">
+			<p style="text-align: center;">57</p>
+			</td>
+			<td style="width:66px;height:20px;">
+			<p style="text-align: center;">3036</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>ICU Bed </strong></p>
+
+			<p style="text-align: center;"><strong>Occupancy</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">136</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">472</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">991</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">263</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">115</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">254</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">34</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">21</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">2286</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Negative Pressure Isolation Total</strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">262</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">309</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">591</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">214</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">240</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">235</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">171</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">89</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">2111</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:55px;">
+			<p style="text-align: center;"><strong>Negative Pressure </strong></p>
+
+			<p style="text-align: center;"><strong>Isolation </strong></p>
+
+			<p style="text-align: center;"><strong>Available</strong></p>
+			</td>
+			<td style="width:72px;height:55px;">
+			<p style="text-align: center;">184</p>
+			</td>
+			<td style="width:72px;height:55px;">
+			<p style="text-align: center;">90</p>
+			</td>
+			<td style="width:72px;height:55px;">
+			<p style="text-align: center;">116</p>
+			</td>
+			<td style="width:60px;height:55px;">
+			<p style="text-align: center;">84</p>
+			</td>
+			<td style="width:60px;height:55px;">
+			<p style="text-align: center;">128</p>
+			</td>
+			<td style="width:60px;height:55px;">
+			<p style="text-align: center;">111</p>
+			</td>
+			<td style="width:60px;height:55px;">
+			<p style="text-align: center;">138</p>
+			</td>
+			<td style="width:60px;height:55px;">
+			<p style="text-align: center;">74</p>
+			</td>
+			<td style="width:66px;height:55px;">
+			<p style="text-align: center;">925</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Mechanical Ventilators </strong>&nbsp;</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">239</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">837</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">1166</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">305</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">177</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">426</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">102</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">78</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">3330</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Available Ventilators</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">167</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">460</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">507</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">183</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">126</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">367</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">90</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">73</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">1973</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Available </strong></p>
+
+			<p style="text-align: center;"><strong>Operating Room</strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">36</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">66</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">66</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">81</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">38</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">77</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">40</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">37</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">441</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Available Adult </strong></p>
+
+			<p style="text-align: center;"><strong>MedSurg</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">244</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">385</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">1000</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">765</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">539</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">750</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">338</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">247</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">4268</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Available Burn Care</strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">17</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">10</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">51</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">11</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">89</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Available Pediatric</strong></p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">24</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">90</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">162</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">102</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">38</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">107</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">29</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">40</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">592</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Available Psychiatric</strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">56</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">96</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">94</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">25</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">74</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">34</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">6</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">23</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">408</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:37px;">
+			<p style="text-align: center;"><strong>Total Morgue Capacity </strong>&nbsp;</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">55</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">218</p>
+			</td>
+			<td style="width:72px;height:37px;">
+			<p style="text-align: center;">672</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">112</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">38</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">95</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">30</p>
+			</td>
+			<td style="width:60px;height:37px;">
+			<p style="text-align: center;">29</p>
+			</td>
+			<td style="width:66px;height:37px;">
+			<p style="text-align: center;">1249</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:125px;height:36px;">
+			<p style="text-align: center;"><strong>Morgue </strong></p>
+
+			<p style="text-align: center;"><strong>Availability&nbsp; </strong></p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">29</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">99</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">283</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">63</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">29</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">77</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">29</p>
+			</td>
+			<td style="width:60px;height:36px;">
+			<p style="text-align: center;">27</p>
+			</td>
+			<td style="width:66px;height:36px;">
+			<p style="text-align: center;">636</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+*93.63% response rate</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%;">
+	<caption>
+	<p><strong>COVID-19 Metrics</strong></p>
+	</caption>
+	<thead>
+		<tr>
+			<th scope="col" style="text-align: center;">HCC Region</th>
+			<th scope="col" style="text-align: center;">Region 1</th>
+			<th scope="col" style="text-align: center;">Region 2 North</th>
+			<th scope="col" style="text-align: center;">Region 2 South</th>
+			<th scope="col" style="text-align: center;">Region 3</th>
+			<th scope="col" style="text-align: center;">Region 5</th>
+			<th scope="col" style="text-align: center;">Region 6</th>
+			<th scope="col" style="text-align: center;">Region 7</th>
+			<th scope="col" style="text-align: center;">Region 8</th>
+			<th scope="col" style="text-align: center;">Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;"># of ED Discharges</td>
+			<td style="text-align: center;">75</td>
+			<td style="text-align: center;">192</td>
+			<td style="text-align: center;">192</td>
+			<td style="text-align: center;">81</td>
+			<td style="text-align: center;">36</td>
+			<td style="text-align: center;">65</td>
+			<td style="text-align: center;">12</td>
+			<td style="text-align: center;">18</td>
+			<td style="text-align: center;">671</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># In Critical Care</td>
+			<td style="text-align: center;">63</td>
+			<td style="text-align: center;">388</td>
+			<td style="text-align: center;">653</td>
+			<td style="text-align: center;">144</td>
+			<td style="text-align: center;">31</td>
+			<td style="text-align: center;">40</td>
+			<td style="text-align: center;">24</td>
+			<td style="text-align: center;">7</td>
+			<td style="text-align: center;">1350</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># on Ventilators</td>
+			<td style="text-align: center;">43</td>
+			<td style="text-align: center;">320</td>
+			<td style="text-align: center;">560</td>
+			<td style="text-align: center;">89</td>
+			<td style="text-align: center;">20</td>
+			<td style="text-align: center;">24</td>
+			<td style="text-align: center;">5</td>
+			<td style="text-align: center;">4</td>
+			<td style="text-align: center;">1065</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"># of Inpatients</td>
+			<td style="text-align: center;">113</td>
+			<td style="text-align: center;">1214</td>
+			<td style="text-align: center;">1546</td>
+			<td style="text-align: center;">255</td>
+			<td style="text-align: center;">70</td>
+			<td style="text-align: center;">89</td>
+			<td style="text-align: center;">15</td>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">3305</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</div>
+</div>
+
+<div style="clear:both;">
+<div style="clear: both;">
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="755">
+	<caption><strong>Statewide Available PPE Tracking for COVID-19* 04/21/2020 </strong></caption>
+	<thead>
+		<tr>
+			<th scope="col" style="width: 90px; height: 40px;">
+			<p style="margin-left: 2.05pt; text-align: center;"><strong>HCC Region</strong></p>
+			</th>
+			<th scope="col" style="width: 74px; height: 40px;">
+			<p style="margin-left: 2.6pt; text-align: center;"><strong>Region 1</strong></p>
+			</th>
+			<th scope="col" style="width: 74px; height: 40px;">
+			<p style="text-align: center;"><strong>Region 2- North</strong></p>
+			</th>
+			<th scope="col" style="width: 74px; height: 40px;">
+			<p style="text-align: center;"><strong>Region 2- South</strong></p>
+			</th>
+			<th scope="col" style="width: 74px; height: 40px;">
+			<p style="margin-left: 2.65pt; text-align: center;"><strong>Region 3</strong></p>
+			</th>
+			<th scope="col" style="width: 69px; height: 40px;">
+			<p style="margin-left: 0.95pt; text-align: center;"><strong>Region 5</strong></p>
+			</th>
+			<th scope="col" style="width: 75px; height: 40px;">
+			<p style="margin-left: 2.9pt; text-align: center;"><strong>Region 6</strong></p>
+			</th>
+			<th scope="col" style="width: 69px; height: 40px;">
+			<p style="margin-left: 0.95pt; text-align: center;"><strong>Region 7</strong></p>
+			</th>
+			<th scope="col" style="width: 72px; height: 40px;">
+			<p style="margin-left: 1.9pt; text-align: center;"><strong>Region 8</strong></p>
+			</th>
+			<th scope="col" style="width: 84px; height: 40px;">
+			<p style="text-align: center;"><strong>Total</strong></p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:90px;height:20px;">
+			<p style="text-align: center;"><strong>CAPRs </strong></p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">50</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">134</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">109</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">272</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">157</p>
+			</td>
+			<td style="width:75px;height:20px;">
+			<p style="text-align: center;">80</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">39</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">4</p>
+			</td>
+			<td style="width:84px;height:20px;">
+			<p style="text-align: center;">845</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:20px;">
+			<p style="text-align: center;"><strong>Coveralls </strong></p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">30879</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">9191</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">26488</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">2248</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">1970</p>
+			</td>
+			<td style="width:75px;height:20px;">
+			<p style="text-align: center;">2523</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">3039</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">1928</p>
+			</td>
+			<td style="width:84px;height:20px;">
+			<p style="text-align: center;">78266</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:36px;">
+			<p style="text-align: center;"><strong>Elastomeric Respirator </strong></p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">71</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">24</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">7</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">8</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">23</p>
+			</td>
+			<td style="width:75px;height:36px;">
+			<p style="text-align: center;">14</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:84px;height:36px;">
+			<p style="text-align: center;">147</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:54px;">
+			<p style="text-align: center;"><strong>Elastomeric </strong></p>
+
+			<p style="text-align: center;"><strong>Respirator Filters </strong></p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">9</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">73</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">1847</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">12</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">40</p>
+			</td>
+			<td style="width:75px;height:54px;">
+			<p style="text-align: center;">36</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:72px;height:54px;">
+			<p style="text-align: center;">0</p>
+			</td>
+			<td style="width:84px;height:54px;">
+			<p style="text-align: center;">2017</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:20px;">
+			<p style="text-align: center;"><strong>Face Shields </strong></p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">56931</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">122206</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">296700</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">40836</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">8790</p>
+			</td>
+			<td style="width:75px;height:20px;">
+			<p style="text-align: center;">58138</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">36288</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">19753</p>
+			</td>
+			<td style="width:84px;height:20px;">
+			<p style="text-align: center;">639642</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:24px;">
+			<p style="text-align: center;"><strong>Gloves&nbsp; </strong></p>
+			</td>
+			<td style="width:74px;height:24px;">
+			<p style="margin-left: 2.85pt; text-align: center;">2000311</p>
+			</td>
+			<td style="width:74px;height:24px;">
+			<p style="margin-left: 2.85pt; text-align: center;">4292696</p>
+			</td>
+			<td style="width:74px;height:24px;">
+			<p style="margin-left: 2.9pt; text-align: center;">4257594</p>
+			</td>
+			<td style="width:74px;height:24px;">
+			<p style="margin-left: 2.9pt; text-align: center;">3774105</p>
+			</td>
+			<td style="width:69px;height:24px;">
+			<p style="margin-left: 1.15pt; text-align: center;">1094209</p>
+			</td>
+			<td style="width:75px;height:24px;">
+			<p style="margin-left: 0.35pt; text-align: center;">18785291</p>
+			</td>
+			<td style="width:69px;height:24px;">
+			<p style="margin-left: 1.15pt; text-align: center;">5579694</p>
+			</td>
+			<td style="width:72px;height:24px;">
+			<p style="margin-left: 2.15pt; text-align: center;">1348703</p>
+			</td>
+			<td style="width:84px;height:24px;">
+			<p style="margin-left: 3.85pt; text-align: center;">41132603</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:39px;">
+			<p style="text-align: center;"><strong>Goggles </strong></p>
+			</td>
+			<td style="width:74px;height:39px;">
+			<p style="text-align: center;">6028</p>
+			</td>
+			<td style="width:74px;height:39px;">
+			<p style="text-align: center;">14763</p>
+			</td>
+			<td style="width:74px;height:39px;">
+			<p style="text-align: center;">79954</p>
+			</td>
+			<td style="width:74px;height:39px;">
+			<p style="text-align: center;">31572</p>
+			</td>
+			<td style="width:69px;height:39px;">
+			<p style="text-align: center;">9606</p>
+			</td>
+			<td style="width:75px;height:39px;">
+			<p style="text-align: center;">30245</p>
+			</td>
+			<td style="width:69px;height:39px;">
+			<p style="text-align: center;">9639</p>
+			</td>
+			<td style="width:72px;height:39px;">
+			<p style="text-align: center;">613</p>
+			</td>
+			<td style="width:84px;height:39px;">
+			<p style="text-align: center;">182420</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:54px;">
+			<p style="text-align: center;"><strong>N95 </strong></p>
+
+			<p style="text-align: center;"><strong>Respirator </strong></p>
+
+			<p style="text-align: center;"><strong>Masks </strong></p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">78354</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">200054</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">487125</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">148399</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">29834</p>
+			</td>
+			<td style="width:75px;height:54px;">
+			<p style="text-align: center;">230181</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">55345</p>
+			</td>
+			<td style="width:72px;height:54px;">
+			<p style="text-align: center;">40344</p>
+			</td>
+			<td style="width:84px;height:54px;">
+			<p style="text-align: center;">1269636</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:36px;">
+			<p style="text-align: center;"><strong>PAPR </strong></p>
+
+			<p style="text-align: center;"><strong>Batteries </strong></p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">216</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">353</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">871</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">205</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">258</p>
+			</td>
+			<td style="width:75px;height:36px;">
+			<p style="text-align: center;">257</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">181</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">138</p>
+			</td>
+			<td style="width:84px;height:36px;">
+			<p style="text-align: center;">2479</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:20px;">
+			<p style="text-align: center;"><strong>PAPR Filters&nbsp; </strong></p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">415</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">499</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">1276</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">393</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">314</p>
+			</td>
+			<td style="width:75px;height:20px;">
+			<p style="text-align: center;">649</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">215</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">353</p>
+			</td>
+			<td style="width:84px;height:20px;">
+			<p style="text-align: center;">4114</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:20px;">
+			<p style="text-align: center;"><strong>PAPRs </strong></p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">119</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">310</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">1219</p>
+			</td>
+			<td style="width:74px;height:20px;">
+			<p style="text-align: center;">100</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">174</p>
+			</td>
+			<td style="width:75px;height:20px;">
+			<p style="text-align: center;">235</p>
+			</td>
+			<td style="width:69px;height:20px;">
+			<p style="text-align: center;">115</p>
+			</td>
+			<td style="width:72px;height:20px;">
+			<p style="text-align: center;">143</p>
+			</td>
+			<td style="width:84px;height:20px;">
+			<p style="text-align: center;">2415</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:36px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Gowns </strong></p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">18338</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">94798</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">50956</p>
+			</td>
+			<td style="width:74px;height:36px;">
+			<p style="text-align: center;">18937</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">19067</p>
+			</td>
+			<td style="width:75px;height:36px;">
+			<p style="text-align: center;">25517</p>
+			</td>
+			<td style="width:69px;height:36px;">
+			<p style="text-align: center;">17068</p>
+			</td>
+			<td style="width:72px;height:36px;">
+			<p style="text-align: center;">9511</p>
+			</td>
+			<td style="width:84px;height:36px;">
+			<p style="text-align: center;">254192</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:54px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Isolation </strong></p>
+
+			<p style="text-align: center;"><strong>Gowns </strong></p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">87041</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">120846</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">188353</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">148262</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">43725</p>
+			</td>
+			<td style="width:75px;height:54px;">
+			<p style="text-align: center;">45235</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="text-align: center;">18632</p>
+			</td>
+			<td style="width:72px;height:54px;">
+			<p style="text-align: center;">28925</p>
+			</td>
+			<td style="width:84px;height:54px;">
+			<p style="text-align: center;">681019</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:90px;height:54px;">
+			<p style="text-align: center;"><strong>Surgical </strong></p>
+
+			<p style="text-align: center;"><strong>Masks/Face masks&nbsp; </strong></p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">877664</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">558486</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="margin-left: 2.9pt; text-align: center;">1946908</p>
+			</td>
+			<td style="width:74px;height:54px;">
+			<p style="text-align: center;">618916</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="margin-left: 3.95pt; text-align: center;">103753</p>
+			</td>
+			<td style="width:75px;height:54px;">
+			<p style="margin-left: 3.1pt; text-align: center;">2103932</p>
+			</td>
+			<td style="width:69px;height:54px;">
+			<p style="margin-left: 3.95pt; text-align: center;">561584</p>
+			</td>
+			<td style="width:72px;height:54px;">
+			<p style="margin-left: 4.9pt; text-align: center;">172386</p>
+			</td>
+			<td style="width:84px;height:54px;">
+			<p style="text-align: center;">6943629</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+*79% Reporting</div>
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+
+<div style="clear:both;">&nbsp;</div>
+</div>
+
+<ul>
+	<li>Data is self-reported by hospitals daily to the EM Resource System per <a href="/documents/coronavirus/MDHHS_epidemic_reporting_order_and_instructions_684709_7.pdf">MDHHS Director Robert Gordon&rsquo;s Emergency Order</a>.</li>
+	<li>Changes in inventory numbers have likely occurred since reporting was completed.</li>
+	<li>This information will be updated daily by 7 p.m.</li>
+	<li>Information about Healthcare Coalition Regions is available on the <a href="/mdhhs/0,5885,7-339-71548_54783_54826_56171-237197--,00.html#hcc">MDHHS website</a>.</li>
+</ul>
+
+<p><strong>Region1</strong> &ndash; Clinton, Eaton, Gratiot, Hillsdale, Ingham, Jackson, Lenawee, Livingston and Shiawassee counties.<br />
+<strong>Region 2S</strong> &ndash; City of Detroit and Monroe, Washtenaw and Wayne counties.<br />
+<strong>Region 2N</strong> - Macomb, Oakland and St. Clair counties.<br />
+<strong>Region 3</strong> - Saginaw, Alcona, Iosco, Ogemaw, Arenac, Gladwin, Midland, Bay, Genesee, Tuscola, Lapeer, Sanilac and Huron counties.<br />
+<strong>Region 5</strong> - Allegan, Barry, Calhoun, Branch, St. Joseph, Cass, Berrien, Van Buren and Kalamazoo counties.<br />
+<strong>Region 6</strong> - Clare, Ionia, Isabella, Kent, Lake, Mason, Mecosta, Montcalm, Muskegon, Newaygo, Oceana, Osceola and Ottawa counties.<br />
+<strong>Region 7</strong> - Manistee, Wexford, Missaukee, Roscommon, Benzie, Leelanau, Grand Traverse, Kalkaska, Crawford, Oscoda, Antrim, Otsego, Montmorency, Alpena, Presque Ilse, Cheboygan, Emmet and Charlevoix counties.<br />
+<strong>Region 8</strong> - Chippewa, Mackinac, Luce, Schoolcraft, Delta, Alger, Marquette, Dickinson, Menominee, Baraga, Iron, Gogebic, Ontonagon, Houghton and Keweenaw counties.</p>
+
+<p>&nbsp;</p>
+
+<h3>Reported Counts of Respiratory Outbreaks from Congregate Settings</h3>
+
+<p>Congregate setting facility types that comprise these facility counts include adult foster care, group homes, homeless shelters, independent living facilities, long term care facilities, nursing homes, prisons and juvenile justice facilities.</p>
+
+<p>These data are collected from several sources, including aggregate reports from Local Health Departments that have been entered into the Michigan Disease Surveillance System under &ldquo;Unusual Outbreak or Occurrence&rdquo; linked to COVID-19, and notifications that may come from LHDs and congregate setting facilities directly.</p>
+
+<p>It is important to note that these reports are often snapshots in time and are usually based on an initial reporting of data.&nbsp; These data are provisional and will be updated weekly.</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:60%;" width="224">
+	<caption><strong>Reports of Congregate Setting Respiratory Outbreaks in 2020 by County as of April 15</strong></caption>
+	<thead>
+		<tr>
+			<th nowrap="nowrap" scope="col" style="width: 121px; height: 21px;">
+			<p style="text-align: center;"><strong>County</strong></p>
+			</th>
+			<th nowrap="nowrap" scope="col" style="width: 103px; height: 21px;">
+			<p style="text-align: center;"><strong>Facility Count</strong></p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:21px;">
+			<p style="text-align: center;">Berrien</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:21px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Branch</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Calhoun</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Chippewa</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Clinton</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Crawford</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Detroit City</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>22</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Genesee</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>12</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Hillsdale</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Ingham</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Isabella</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Jackson</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>4</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Kalamazoo</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>4</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Kent</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>4</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Lake</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Lapeer</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>4</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Livingston</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Luce</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Macomb</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>17</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Marquette</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>3</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Midland</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Montcalm</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Oakland</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>56</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Osceola</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Ottawa</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Saginaw</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>8</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Shiawassee</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">St Clair</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>4</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Tuscola</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>1</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Van Buren</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>2</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Washtenaw</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>17</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:20px;">
+			<p style="text-align: center;">Wayne</p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:20px;">
+			<p style="text-align: center;"><strong>61</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width:121px;height:21px;">
+			<p style="text-align: center;"><strong>Grand Total</strong></p>
+			</td>
+			<td nowrap="nowrap" style="width:103px;height:21px;">
+			<p style="text-align: center;"><strong>243</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+			
+		
+			</div><!-- /End CDA Create Content--><!-- Body End --></div><!-- /main -->
+	</div><!-- /contentWrapper -->
+</div><!-- /bodyWrapper -->
+<!-- BOTTOMNAV -->
+<!-- BEGIN FOOTER RD -->
+<div id="footerArea" role="contentinfo" style="clear: both">
+
+	<!-- begin expanded footer --><div id='expandedFooter'><div id='cat_98152' class='footer_1'><h2>brandarea</h2><ul><li><a href='/som'><img src="/images/som/somFooterLogoBOW2015_491229_7.png" alt="Michigan.gov"></a></li></ul></div><div id='agencylinks' class='footer_1'><ul></ul></div><div id='policylinks' class='footer_1'><ul><li><a href='/'>Michigan.gov Home</a></li><li><a href='/adaform'>ADA</a></li><li><a href='/minewswire'>Michigan News</a></li><li><a href='/coronavirus/0,9753,7-406--281460--,00.html'>Policies</a></li></ul></div></div><br><span class='copyright'><br>Copyright 2020 State of Michigan</span><!-- end expanded footer --><script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.querySelector('body').classList.remove('matching-heights-processing');
+	document.getElementById("noAdBlock").style.display = "block";
+}
+</script>
+
+</div>
+<!--END DIV CONTAINER-->
+</div>
+
+<!-- Mega Menu Block -->
+<div id="megaMenuBlock">
+	<div id="megaMenuSubLinksBlock_container">
+		<div class="container">
+			<div class="col-xs-3">
+				<div id="megaMenuLogoBlock" >
+					<a href='/coronavirus'>
+						<img src="/images/som/final_logo_migov_white_526452_7.png" class="img-responsive logo" alt="Description: Coronavirus " />
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div id="megaMenuSubLinksBlockBreadCrumb"></div>
+				<div id="megaMenuSubLinksBlock"></div>
+			</div>
+		</div>
+	</div>
+	<div id="megaMenuSearchBlock"></div>
+</div>
+<style type="text/css">
+
+</style>
+<!-- stmiws103 rjp NT -->
+</body>
+</html>
