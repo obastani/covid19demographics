@@ -73,3 +73,13 @@ Keep in mind that this record is specific to DE, meaning that the fields in the 
 Within /key/ there is an.xlsx file with all the field names, mapped by state. There is a pivot table in the file that will help you navigate and see what fields are available for each states. Again, since states may have changed what metrics they report, the fields are not standardized within a state across time, necessarily.
 
 
+## Updates
+
+The data will be updated twice a week on Mondays and Thursdays around 12PM EST. The raw data will be updated once a week on Monday around 12PM EST.
+
+## Contributors
+
+This data is made available by:
+
+Hamsa Bastani, Osbert Bastani, Andrew Chiang, Alex Miller, Armin Pourshafeie, John Silberholz.
+
