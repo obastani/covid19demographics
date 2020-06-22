@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<!-- saved from url=(0149)https://app.powerbigov.us/view?r=eyJrIjoiMDQ5YzRhNzktZTRiNS00YjFkLWFiMGItYzliOWQ2MDNmODExIiwidCI6IjJkMGYxZGI2LWRkNTktNDc3Mi04NjVmLTE5MTQxNzVkMDdjMiJ9 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="" data-focus-source="mouse"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>Microsoft Power BI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui" src="./jquery-ui.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="powerbi-models" src="./powerbi-models.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jsonFilter" src="./jsonfilter.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="resizeSensor" src="./resizeSensor.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="singleValueVisuals" src="./singleValueVisuals.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pivotTableVisuals" src="./pivotTableVisuals.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cartesianVisuals" src="./cartesianVisuals.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="multiRowCardVisual" src="./multiRowCardVisual.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="textboxVisual" src="./textboxVisual.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="exploreActions" src="./exploreActions.min.js.download"></script><!--<base href="/">--><base href=".">
+    
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://app.powerbigov.us/images/PowerBI_Favicon.ico">
+
+    <link rel="stylesheet" href="./jquery-ui.min.css"><link rel="stylesheet" href="./pivotTableVisuals.min.css"><script>
+        var viewLoadingStarted = Date.now();
+
+
+
+        var skipCheckPowerBIAccessToken = true;
+        var powerBIAccessToken = 'any';
+        var reportId = 'any';
+        var getExplorationUrl = '/public/';
+        var getConceptualSchemaUrl = '/public/reports/conceptualschema';
+        var queryDataUrl = '/public/reports/querydata';
+        var resourceLoaderUrl = '/public/reports/resourcePackage/';
+        var routingUrl = '/public/routing/cluster/';
+        var resourceLoaderIncludePackageId = true;
+        var isLoadReportMessagePending = false;
+        var isReportControllerInitialized = false;
+        var isAnonymousEmbed = true;
+        var accessToken;
+        var oDataFilter;
+        var resolvedClusterUri = 'https://wabi-us-gov-virginia-redirect.analysis.usgovcloudapi.net/';
+        var resourceKey;
+        var resolveClusterError;
+        var modelsAndExplorationResponse;
+        var frontLoadStatus;
+        var frontLoadError;
+        var conceptualSchemaResponse;
+        var loadingState = "#Loading#";
+        var errorState = "#Error#";
+        var isConceptualSchemaCached;
+        var isModelsAndExplorationCached;
+        var conceptualSchemaDuration;
+        var clusterResolutionFrontLoadStartTime = null;
+        var clusterResolutionFrontLoadEndTime = null;
+        var modelsAndExplorationFrontLoadStartTime = null;
+        var modelsAndExplorationFrontLoadEndTime = null;
+        var conceptualSchemaFrontLoadStartTime = null;
+        var conceptualSchemaFrontLoadEndTime = null;
+        var responseRequestId;
+        var conceptualSchemaRequestId;
+        var conceptualSchemaResponseRequestId;
+        var modelsAndExplorationRequestId;
+
+        //register for messages from parent window
+        window.addEventListener("message", receiveMessage, false);
+
+        //handle message from parent window
+        function receiveMessage(event) {
+            if (event.data) {
+                try {
+                    var messageData = jsCommon.JsonExtensions.isJsonString(event.data) ? JSON.parse(event.data) : event.data;
+                    if (messageData.action === 'setPage') {
+                        if (!messageData.pageName) {
+                            return;
+                        }
+
+                        var pageName = messageData.pageName;
+                        if (isReportControllerInitialized) {
+                            setPage(pageName);
+                        }
+                    }
+                }
+                catch (e) {
+                    var embedReportLoadMessage = {
+                        event: 'error',
+                        error: 'Invalid message data:' + e.message,
+                    };
+                    window.parent.postMessage(JSON.stringify(embedReportLoadMessage), '*');
+                    return;
+                }
+            }
+        }
+
+        function resolveCluster() {
+            try {
+                var activityId = telemetrySessionId;
+                var requestId = '42d2dbf2-29c2-4f30-ac27-512bcb0b4d65';
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try {
+                        if(xhr.readyState == XMLHttpRequest.DONE) {
+                            clusterResolutionFrontLoadEndTime = Date.now();
+                            var response = JSON.parse(xhr.responseText);
+                            if(response.FixedClusterUri) {
+                                resolvedClusterUri = response.FixedClusterUri;
+                                // Bug 121315: P2W frontload flow not working
+                                // getModelsAndExploration();
+                            }
+                            else {
+                                resolveClusterError = "FixedClusterUri is empty, activityid:" + activityId + "requestid:" + requestId;
+                            }
+                        }
+                    }
+                    catch(e) {
+                        resolveClusterError = "Exception:"+e.message +", activityid:" + activityId + "requestid:" + requestId;
+                    }
+                }
+
+                var apimClusterUri = getAPIMUrl(clusterUri);
+                xhr.open("GET", apimClusterUri + routingUrl + tenantId);
+                setGETRequestHeaders(xhr, telemetrySessionId, requestId, resourceKey);
+                clusterResolutionFrontLoadStartTime = Date.now();
+                xhr.send();
+            }
+            catch(e) {
+                resolveClusterError = "Exception:"+e.message +", activityid:" + activityId + "requestid:" + requestId;
+            }
+        }
+
+        function getModelsAndExploration() {
+            try {
+                var activityId = telemetrySessionId;
+                var requestId = 'b971da3a-da96-484b-b0f4-074bac335330';
+                modelsAndExplorationResponse = loadingState;
+
+                if(!resolvedClusterUri) {
+                    modelsAndExplorationResponse = errorState;
+                    return;
+                }
+
+                var resolvedAPIMCluster = getAPIMUrl(resolvedClusterUri);
+                url = resolvedAPIMCluster + "/public/reports/" + resourceKey + "/modelsAndExploration?preferReadOnlySession=true";
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try{
+                        var status = xhr.status;
+                        if(xhr.readyState == XMLHttpRequest.DONE) {
+                            modelsAndExplorationFrontLoadEndTime = Date.now();
+                            var isSuccess = status >= 200 && status < 300 || status === 304;
+                            frontLoadStatus = status;
+                            if(isSuccess) {
+                                var data = JSON.parse(xhr.responseText);
+                                responseRequestId =  xhr.getResponseHeader('requestId');
+                                isModelsAndExplorationCached = responseRequestId && responseRequestId !== requestId ? true: false;
+                                modelsAndExplorationRequestId = responseRequestId ? responseRequestId : requestId;
+                                setModelsAndExploration(data);
+                                getConceptualSchema();
+                            }
+                            else {
+                                try {
+                                    var data = JSON.parse(xhr.response);
+                                    if (data && data.error) {
+                                        frontLoadError = data.error;
+                                    }
+                                }
+                                catch (e) {
+                                    // If we cannot parse an error out of the response, just fall through to the end to return undefined
+                                }
+                                setModelsAndExploration(errorState);
+                            }
+                        }
+                    }
+                    catch(e) {
+                        setModelsAndExploration(errorState);
+                    }
+                }
+
+                xhr.open("GET", url);
+                setGETRequestHeaders(xhr, telemetrySessionId, requestId, resourceKey);
+                modelsAndExplorationFrontLoadStartTime = Date.now();
+                xhr.send();
+            }
+            catch(e) {
+                setModelsAndExploration(errorState);
+            }
+        }
+
+        function getConceptualSchema() {
+            try {
+                var modelId;
+                conceptualSchemaResponse = loadingState;
+
+                if(modelsAndExplorationResponse.models && modelsAndExplorationResponse.models.length > 0) {
+                    modelId = modelsAndExplorationResponse.models[0].id;
+                }
+                else {
+                    setConceptualSchema(errorState);
+                    return;
+                }
+
+                var activityId = telemetrySessionId;
+                var requestId = '5017afee-aaaf-4889-bd39-973fa06d6171';
+                conceptualSchemaResponse = loadingState;
+
+                var resolvedAPIMCluster = getAPIMUrl(resolvedClusterUri);
+                url = resolvedAPIMCluster + getConceptualSchemaUrl;
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try {
+                        conceptualSchemaFrontLoadEndTime = Date.now();
+                        var status = xhr.status;
+                        if(xhr.readyState == XMLHttpRequest.DONE) {
+                            var isSuccess = status >= 200 && status < 300 || status === 304;
+                            if(isSuccess) {
+                                var data = JSON.parse(xhr.responseText);
+                                conceptualSchemaDuration = conceptualSchemaFrontLoadEndTime - conceptualSchemaFrontLoadStartTime;
+                                responseRequestId =  xhr.getResponseHeader('requestId');
+                                isConceptualSchemaCached = responseRequestId && responseRequestId !== requestId ? true: false;
+                                conceptualSchemaRequestId = requestId;
+                                conceptualSchemaResponseRequestId = responseRequestId ? responseRequestId : requestId;
+                                setConceptualSchema(data);
+                            }
+                            else {
+                                setConceptualSchema(errorState);
+                            }
+                        }
+                    }
+                    catch(e) {
+                        setConceptualSchema(errorState);
+                    }
+                }
+
+                var data = "{\"modelIds\":["+ modelId +"]}";
+                xhr.open("POST", url);
+                setPOSTRequestHeaders(xhr, telemetrySessionId, requestId, resourceKey);
+                conceptualSchemaFrontLoadStartTime = Date.now();
+                xhr.send(data);
+            }catch(e) {
+                setConceptualSchema(errorState);
+            }
+        }
+
+        function setGETRequestHeaders(xhr, activityId, requestId, resourceKey) {
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.setRequestHeader('ActivityId', activityId);
+            xhr.setRequestHeader('RequestId', requestId);
+            xhr.setRequestHeader('X-PowerBI-ResourceKey', resourceKey);
+        }
+
+        function setPOSTRequestHeaders(xhr, activityId, requestId, resourceKey) {
+            setGETRequestHeaders(xhr, activityId, requestId, resourceKey);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+        }
+
+        function setConceptualSchema(data) {
+            conceptualSchemaResponse = data;
+            notifyConceptualSchemaComplete();
+        }
+
+        function setModelsAndExploration(data) {
+            modelsAndExplorationResponse = data;
+            notifyModelsAndExplorationComplete();
+        }
+
+        function  notifyModelsAndExplorationComplete() {
+            if(powerbi && powerbi.explore && powerbi.explore.reportembed && powerbi.explore.reportembed.notifyModelsAndExplorationReady) {
+                powerbi.explore.reportembed.notifyModelsAndExplorationReady(modelsAndExplorationResponse);
+            }
+        }
+
+        function notifyConceptualSchemaComplete() {
+            if(powerbi && powerbi.explore && powerbi.explore.reportembed && powerbi.explore.reportembed.notifyConceptualSchemaReady) {
+                powerbi.explore.reportembed.notifyConceptualSchemaReady(conceptualSchemaResponse);
+            }
+        }
+
+        function getAPIMUrl(clusterUri) {
+            var parser = document.createElement('a');
+            parser.href = clusterUri;
+
+            var protocol =  parser.protocol;
+            var hostname =  parser.hostname;
+
+            var hostNameTakens = hostname.split(".");
+            hostNameTakens[0] = hostNameTakens[0].replace("-redirect", "");
+            hostNameTakens[0] = hostNameTakens[0].replace("global-", "");
+            hostNameTakens[0] += "-api";
+            var apiHostName = hostNameTakens.join(".");
+            return protocol + "//" + apiHostName;
+        }
+
+        function isResponseCached(responseRequestId, requestId) {
+            if(responseRequestId && responseRequestId !== requestId) {
+                return true;
+            }
+            return false;
+        }
+
+        var baseUrl = window.location.protocol + '//' + window.location.host;
+        var powerbi = {
+            session : {
+                userInfo: {
+                    alternateEmail: '',
+                }
+            }
+        };
+
+        powerbi.telemetrySamplingRules = 'embed';
+        powerbi.build = '13.0.12816.311';
+        powerbi.buildDetails = '13.0.12816.311 ((Main).200411-1356)';
+        powerbi.clientVersion = '2003.4.025';
+        powerbi.customVisualsUrl = 'https://visuals.azureedge.net/;https://visuals2.azureedge.net/;https://extendcustomvisual.blob.core.windows.net/';
+        powerbi.visualCDNBlobContainerUrl = 'prod';
+        powerbi.common = {};
+        powerbi.common.cultureInfo = 'en-US';
+        powerbi.common.formattingLocale = 'en-US';
+        var useCDN = 'False';
+        var clusterUri =  'https://api.powerbigov.us';
+        var cdnUrl = '';
+        var previousTenantId = '';
+        var telemetrySessionId =  '1a85dbb1-8580-4606-ae7b-383e10abba48';
+        var sessionSource = "Embed";
+        var allowTelemetry = true;
+        var appInsightsV2InstrKey = '8adeeaf0-ca71-ff43-a91e-7afbce21a5f2';
+        var appInsightsV2EndpointUrl = 'https://dc.applicationinsights.us/v2/track';
+        var initialDashboardContainer = undefined;
+        var appLoadError = undefined;
+
+        var  url = window.location.href;
+        var reportQueryString = new RegExp('[\\?&]r=([^&#]*)').exec(url);
+        if (reportQueryString) {
+            try {
+                var embedCode = decodeURIComponent(reportQueryString[1]);
+                var encodedReport = JSON.parse(atob(embedCode));
+                var tenantId = encodedReport.t;
+                resourceKey = encodedReport.k;
+                if (resolvedClusterUri == '') {
+                    resolvedClusterUri = undefined;
+                    resolveCluster();
+                } else {
+                    // Bug 121315: P2W frontload flow not working
+                    // getModelsAndExploration();
+                }
+            }
+            catch(e) {
+                resolveClusterError = "Exception: " + e.message + ", activityid: " + telemetrySessionId;
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./reportembed.bundle.min.css">
+
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; touch-action-delay: none; }
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto; touch-action-delay: none; }
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; touch-action-delay: none; }
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; touch-action-delay: none; }
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; touch-action-delay: none; }
+</style><style></style><script src="./ai.0.js.download"></script><script charset="utf-8" src="./reportEmbed.json-contracts.min.js.download"></script><style>.logoBar[_ngcontent-beq-c2]   .logo[_ngcontent-beq-c2]   button[_ngcontent-beq-c2] {
+  border: transparent;
+  background: none;
+  padding: 0;
+  margin-left: 24px;
+}
+.logoBar[_ngcontent-beq-c2]   .logo[_ngcontent-beq-c2]   button[_ngcontent-beq-c2]:focus {
+  box-shadow: 0 0 5px #51caee;
+  outline: 1px solid #51cbee;
+}
+.logoBar[_ngcontent-beq-c2]   .logo[_ngcontent-beq-c2]   button[_ngcontent-beq-c2]   .icon[_ngcontent-beq-c2] {
+  margin: 0;
+}
+.logoBar[_ngcontent-beq-c2]   .logo[_ngcontent-beq-c2]   .socialSharing[_ngcontent-beq-c2] {
+  float: right;
+}</style><style>.navigation-wrapper[_ngcontent-beq-c3]   button[_ngcontent-beq-c3] {
+  border: transparent;
+  background: none;
+  padding: 0;
+  margin-left: 24px;
+}
+.navigation-wrapper[_ngcontent-beq-c3]   button[_ngcontent-beq-c3]:focus {
+  box-shadow: 0 0 5px #51caee;
+  outline: 1px solid #51cbee;
+}
+.navigation-wrapper[_ngcontent-beq-c3]   button[_ngcontent-beq-c3]   .icon[_ngcontent-beq-c3] {
+  margin: 0;
+}
+.navigation-wrapper[_ngcontent-beq-c3]   .socialIcon[_ngcontent-beq-c3] {
+  padding: 0;
+  cursor: pointer;
+  margin-left: 24px;
+}</style><style>.powerbi-spinner[_ngcontent-beq-c4] {
+  display: inline-block !important;
+  width: 20px;
+  height: 20px;
+  text-align: initial !important;
+  vertical-align: middle;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform: scale(0.35714286);
+}
+.powerbi-spinner.centered[_ngcontent-beq-c4] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.powerbi-spinner.xlarge[_ngcontent-beq-c4] {
+  width: 48px;
+  height: 48px;
+}
+.powerbi-spinner.xlarge[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform: scale(0.85714286);
+}
+.powerbi-spinner.xlarge.centered[_ngcontent-beq-c4] {
+  margin-top: -24px;
+  margin-left: -24px;
+}
+.powerbi-spinner.large[_ngcontent-beq-c4] {
+  width: 32px;
+  height: 32px;
+}
+.powerbi-spinner.large[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform: scale(0.57142857);
+}
+.powerbi-spinner.large.centered[_ngcontent-beq-c4] {
+  margin-top: -16px;
+  margin-left: -16px;
+}
+.powerbi-spinner.small[_ngcontent-beq-c4] {
+  width: 20px;
+  height: 20px;
+}
+.powerbi-spinner.small[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform: scale(0.35714286);
+}
+.powerbi-spinner.small.centered[_ngcontent-beq-c4] {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.powerbi-spinner.xsmall[_ngcontent-beq-c4] {
+  width: 16px;
+  height: 16px;
+}
+.powerbi-spinner.xsmall[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform: scale(0.28571429);
+}
+.powerbi-spinner.xsmall.centered[_ngcontent-beq-c4] {
+  margin-top: -8px;
+  margin-left: -8px;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  position: static;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  box-sizing: content-box;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+html[dir="rtl"][_ngcontent-beq-c4]   .powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4] {
+  transform-origin: top left;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4] {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+  transform: rotate(225deg);
+  animation-iteration-count: infinite;
+  animation-name: orbit;
+  animation-duration: 5.5s;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4]:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #666;
+  
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4]:nth-child(2) {
+  animation-delay: 360ms;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4]:nth-child(3) {
+  animation-delay: 720ms;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4]:nth-child(4) {
+  animation-delay: 1080ms;
+}
+.powerbi-spinner[_ngcontent-beq-c4]   .spinner[_ngcontent-beq-c4]   .circle[_ngcontent-beq-c4]:nth-child(5) {
+  animation-delay: 1440ms;
+}
+@keyframes orbit {
+  0% {
+    transform: rotate(225deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  7% {
+    transform: rotate(345deg);
+    animation-timing-function: linear;
+  }
+  30% {
+    transform: rotate(455deg);
+    animation-timing-function: ease-in-out;
+  }
+  39% {
+    transform: rotate(690deg);
+    animation-timing-function: linear;
+  }
+  70% {
+    transform: rotate(815deg);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: rotate(945deg);
+    animation-timing-function: ease-out;
+  }
+  76% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(945deg);
+    opacity: 0;
+  }
+}</style><style>.notification-bar[_ngcontent-beq-c5] {
+  display: flex;
+  justify-content: space-between;
+  background: #777777;
+  width: auto;
+  height: 32px;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99998;
+  border-bottom: 1px solid #E1DFDD;
+}
+@keyframes infiniteLoading {
+  from {
+    left: -200px;
+    width: 30%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 120%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes progressBarState1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes progressBarState2 {
+  0% {
+    width: 90%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes progressBarState3 {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 98%;
+  }
+}
+@keyframes progressBarState4 {
+  0% {
+    width: 98%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.notification-bar[_ngcontent-beq-c5]   .infiniteLoader[_ngcontent-beq-c5] {
+  height: 6px;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF;
+  float: left;
+  top: 22px;
+}
+.notification-bar[_ngcontent-beq-c5]   .infiniteLoader[_ngcontent-beq-c5]:before {
+  display: block;
+  position: absolute;
+  content: '';
+  left: -200px;
+  width: 200px;
+  height: 6px;
+  background-color: #F2C811;
+  animation: infiniteLoading 2s linear infinite;
+}
+.notification-bar[_ngcontent-beq-c5]   .progressBarLoader[_ngcontent-beq-c5] {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #F2C811;
+  animation-name: progressBarState1, progressBarState2, progressBarState3, progressBarState4;
+  animation-timing-function: linear;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-actions[_ngcontent-beq-c5] {
+  display: flex;
+  padding: 0 8px;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-actions[_ngcontent-beq-c5]   button[_ngcontent-beq-c5] {
+  display: block;
+  height: 24px;
+  margin: 4px 0;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-actions[_ngcontent-beq-c5]   button.primary[_ngcontent-beq-c5] {
+  padding: 2px 16px;
+  background-color: #FFF;
+  border: 1px solid #8A8886;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-actions[_ngcontent-beq-c5]   button.last[_ngcontent-beq-c5] {
+  margin-right: 0;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-actions[_ngcontent-beq-c5]   button.dismissBtn[_ngcontent-beq-c5] {
+  background: none;
+  border: none;
+  margin-right: 0;
+  margin-left: 8px;
+  color: #605E5C;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5] {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 0 8px;
+  line-height: 32px;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   .icon[_ngcontent-beq-c5], .notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   spinner[_ngcontent-beq-c5] {
+  color: #605E5C;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   .powerbi-spinner[_ngcontent-beq-c5]   .spinner[_ngcontent-beq-c5]   .circle[_ngcontent-beq-c5]:after {
+  background: #FFF !important;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   .message[_ngcontent-beq-c5] {
+  color: #323130;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   a.actionLink[_ngcontent-beq-c5] {
+  padding: 0 8px;
+  color: #005A9E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.notification-bar[_ngcontent-beq-c5]   .bar-content[_ngcontent-beq-c5]   .embeddedActionLink[_ngcontent-beq-c5] {
+  padding: 0;
+}
+.notification-bar.error[_ngcontent-beq-c5] {
+  background-color: #FDE7E9;
+}
+.notification-bar.info[_ngcontent-beq-c5] {
+  background-color: #F3F2F1;
+}
+.notification-bar.warning[_ngcontent-beq-c5], .notification-bar.sampleDataLoad[_ngcontent-beq-c5] {
+  background-color: #FFF4CE;
+}
+.notification-bar.sampleDataLoad[_ngcontent-beq-c5]   .progressBarLoader[_ngcontent-beq-c5] {
+  display: none;
+  background-color: unset;
+}
+@media print {
+  body[_nghost-beq-c5]   div.notification-bar[_ngcontent-beq-c5], body   div.notification-bar   [_nghost-beq-c5] {
+    display: none !important;
+  }
+}</style><style></style><style>[_nghost-beq-c7] {
+  position: absolute;
+  z-index: 10000003;
+}
+.accessibility-info[_ngcontent-beq-c7] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  padding: 10px 6px;
+  background: white;
+  border: #CCCCCC solid 1px;
+  box-shadow: 0px 0px 20px #CCCCCC;
+  outline: none;
+  font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+.accessibility-info.accessibility-info-collapsed[_ngcontent-beq-c7] {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+.accessibility-info[_ngcontent-beq-c7]   a[_ngcontent-beq-c7], .accessibility-info[_ngcontent-beq-c7]   span.link[_ngcontent-beq-c7] {
+  color: #1F3A93;
+  text-decoration: underline;
+}
+.accessibility-info[_ngcontent-beq-c7]   span[_ngcontent-beq-c7]:focus, .accessibility-info[_ngcontent-beq-c7]   a[_ngcontent-beq-c7]:focus {
+  outline: none;
+  border: 1px dashed #333333;
+}
+.accessibility-info[_ngcontent-beq-c7]   a[_ngcontent-beq-c7]:visited {
+  color: #551A8B;
+}
+.accessibility-info[_ngcontent-beq-c7]   span[_ngcontent-beq-c7] {
+  color: #212121;
+}</style><style>transform[_ngcontent-beq-c13] {
+  pointer-events: auto;
+}
+.explorationContainer.reading[_nghost-beq-c13]   .exploreCanvas[_ngcontent-beq-c13]   transform.selected[_ngcontent-beq-c13]:hover:not(.popOut), .explorationContainer.reading   .exploreCanvas   [_nghost-beq-c13]   transform.selected[_ngcontent-beq-c13]:hover:not(.popOut) {
+  z-index: 10000001 !important;
+}
+.explorationContainer.editing[_nghost-beq-c13]   .exploreCanvas[_ngcontent-beq-c13]:hover   transform.selected[_ngcontent-beq-c13]:not(.popOut), .explorationContainer.editing   .exploreCanvas:hover   [_nghost-beq-c13]   transform.selected[_ngcontent-beq-c13]:not(.popOut) {
+  z-index: 10000001 !important;
+}
+.explorationContainer[_nghost-beq-c13]   .exploreCanvas.stylableVisualContainerHeader[_ngcontent-beq-c13]   transform.dragging[_ngcontent-beq-c13]   .vcHeader[_ngcontent-beq-c13], .explorationContainer   .exploreCanvas.stylableVisualContainerHeader   [_nghost-beq-c13]   transform.dragging[_ngcontent-beq-c13]   .vcHeader[_ngcontent-beq-c13], .explorationContainer[_nghost-beq-c13]   .exploreCanvas.stylableVisualContainerHeader[_ngcontent-beq-c13]   transform.resizing[_ngcontent-beq-c13]   .vcHeader[_ngcontent-beq-c13], .explorationContainer   .exploreCanvas.stylableVisualContainerHeader   [_nghost-beq-c13]   transform.resizing[_ngcontent-beq-c13]   .vcHeader[_ngcontent-beq-c13] {
+  display: none;
+}</style><style>[_nghost-beq-c17] {
+  position: absolute;
+}</style><style type="text/css">@keyframes resizeanim {from { opacity: 0; } to { opacity: 0; }} .ResizeSensor__resizeTriggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .ResizeSensor__resizeTriggers, .ResizeSensor__resizeTriggers > div, .ResizeSensor__contractTrigger:before { content: ' '; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .ResizeSensor__resizeTriggers > div { background: #eee; overflow: auto; } .ResizeSensor__contractTrigger:before { width: 200%; height: 200%; }</style><style>[_nghost-beq-c25] {
+  width: 100%;
+}
+[_nghost-beq-c25]   .visual-tooltip-container[_ngcontent-beq-c25] {
+  position: relative;
+}
+[_nghost-beq-c25]   .loading-message-container[_ngcontent-beq-c25] {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+html[_nghost-beq-c25]:not([dir="rtl"])   [_nghost-beq-c25]   .loading-message-container[_ngcontent-beq-c25], html:not([dir="rtl"])   [_nghost-beq-c25]   [_nghost-beq-c25]   .loading-message-container[_ngcontent-beq-c25] {
+  left: 0;
+}
+html[dir="rtl"][_nghost-beq-c25]   [_nghost-beq-c25]   .loading-message-container[_ngcontent-beq-c25], html[dir="rtl"]   [_nghost-beq-c25]   [_nghost-beq-c25]   .loading-message-container[_ngcontent-beq-c25] {
+  right: 0;
+}
+[_nghost-beq-c25]   .loading-message[_ngcontent-beq-c25] {
+  display: inline-block;
+  margin-top: 25%;
+  font-size: 12px;
+  color: #C8C8C8;
+}</style><style>.explorationContainer[_ngcontent-beq-c26] {
+  overflow: hidden;
+  background-color: #FFF;
+  border: 1px solid #333333;
+}</style><style>.popOutBar[_ngcontent-beq-c20] {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  list-style-type: none;
+  font-size: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.popOutBar[_ngcontent-beq-c20]   .title[_ngcontent-beq-c20], .popOutBar[_ngcontent-beq-c20]   .subtitle[_ngcontent-beq-c20] {
+  vertical-align: top;
+  text-transform: uppercase;
+  letter-spacing: 0.04375em;
+}
+html[data-focus-source="key"][_nghost-beq-c20]   .popOutBar[_ngcontent-beq-c20]   .title[_ngcontent-beq-c20]:focus, html[data-focus-source="key"]   [_nghost-beq-c20]   .popOutBar[_ngcontent-beq-c20]   .title[_ngcontent-beq-c20]:focus, html[data-focus-source="key"][_nghost-beq-c20]   .popOutBar[_ngcontent-beq-c20]   .subtitle[_ngcontent-beq-c20]:focus, html[data-focus-source="key"]   [_nghost-beq-c20]   .popOutBar[_ngcontent-beq-c20]   .subtitle[_ngcontent-beq-c20]:focus {
+  box-shadow: inset 0 0 5px #51caee;
+  outline: 1px solid #51cbee;
+  outline-offset: -1px;
+  background-color: transparent;
+}
+.popOutBar[_ngcontent-beq-c20]   .subtitle[_ngcontent-beq-c20] {
+  font-family: 'wf_standard-font', helvetica, arial, sans-serif;
+  color: #777777;
+}
+.popOutBar[_ngcontent-beq-c20]   .title[_ngcontent-beq-c20] {
+  font-family: 'wf_standard-font_bold', helvetica, arial, sans-serif;
+  color: #444444;
+  max-width: 500px;
+  padding-right: 5px;
+}
+.popOutBar[_ngcontent-beq-c20]   .visualLastRefreshTime[_ngcontent-beq-c20] {
+  float: right;
+  margin-left: auto;
+}
+.popOutBar[_ngcontent-beq-c20]   .menuItem[_ngcontent-beq-c20] {
+  font-family: 'Segoe UI', 'wf_segoe-ui_normal', helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+.popOutBar[_ngcontent-beq-c20]   button[_ngcontent-beq-c20] {
+  border: none;
+  padding: 0;
+  line-height: 16px;
+  height: 38px;
+  background-color: transparent;
+  color: #666666;
+  margin-top: 1px;
+}
+.popOutBar[_ngcontent-beq-c20]   button[_ngcontent-beq-c20]:focus {
+  box-shadow: 0 0 5px #51caee;
+  outline: 1px solid #51cbee;
+}
+.popOutBar[_ngcontent-beq-c20]   button[_ngcontent-beq-c20]    > span[_ngcontent-beq-c20] {
+  margin-left: 12px;
+  margin-right: 6px;
+}
+.popOutBar[_ngcontent-beq-c20]   .iconBox[_ngcontent-beq-c20] {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+html[dir="rtl"][_ngcontent-beq-c20]   .popOutBar[_ngcontent-beq-c20]   .iconBox[_ngcontent-beq-c20] {
+  transform: rotate(90deg);
+}
+.popOutBar[_ngcontent-beq-c20]    > div[_ngcontent-beq-c20] {
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+  cursor: default;
+  vertical-align: top;
+  line-height: 40px;
+  padding: 0 15px 0 15px;
+  outline: none;
+}
+.popOutBar[_ngcontent-beq-c20]    > div.divider[_ngcontent-beq-c20] {
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background-color: #999999;
+  margin-top: 5px;
+  padding: 0;
+}
+.popOutBar[_ngcontent-beq-c20]    > div[_ngcontent-beq-c20]    > span[_ngcontent-beq-c20], .popOutBar[_ngcontent-beq-c20]    > div[_ngcontent-beq-c20]   i[_ngcontent-beq-c20] {
+  vertical-align: top;
+}</style></head>
+<body>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Power BI Report">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Report powered by Power BI">
+    <meta property="og:image" content="https://app.powerbigov.us/13.0.12816.311/images/PowerBI125x125.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Power BI Report">
+    <meta name="twitter:description" content="Report powered by Power BI">
+    <meta name="twitter:image:src" content="https://app.powerbigov.us/13.0.12816.311/images/PowerBI125x125.png">
+    <meta name="twitter:image" content="https://app.powerbigov.us/13.0.12816.311/images/PowerBI125x125.png">
+
+    <!-- perf: loading screen directly on page -->
+    
+
+    <div id="pbiAppPlaceHolder">
+        <!----><ui-view><!----><!----><!----><div><div id="embedWrapperID" class="embedWrapper" tabindex="0" ng-keydown="keyDown($event)" localize-attr="{&#39;aria-label&#39;: &#39;Embed_Wrapper_Hint&#39;}" aria-label="Press Ctrl + Enter key to navigate into the report."><!----><div ng-if="!showErrorMessage &amp;&amp; !showPromptForLogin &amp;&amp; !optimizePublishToWeb &amp;&amp; !isUserUnauthorized" class="landingController fillAvailableSpace"><div class="landingContainer"><div id="reportLandingContainer" class="embeddedLandingRootContent reportContainerContent isActive embeddedPV embeddedLandingRootContentLogoVisible" ng-class="backgroundCssClass + (showLogoBar ? &#39; embeddedLandingRootContentLogoVisible&#39; : &#39; embeddedLandingRootContentLogoHidden&#39;)"><div class="embeddedPV"><!----><exploration-container [use-legacy]="useLegacyExplorationContainer()" [view-model]="exploreContainer" ng-if="exploreContainer" [canvas-options]="canvasOptions" [exploration-container-options]="explorationContainerOptions" ng-version="8.2.6"><!----><exploration-container-legacy><div class="explorationContainer explorationWithChrome themeableElement reading" ng-class="{&#39;editing&#39; : (C.viewModeState.getMode() === 1 || C.viewModeState.getMode() === 2),    &#39;reading&#39;: C.viewModeState.getMode() === 0,    &#39;newPaneColors&#39;: C.featureSwitchService.featureSwitches.paneColorRefresh || C.isFluentDesignEnabled()}" pbi-lazy-load-contents="C.jQueryUIConfig" prevent-focus-loss="true"><!----><notification-bar _nghost-beq-c5="" ng-version="8.2.6"><!----></notification-bar><div class="explorationHost explorationHostNoAppBar" ng-class="{ &#39;explorationHostNoAppBar&#39;: !C.viewModel.options.showAppBar }"><exploration-host [view-model]="C.viewModel" id="pvExplorationHost" _nghost-beq-c6="" ng-version="8.2.6"><div _ngcontent-beq-c6="" class="fillAvailableSpace verticalItemsContainer"><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><div class="horizontalItemsContainer" ng-if="!(C.viewModel &amp;&amp; C.viewModel.hideVisuals)"><exploration [view-model]="C.viewModel.exploration" ng-class="{&#39;exploreCanvasToBottom&#39;: !C.isFooterVisible() &amp;&amp; !C.showFullScreenComponent(), &#39;exploreCanvasWithFullScreenComponent&#39;: C.showFullScreenComponent()}" [canvas-options]="C.canvasOptions" [should-set-focus]="C.shouldSetTabIndex()" ng-version="8.2.6" class="exploreCanvasToBottom"><div class="exploration" role="application" toolbar-container=""><accessibility-info _nghost-beq-c7=""><div _ngcontent-beq-c7="" class="accessibility-info accessibility-info-collapsed"><a _ngcontent-beq-c7="" href="https://go.microsoft.com/fwlink/?linkid=852575" keyboard-shortcuts="ctrl-Enter" localize="AccessibilityInfo_Link" target="_blank">Tips for using Power BI with a screen reader.</a><span _ngcontent-beq-c7="" class="link pbi-focus-outline" localize="AccessibilityInfo_SkipToContent" role="button" tabindex="0">Skip to main content.</span><span _ngcontent-beq-c7="" tabindex="0" aria-label="Also you can press &quot;Question mark&quot; to show keyboard shortcuts.">Also you can press "?" to show keyboard shortcuts.</span></div></accessibility-info><!----><!----><explore-canvas-modern _nghost-beq-c8=""><div _ngcontent-beq-c8="" class="exploreCanvas themeableElement disableAnimations popOut seeData master-form-factor"><!----><!----><div _ngcontent-beq-c8="" class="backgroundContainer outspaceContainer" style="opacity: 1; background-color: rgb(255, 255, 255);"><!----></div><!----><div _ngcontent-beq-c8="" class="canvasFlexBox"><div _ngcontent-beq-c8="" class="displayAreaContainer droppableElement ui-droppable" style="overflow: hidden;"><div _ngcontent-beq-c8="" class="displayAreaViewport"></div><div _ngcontent-beq-c8="" class="displayArea disableAnimations fitToScreen" container-printer="" print-container-selector="displayArea" style="box-shadow: rgb(200, 200, 200) 0px 0px 10px; outline: none;"><div _ngcontent-beq-c8="" class="backgroundContainer visualBackgroundContainer themableBackgroundColorSolid" style="opacity: 1; background-color: rgb(255, 255, 255);"><!----></div><div _ngcontent-beq-c8="" class="visualContainerHost" focus-nav-mode="Group" focus-priority="0" keyboard-shortcuts="ctrl-F6" tab-order-enabled=""><!----><!----><!----><!----><!----><visual-container-repeat _ngcontent-beq-c8=""><!----><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 82px; width: 273px; transform: translate(0px, 46px); z-index: 1000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Total Tested Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 62px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Total Tested" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">Total Tested</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="24.65625" class="card" tabindex="0" focusable="true" aria-label="Total Tested 37,080."><g transform="translate(131.5,31.661458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">37,080</tspan><title>37,080</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 84px; width: 235px; transform: translate(905px, -20px); z-index: 0;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Updated by 12pm each day Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 235px; height: 64px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Updated by 12pm each day" style="visibility: visible; font-size: 14pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; background-color: rgb(1, 79, 139); height: 45.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" style="width: 225px;">Updated by 12pm each</div></div><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 225px;">day</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="225" height="8.65625" class="card" tabindex="0" focusable="true" aria-label="Latest Date 4/20/2020."><g transform="translate(112.5,10.994791666666666)"><text class="value" style="text-anchor: middle; fill: rgb(255, 255, 255); font-family: Verdana; font-size: 21.3333px; white-space: pre;"><tspan x="0" dy="0">4/20/2020</tspan><title>4/20/2020</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 84px; width: 273px; transform: translate(0px, -20px); z-index: 9000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable readMode hideBorder noVisualTitle droppableElement ui-droppable" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label=" Simple Image" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 64px; background-color: rgb(1, 79, 139);"><!----><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-simpleImageEBC4593F96F1425FB3D84C5BF02B5075 allow-deferred-rendering" aria-hidden="true" initialized=""><iframe class="visual-sandbox" sandbox="allow-scripts" name="visual-sandbox" width="296.47887323943667" height="93.25224071702945" src="./visualSandboxMinimal.html" style="width: 263px; height: 54px;"></iframe></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 400px; width: 217px; transform: translate(923px, 44px); z-index: 8000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable readMode hideBorder noVisualTitle droppableElement ui-droppable" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label=" Table" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 217px; height: 380px; background-color: rgb(255, 255, 255);"><!----><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-tableEx allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="tableExContainer"><div style="position:absolute;left:0;top:0;visibility:hidden;"></div><div style="position: relative; width: 207px; height: 370px;" tabindex="0" aria-label="Grid" class="tableEx"><div class="innerContainer" style="position:absolute;left:0;top:0;right:0;bottom:0"><div class="corner" drag-resize-disabled="true" style="height: 27px; width: 1px;"><div style="position: absolute; overflow: hidden; width: 1px; top: 0px; left: 0px;"><div style="box-sizing: border-box; height: 27px;"></div></div></div><div class="columnHeaders" style="position: absolute; overflow: auto; right: 9px; top: 0px; font-family: Verdana; font-size: 13.3333px; left: 1px;"><div drag-resize-disabled="true" style="height: 27px; width: 205.231px;"><div style="position: absolute; overflow: hidden; top: 0px; left: 0px; width: 99.2308px;"><div title="City/Town" class="pivotTableCellWrap cell-interactive " style="padding: 1px 5px 10px; color: rgb(255, 255, 255); background-color: rgb(1, 79, 139); box-shadow: rgb(17, 141, 255) 0px -1px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 27px;">City/Town<div class="powervisuals-glyph sort-icon caret-up future " style="font-size:9.466666666666665px;bottom:2px;">&nbsp;</div></div></div><div style="position: absolute; overflow: hidden; top: 0px; left: 99.2308px; width: 106px;"><div title="Positive Cases" class="pivotTableCellWrap cell-interactive " style="padding: 1px 5px 10px; color: rgb(255, 255, 255); background-color: rgb(1, 79, 139); box-shadow: rgb(17, 141, 255) 0px -1px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 27px;">Positive Cases<div class="powervisuals-glyph sort-icon caret-down " style="font-size:9.466666666666665px;bottom:2px;">&nbsp;</div></div></div></div></div><div class="rowHeaders" style="position: absolute; overflow: auto; left: 0px; bottom: 9px; top: 27px;"><div drag-resize-disabled="true" style="width: 1px; height: 1039px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 160px; width: 1px;"><div style="box-sizing: border-box; height: 38px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 198px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 219px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 240px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 261px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 282px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 303px; width: 1px;"><div style="box-sizing: border-box; height: 38px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 341px; width: 1px;"><div style="box-sizing: border-box; height: 38px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 379px; width: 1px;"><div style="box-sizing: border-box; height: 38px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 417px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 438px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 459px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 480px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 501px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 522px; width: 1px;"><div style="box-sizing: border-box; height: 21px;"></div></div></div></div><div class="bodyCells" style="position: absolute; overflow: auto; left: 1px; top: 27px; right: 9px; bottom: 9px; box-sizing: border-box; font-family: Verdana; font-size: 14.6667px;"><div style="position: absolute; overflow: hidden; width: 205.231px; height: 1039px;"><div style="position:absolute;left:0;top:0;width:205.23076923076923px;height:522px;"><div style="overflow:hidden;position:absolute;left:0;width:99.23076923076923px;"><div title="Providence" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Providence</div><div title="Pawtucket" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Pawtucket</div><div title="Cranston" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Cranston</div><div title="North Providence" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">North Providence</div><div title="East Providence" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">East Providence</div><div title="Warwick" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Warwick</div><div title="Central Falls" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">Central Falls</div><div title="Woonsocket" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Woonsocket</div><div title="Cumberland" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Cumberland</div><div title="Smithfield" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Smithfield</div><div title="Johnston" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Johnston</div><div title="Coventry" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Coventry</div><div title="North Kingstown" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">North Kingstown</div><div title="West Warwick" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">West Warwick</div><div title="South Kingstown" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">South Kingstown</div><div title="Lincoln" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Lincoln</div><div title="Burrillville" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Burrillville</div><div title="Bristol" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Bristol</div><div title="Tiverton" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Tiverton</div><div title="Westerly" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Westerly</div></div><div style="overflow:hidden;position:absolute;left:99.23076923076923px;width:106px;"><div title="1399" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">1399</div><div title="464" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">464</div><div title="309" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">309</div><div title="301" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">301</div><div title="246" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">246</div><div title="187" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">187</div><div title="169" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">169</div><div title="158" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">158</div><div title="125" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">125</div><div title="96" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">96</div><div title="85" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">85</div><div title="75" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">75</div><div title="75" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">75</div><div title="73" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">73</div><div title="46" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">46</div><div title="44" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">44</div><div title="42" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">42</div><div title="31" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">31</div><div title="31" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">31</div><div title="30" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">30</div></div></div><div style="position:absolute;left:0;top:522px;width:205.23076923076923px;height:517px;"><div style="overflow:hidden;position:absolute;left:0;width:99.23076923076923px;"><div title="Barrington" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Barrington</div><div title="Newport" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Newport</div><div title="East Greenwich" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">East Greenwich</div><div title="North Smithfield" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">North Smithfield</div><div title="Middletown" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Middletown</div><div title="Portsmouth" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Portsmouth</div><div title="Narragansett" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">Narragansett</div><div title="Scituate" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Scituate</div><div title="Exeter" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Exeter</div><div title="Warren" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Warren</div><div title="Little Compton" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">Little Compton</div><div title="West Greenwich" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">West Greenwich</div><div title="Foster" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Foster</div><div title="Glocester" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Glocester</div><div title="Charlestown" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">Charlestown</div><div title="Jamestown" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Jamestown</div><div title="Richmond" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Richmond</div><div title="Hopkinton" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">Hopkinton</div><div title="New Shoreham" class="pivotTableCellWrap cell-interactive " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:37px;">New Shoreham</div></div><div style="overflow:hidden;position:absolute;left:99.23076923076923px;width:106px;"><div title="25" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">25</div><div title="23" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">23</div><div title="22" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">22</div><div title="22" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">22</div><div title="19" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">19</div><div title="19" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">19</div><div title="18" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">18</div><div title="15" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">15</div><div title="11" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">11</div><div title="11" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">11</div><div title="9" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">9</div><div title="9" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">9</div><div title="8" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">8</div><div title="8" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">8</div><div title="7" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:38px;">7</div><div title="6" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">6</div><div title="6" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">6</div><div title="5" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:2px;padding-left:5px;color:#014f8b;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -1px 0 0 #E5E5E5, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:21px;">5</div><div title="0" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#014f8b;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:37px;">0</div></div></div></div></div><div class="floatingRowHeader" style="position: absolute; left: 0px; font-family: Verdana; font-size: 13.3333px; width: 1px; height: 0px; bottom: 9px;"></div><div class="floatingBodyCells" style="position: absolute; overflow: auto; right: 9px; font-family: Verdana; font-size: 14.6667px; left: 1px; height: 0px; bottom: 9px;"><div style="height: 0px; width: 205.231px;"></div></div></div><div class="measureElement" style="position:absolute;left:0;top:0;visibility:hidden"></div><div class="scroll-bar-div" drag-resize-disabled="true" style="height: 9px; position: absolute; left: 0px; bottom: 0px; right: 9px; visibility: visible;"><div class="scroll-bar-part-arrow unselectable" style="width: 26px; height: 9px;"><svg class="unselectable" width="26px" height="9px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(8.5, 0) scale(0.5625) rotate(-180,8,8)"></polygon></svg></div><div class="scroll-bar-part-arrow unselectable" style="width: 26px; height: 9px; left: 172px;"><svg class="unselectable" width="26px" height="9px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(8.5, 0) scale(0.5625) rotate(0,8,8)"></polygon></svg></div><div class="scroll-bar-part-bar" style="width: 138.225px; height: 9px; left: 27px;"></div></div><div class="scroll-bar-div" drag-resize-disabled="true" style="width: 9px; position: absolute; right: 0px; top: 0px; bottom: 9px; visibility: visible;"><div class="scroll-bar-part-arrow unselectable" style="width: 9px; height: 26px;"><svg class="unselectable" width="9px" height="26px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(0, 8.5) scale(0.5625) rotate(-90,8,8)"></polygon></svg></div><div class="scroll-bar-part-arrow unselectable" style="width: 9px; height: 26px; top: 335px;"><svg class="unselectable" width="9px" height="26px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(0, 8.5) scale(0.5625) rotate(90,8,8)"></polygon></svg></div><div class="scroll-bar-part-bar" style="width: 9px; height: 98.6891px; top: 75.4581px;"></div></div></div></div></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 464px; width: 1140px; transform: translate(0px, -20px); z-index: 7000;" class="popOut selected"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable selected swipeable-blocked readMode hideBorder popOut seeData noVisualTitle" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Total Positive Cases and Total Tested by Date Area chart" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><visual-container-pop-out-bar _ngcontent-beq-c13="" _nghost-beq-c20=""><div _ngcontent-beq-c20="" class="popOutBar" focus-nav-mode="Group" keyboard-shortcuts=""><div _ngcontent-beq-c20=""><button _ngcontent-beq-c20="" type="button" pbi-focus-tracker-idx="0"><i _ngcontent-beq-c20="" class="glyphicon iconBox pbi-glyph-chevronleftmedium glyph-small"></i><span _ngcontent-beq-c20="" class="menuItem" localize="VisualContainer_PopOut_BackToReportButton">Back to report</span></button></div><div _ngcontent-beq-c20="" class="divider"></div><!----><div _ngcontent-beq-c20="" class="title trimmedTextWithEllipsis" tabindex="0">Total Positive Cases and Total Tested</div><!----><div _ngcontent-beq-c20="" class="subtitle" tabindex="0">by Date</div><!----><div _ngcontent-beq-c20="" class="visualLastRefreshTime"><span _ngcontent-beq-c20="" localize="ReportAppBar_LastRefresh">LAST REFRESH:</span><span _ngcontent-beq-c20="" class="dataUpdatedTime">4/20/2020, 9:48:22 PM</span></div></div></visual-container-pop-out-bar><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 1140px; height: 404px; background-color: rgb(255, 255, 255);"><!----><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-areaChart allow-deferred-rendering" focus-nav-mode="Group" initialized=""><svg class="cartesianChart" width="1130" height="164" style="position: absolute; margin-top: 28px;"><rect class="clearCatcher" width="100%" height="100%"></rect><g class="axisGraphicsContext" transform="translate(53.671875,8)"><g class="y axis showLinesOnAxis" transform="translate(0,0)" style="fill: rgb(1, 79, 139); font-family: Verdana; font-size: 12px;"><g class="tick" transform="translate(0,132)" style="opacity: 1;"><line x2="1058.328125" y2="0" class="zero-line" style="stroke: rgb(200, 198, 196); stroke-width: 1; stroke-dasharray: 1, 5;"></line><text dy=".32em" x="-10" y="0" style="text-anchor: end; fill: rgb(1, 79, 139);">-<title>-</title></text></g><g class="tick" transform="translate(0,66.5)" style="opacity: 1;"><line x2="1058.328125" y2="0" style="stroke: rgb(200, 198, 196); stroke-width: 1; stroke-dasharray: 1, 5;"></line><text dy=".32em" x="-10" y="0" style="text-anchor: end; fill: rgb(1, 79, 139);">20K<title>20K</title></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="1058.328125" y2="0" style="stroke: rgb(200, 198, 196); stroke-width: 1; stroke-dasharray: 1, 5;"></line><text dy=".32em" x="-10" y="0" style="text-anchor: end; fill: rgb(1, 79, 139);">40K<title>40K</title></text></g><path class="domain" d="M1058.328125,1H0V132H1058.328125"></path></g><g class="y axis" transform="translate(1058.328125,0)"></g><text class="yAxisLabel" transform="rotate(-90)" y="-56.671875" x="-66.5" dy="1em" style="text-anchor: middle; fill: rgb(1, 79, 139); font-family: Verdana; font-size: 12px;">Total Positive Cases …<title>Total Positive Cases and Total Tested</title></text></g><svg class="svgScrollable" style="overflow: hidden;" x="0" width="1130" height="164"><g class="axisGraphicsContext lineChart" transform="translate(53.671875,8)"><g class="x axis hideLinesOnAxis" transform="translate(0,133)"><g class="tick" transform="translate(227.86037323470075,0)" style="opacity: 1;"><line y2="-133" x2="0" style="stroke: rgb(200, 198, 196); stroke-width: 1; stroke-dasharray: 1, 5;"></line><text dy="1em" y="3" x="0" dx="0em" transform="rotate(0)" style="text-anchor: middle; fill: rgb(1, 79, 139); font-family: Verdana; font-size: 12px;">Mar 2020<title>Mar 2020</title></text></g><g class="tick" transform="translate(746.6753005211835,0)" style="opacity: 1;"><line y2="-133" x2="0" style="stroke: rgb(200, 198, 196); stroke-width: 1; stroke-dasharray: 1, 5;"></line><text dy="1em" y="3" x="0" dx="0em" transform="rotate(0)" style="text-anchor: middle; fill: rgb(1, 79, 139); font-family: Verdana; font-size: 12px;">Apr 2020<title>Apr 2020</title></text></g><path class="domain" d="M10,0V0H1048.328125V0"></path></g><rect class="scale-detector" width="1" height="1" stroke-width="0px" fill="none"></rect><svg class="lineChartSVG" height="133" width="1058.328125"><g class="forecast-line-layer"></g><defs></defs><rect class="tooltip-overlay" x="0" width="1058.328125" height="133"></rect><g aria-label="Plot area" class="mainGraphicsContext setFocusRing" tabindex="0" focusable="true"><g class="selected-markers"></g><path class="catArea" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.99345L261.377353732347,131.99345L278.1358439811702,131.99345L294.8943342299933,131.990175L311.6528244788164,131.990175L328.41131472763954,131.990175L345.1698049764627,131.990175L361.2300247982515,131.983625L377.98851504707466,131.983625L394.7470052958978,131.983625L411.5054955447209,131.95415L428.263985793544,131.93449999999999L445.02247604236715,131.93449999999999L461.78096629119034,131.931225L478.5394565400134,131.924675L495.2979467888366,131.891925L512.0564370376597,131.85590000000002L528.8149272864828,131.82315L545.573417535306,131.78385L562.3319077841292,131.728175L579.0903980329522,131.65284999999997L595.8488882817753,131.5939L612.6073785305985,131.5677L629.3658687794217,131.459625L646.1243590282448,131.335175L662.8828492770679,131.217275L679.6413395258911,131.040425L696.3998297747141,130.68672500000002L713.1583200235373,130.4018L729.9168102723605,130.149625L746.6753005211835,129.85487500000002L763.4337907700068,129.67802500000002L780.1922810188298,129.36690000000002L796.950771267653,128.983725L813.7092615164762,128.45972500000002L830.4677517652992,127.975025L847.2262420141224,127.25125L863.9847322629455,126.344075L880.7432225117686,125.400875L897.5017127605918,124.307025L914.260203009415,123.272125L931.018693258238,122.25359999999999L947.7771835070612,121.352975L964.5356737558843,120.5244L981.2941640047075,119.518975L998.0526542535306,118.32032500000001L1014.8111445023537,117.337825L1031.5696347511769,116.440475L1048.328125,115.33025L1048.328125,132L1031.5696347511769,132L1014.8111445023537,132L998.0526542535306,132L981.2941640047075,132L964.5356737558843,132L947.7771835070612,132L931.018693258238,132L914.260203009415,132L897.5017127605918,132L880.7432225117686,132L863.9847322629455,132L847.2262420141224,132L830.4677517652992,132L813.7092615164762,132L796.950771267653,132L780.1922810188298,132L763.4337907700068,132L746.6753005211835,132L729.9168102723605,132L713.1583200235373,132L696.3998297747141,132L679.6413395258911,132L662.8828492770679,132L646.1243590282448,132L629.3658687794217,132L612.6073785305985,132L595.8488882817753,132L579.0903980329522,132L562.3319077841292,132L545.573417535306,132L528.8149272864828,132L512.0564370376597,132L495.2979467888366,132L478.5394565400134,132L461.78096629119034,132L445.02247604236715,132L428.263985793544,132L411.5054955447209,132L394.7470052958978,132L377.98851504707466,132L361.2300247982515,132L345.1698049764627,132L328.41131472763954,132L311.6528244788164,132L294.8943342299933,132L278.1358439811702,132L261.377353732347,132L244.61886348352388,132L227.86037323470075,132L211.1018829858776,132L194.3433927370545,132L177.58490248823134,132L160.82641223940817,132L144.0679219905851,132L127.30943174176194,132L110.5509414929388,132L93.79245124411567,132L77.03396099529255,132L60.2754707464694,132L43.51698049764627,132L26.758490248823136,132L10,132Z" style="fill: rgb(254, 198, 0); fill-opacity: 0.4;"></path><path class="catArea" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.990175L261.377353732347,131.983625L278.1358439811702,131.970525L294.8943342299933,131.950875L311.6528244788164,131.911575L328.41131472763954,131.869L345.1698049764627,131.79695L361.2300247982515,131.7511L377.98851504707466,131.69215L394.7470052958978,131.59062500000002L411.5054955447209,131.42360000000002L428.263985793544,131.243475L445.02247604236715,130.961825L461.78096629119034,130.542625L478.5394565400134,130.31664999999998L495.2979467888366,129.87125L512.0564370376597,129.40947500000001L528.8149272864828,128.56452500000003L545.573417535306,127.8997L562.3319077841292,127.221775L579.0903980329522,126.92375L595.8488882817753,126.32115L612.6073785305985,125.75130000000001L629.3658687794217,124.8605L646.1243590282448,123.85835L662.8828492770679,122.8955L679.6413395258911,121.73942500000001L696.3998297747141,120.24929999999999L713.1583200235373,119.01790000000001L729.9168102723605,117.6031L746.6753005211835,115.40557500000001L763.4337907700068,113.77135L780.1922810188298,111.0793L796.950771267653,108.47895000000001L813.7092615164762,104.22145L830.4677517652992,98.28715000000001L847.2262420141224,92.26114999999999L863.9847322629455,86.11725000000001L880.7432225117686,80.1764L897.5017127605918,71.088275L914.260203009415,64.06995L931.018693258238,57.90312499999999L947.7771835070612,53.64235L964.5356737558843,46.97117500000001L981.2941640047075,40.178824999999996L998.0526542535306,31.257725000000004L1014.8111445023537,24.540699999999998L1031.5696347511769,18.213399999999996L1048.328125,10.562999999999994L1048.328125,132L1031.5696347511769,132L1014.8111445023537,132L998.0526542535306,132L981.2941640047075,132L964.5356737558843,132L947.7771835070612,132L931.018693258238,132L914.260203009415,132L897.5017127605918,132L880.7432225117686,132L863.9847322629455,132L847.2262420141224,132L830.4677517652992,132L813.7092615164762,132L796.950771267653,132L780.1922810188298,132L763.4337907700068,132L746.6753005211835,132L729.9168102723605,132L713.1583200235373,132L696.3998297747141,132L679.6413395258911,132L662.8828492770679,132L646.1243590282448,132L629.3658687794217,132L612.6073785305985,132L595.8488882817753,132L579.0903980329522,132L562.3319077841292,132L545.573417535306,132L528.8149272864828,132L512.0564370376597,132L495.2979467888366,132L478.5394565400134,132L461.78096629119034,132L445.02247604236715,132L428.263985793544,132L411.5054955447209,132L394.7470052958978,132L377.98851504707466,132L361.2300247982515,132L345.1698049764627,132L328.41131472763954,132L311.6528244788164,132L294.8943342299933,132L278.1358439811702,132L261.377353732347,132L244.61886348352388,132L227.86037323470075,132L211.1018829858776,132L194.3433927370545,132L177.58490248823134,132L160.82641223940817,132L144.0679219905851,132L127.30943174176194,132L110.5509414929388,132L93.79245124411567,132L77.03396099529255,132L60.2754707464694,132L43.51698049764627,132L26.758490248823136,132L10,132Z" style="fill: rgb(1, 79, 139); fill-opacity: 0.4;"></path><path class="line" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.99345L261.377353732347,131.99345L278.1358439811702,131.99345L294.8943342299933,131.990175L311.6528244788164,131.990175L328.41131472763954,131.990175L345.1698049764627,131.990175L361.2300247982515,131.983625L377.98851504707466,131.983625L394.7470052958978,131.983625L411.5054955447209,131.95415L428.263985793544,131.93449999999999L445.02247604236715,131.93449999999999L461.78096629119034,131.931225L478.5394565400134,131.924675L495.2979467888366,131.891925L512.0564370376597,131.85590000000002L528.8149272864828,131.82315L545.573417535306,131.78385L562.3319077841292,131.728175L579.0903980329522,131.65284999999997L595.8488882817753,131.5939L612.6073785305985,131.5677L629.3658687794217,131.459625L646.1243590282448,131.335175L662.8828492770679,131.217275L679.6413395258911,131.040425L696.3998297747141,130.68672500000002L713.1583200235373,130.4018L729.9168102723605,130.149625L746.6753005211835,129.85487500000002L763.4337907700068,129.67802500000002L780.1922810188298,129.36690000000002L796.950771267653,128.983725L813.7092615164762,128.45972500000002L830.4677517652992,127.975025L847.2262420141224,127.25125L863.9847322629455,126.344075L880.7432225117686,125.400875L897.5017127605918,124.307025L914.260203009415,123.272125L931.018693258238,122.25359999999999L947.7771835070612,121.352975L964.5356737558843,120.5244L981.2941640047075,119.518975L998.0526542535306,118.32032500000001L1014.8111445023537,117.337825L1031.5696347511769,116.440475L1048.328125,115.33025" style="stroke: rgb(254, 198, 0); stroke-opacity: 1; stroke-width: 3; stroke-linejoin: round;"></path><path class="line" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.990175L261.377353732347,131.983625L278.1358439811702,131.970525L294.8943342299933,131.950875L311.6528244788164,131.911575L328.41131472763954,131.869L345.1698049764627,131.79695L361.2300247982515,131.7511L377.98851504707466,131.69215L394.7470052958978,131.59062500000002L411.5054955447209,131.42360000000002L428.263985793544,131.243475L445.02247604236715,130.961825L461.78096629119034,130.542625L478.5394565400134,130.31664999999998L495.2979467888366,129.87125L512.0564370376597,129.40947500000001L528.8149272864828,128.56452500000003L545.573417535306,127.8997L562.3319077841292,127.221775L579.0903980329522,126.92375L595.8488882817753,126.32115L612.6073785305985,125.75130000000001L629.3658687794217,124.8605L646.1243590282448,123.85835L662.8828492770679,122.8955L679.6413395258911,121.73942500000001L696.3998297747141,120.24929999999999L713.1583200235373,119.01790000000001L729.9168102723605,117.6031L746.6753005211835,115.40557500000001L763.4337907700068,113.77135L780.1922810188298,111.0793L796.950771267653,108.47895000000001L813.7092615164762,104.22145L830.4677517652992,98.28715000000001L847.2262420141224,92.26114999999999L863.9847322629455,86.11725000000001L880.7432225117686,80.1764L897.5017127605918,71.088275L914.260203009415,64.06995L931.018693258238,57.90312499999999L947.7771835070612,53.64235L964.5356737558843,46.97117500000001L981.2941640047075,40.178824999999996L998.0526542535306,31.257725000000004L1014.8111445023537,24.540699999999998L1031.5696347511769,18.213399999999996L1048.328125,10.562999999999994" style="stroke: rgb(1, 79, 139); stroke-opacity: 1; stroke-width: 3; stroke-linejoin: round;"></path><path class="interactivity-line" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.99345L261.377353732347,131.99345L278.1358439811702,131.99345L294.8943342299933,131.990175L311.6528244788164,131.990175L328.41131472763954,131.990175L345.1698049764627,131.990175L361.2300247982515,131.983625L377.98851504707466,131.983625L394.7470052958978,131.983625L411.5054955447209,131.95415L428.263985793544,131.93449999999999L445.02247604236715,131.93449999999999L461.78096629119034,131.931225L478.5394565400134,131.924675L495.2979467888366,131.891925L512.0564370376597,131.85590000000002L528.8149272864828,131.82315L545.573417535306,131.78385L562.3319077841292,131.728175L579.0903980329522,131.65284999999997L595.8488882817753,131.5939L612.6073785305985,131.5677L629.3658687794217,131.459625L646.1243590282448,131.335175L662.8828492770679,131.217275L679.6413395258911,131.040425L696.3998297747141,130.68672500000002L713.1583200235373,130.4018L729.9168102723605,130.149625L746.6753005211835,129.85487500000002L763.4337907700068,129.67802500000002L780.1922810188298,129.36690000000002L796.950771267653,128.983725L813.7092615164762,128.45972500000002L830.4677517652992,127.975025L847.2262420141224,127.25125L863.9847322629455,126.344075L880.7432225117686,125.400875L897.5017127605918,124.307025L914.260203009415,123.272125L931.018693258238,122.25359999999999L947.7771835070612,121.352975L964.5356737558843,120.5244L981.2941640047075,119.518975L998.0526542535306,118.32032500000001L1014.8111445023537,117.337825L1031.5696347511769,116.440475L1048.328125,115.33025" style="stroke-width: 10; stroke-linejoin: round;"></path><path class="interactivity-line" d="M10,132L26.758490248823136,132L43.51698049764627,132L60.2754707464694,132L77.03396099529255,132L93.79245124411567,132L110.5509414929388,132L127.30943174176194,132L144.0679219905851,132L160.82641223940817,132L177.58490248823134,132L194.3433927370545,132L211.1018829858776,131.996725L227.86037323470075,131.99345L244.61886348352388,131.990175L261.377353732347,131.983625L278.1358439811702,131.970525L294.8943342299933,131.950875L311.6528244788164,131.911575L328.41131472763954,131.869L345.1698049764627,131.79695L361.2300247982515,131.7511L377.98851504707466,131.69215L394.7470052958978,131.59062500000002L411.5054955447209,131.42360000000002L428.263985793544,131.243475L445.02247604236715,130.961825L461.78096629119034,130.542625L478.5394565400134,130.31664999999998L495.2979467888366,129.87125L512.0564370376597,129.40947500000001L528.8149272864828,128.56452500000003L545.573417535306,127.8997L562.3319077841292,127.221775L579.0903980329522,126.92375L595.8488882817753,126.32115L612.6073785305985,125.75130000000001L629.3658687794217,124.8605L646.1243590282448,123.85835L662.8828492770679,122.8955L679.6413395258911,121.73942500000001L696.3998297747141,120.24929999999999L713.1583200235373,119.01790000000001L729.9168102723605,117.6031L746.6753005211835,115.40557500000001L763.4337907700068,113.77135L780.1922810188298,111.0793L796.950771267653,108.47895000000001L813.7092615164762,104.22145L830.4677517652992,98.28715000000001L847.2262420141224,92.26114999999999L863.9847322629455,86.11725000000001L880.7432225117686,80.1764L897.5017127605918,71.088275L914.260203009415,64.06995L931.018693258238,57.90312499999999L947.7771835070612,53.64235L964.5356737558843,46.97117500000001L981.2941640047075,40.178824999999996L998.0526542535306,31.257725000000004L1014.8111445023537,24.540699999999998L1031.5696347511769,18.213399999999996L1048.328125,10.562999999999994" style="stroke-width: 10; stroke-linejoin: round;"></path><g class="cat"></g><g class="cat"></g><circle class="focus-element setFocusRing" tabindex="0" focusable="true" aria-label="Date 2/17/2020. Total Positive Cases -." cx="10" cy="132" r="3.5" style="fill: none;"></circle></g></svg><g class="hover-line"><line x1="780.1922810188298" x2="780.1922810188298" y1="0" y2="133" style="opacity: 1e-06; stroke: rgb(96, 94, 92);"></line></g><svg class="trend-line-layer" height="133" width="1058.328125"></svg></g><g class="labelBackgroundGraphicsContext" transform="translate(53.671875,8)"></g><g class="labelGraphicsContext" transform="translate(53.671875,8)"></g></svg></svg><div class="legend flex-row flex-justify-content-start flex-align-items-center" tabindex="0" focus-nav-mode="Hierarchy" aria-label="Legend" style="position: absolute; height: 28px; width: 1130px;"><div class="clearCatcher" width="100%" height="100%" style="position: absolute; width: 100%; height: 100%; z-index: 1;"></div><div class="legend-item-container flex-align-items-center flex-order-third flex-justify-context-start flex-row" width="1130" style="z-index: 2;"><div class="legend-item flex-justify-content-center flex-align-items-center" tabindex="0"><svg class="legend-item-svg" height="28" width="32.6"><path class="legend-icon" transform="translate(16.3,14.56) scale(1)" stroke-width="0" style="fill: rgb(254, 198, 0); stroke: rgb(254, 198, 0); stroke-linejoin: round;"><title>Total Positive Cases</title><title>Total Positive Cases</title><title>Total Positive Cases</title><title>Total Positive Cases</title><title>Total Positive Cases</title></path><path class="legend-icon-line" transform="translate(15.5,14.56)" d="M -15.5 0 L 15.5 0" stroke-width="2" fill="none" style="stroke: rgb(254, 198, 0);"></path></svg><text class="legend-item-text" title="Total Positive Cases" style="text-overflow: ellipsis; white-space: pre; color: rgb(96, 94, 92); font-family: Verdana; font-size: 12px; padding-left: 1px; padding-right: 4.8px;">Total Positive Cases</text></div><div class="legend-item flex-justify-content-center flex-align-items-center" tabindex="0"><svg class="legend-item-svg" height="28" width="32.6"><path class="legend-icon" transform="translate(16.3,14.56) scale(1)" stroke-width="0" style="fill: rgb(1, 79, 139); stroke: rgb(1, 79, 139); stroke-linejoin: round;"><title>Total Tested</title><title>Total Tested</title><title>Total Tested</title><title>Total Tested</title><title>Total Tested</title></path><path class="legend-icon-line" transform="translate(15.5,14.56)" d="M -15.5 0 L 15.5 0" stroke-width="2" fill="none" style="stroke: rgb(1, 79, 139);"></path></svg><text class="legend-item-text" title="Total Tested" style="text-overflow: ellipsis; white-space: pre; color: rgb(96, 94, 92); font-family: Verdana; font-size: 12px; padding-left: 1px; padding-right: 4.8px;">Total Tested</text></div></div></div></div></visual-modern><!----><detail-visual-modern _ngcontent-beq-c13="" _nghost-beq-c22=""><div _ngcontent-beq-c22="" class="detailVisual" focus-nav-mode="Group" role="document"><!----><visual-modern _ngcontent-beq-c22="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-pivotTable allow-deferred-rendering" aria-hidden="false" initialized=""><div class="pivotTableContainer"><div style="position:absolute;left:0;top:0;visibility:hidden;"></div><div style="position: relative; width: 1110px; height: 182px;" tabindex="0" aria-label="Grid" class="pivotTable"><div class="innerContainer" style="position:absolute;left:0;top:0;right:0;bottom:0"><div class="corner" drag-resize-disabled="true" style="font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px; height: 29px; width: 73px;"><div style="position: absolute; overflow: hidden; width: 73px; top: 0px; left: 0px;"><div title="Date" class="pivotTableCellWrap cell-interactive " style="padding: 1px 5px 10px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) 0px -1px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 29px;">Date<div class="powervisuals-glyph sort-icon caret-up future " style="font-size:9.466666666666665px;bottom:2px;">&nbsp;</div></div></div></div><div class="columnHeaders" style="position: absolute; overflow: auto; right: 9px; top: 0px; font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px; left: 73px;"><div drag-resize-disabled="true" style="height: 29px; width: 1028px;"><div style="position: absolute; overflow: hidden; top: 0px; left: 0px; width: 124px;"><div title="Total Positive Cases" class="pivotTableCellWrap cell-interactive " style="padding: 1px 5px 10px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) 0px -1px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 29px;">Total Positive Cases<div class="powervisuals-glyph sort-icon caret-down future " style="font-size:9.466666666666665px;bottom:2px;">&nbsp;</div></div></div><div style="position: absolute; overflow: hidden; top: 0px; left: 124px; width: 80px;"><div title="Total Tested" class="pivotTableCellWrap cell-interactive " style="padding: 1px 5px 10px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) 0px -1px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 29px;">Total Tested<div class="powervisuals-glyph sort-icon caret-down future " style="font-size:9.466666666666665px;bottom:2px;">&nbsp;</div></div></div></div></div><div class="rowHeaders" style="position: absolute; overflow: auto; left: 0px; bottom: 0px; font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px; top: 29px;"><div drag-resize-disabled="true" style="width: 73px; height: 1260px;"><div style="position: absolute; overflow: hidden; top: 60px; width: 73px;"><div title="2/20/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(238, 237, 237); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/20/2020</div></div><div style="position: absolute; overflow: hidden; top: 80px; width: 73px;"><div title="2/21/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/21/2020</div></div><div style="position: absolute; overflow: hidden; top: 100px; width: 73px;"><div title="2/22/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(238, 237, 237); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/22/2020</div></div><div style="position: absolute; overflow: hidden; top: 120px; width: 73px;"><div title="2/23/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/23/2020</div></div><div style="position: absolute; overflow: hidden; top: 140px; width: 73px;"><div title="2/24/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(238, 237, 237); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/24/2020</div></div><div style="position: absolute; overflow: hidden; top: 160px; width: 73px;"><div title="2/25/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/25/2020</div></div><div style="position: absolute; overflow: hidden; top: 180px; width: 73px;"><div title="2/26/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(238, 237, 237); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/26/2020</div></div><div style="position: absolute; overflow: hidden; top: 200px; width: 73px;"><div title="2/27/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/27/2020</div></div><div style="position: absolute; overflow: hidden; top: 220px; width: 73px;"><div title="2/28/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(238, 237, 237); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/28/2020</div></div><div style="position: absolute; overflow: hidden; top: 240px; width: 73px;"><div title="2/29/2020" class="pivotTableCellWrap cell-interactive " style="padding: 1px 6px 1px 5px; color: rgb(37, 36, 35); background-color: rgb(255, 255, 255); box-shadow: rgb(17, 141, 255) -1px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset, black 0px 0px 0px 0px inset; box-sizing: border-box; height: 20px;">2/29/2020</div></div></div></div><div class="bodyCells" style="position: absolute; overflow: auto; left: 73px; top: 29px; right: 9px; bottom: 0px; box-sizing: border-box; font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px;"><div style="position: absolute; overflow: hidden; width: 1028px; height: 1260px;"><div style="position:absolute;left:0;top:0;width:204px;height:400px;"><div style="overflow:hidden;position:absolute;left:0;width:124px;"><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="1" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">1</div><div title="2" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">2</div><div title="2" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">2</div><div title="2" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">2</div><div title="2" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">2</div><div title="3" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">3</div><div title="3" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">3</div><div title="3" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">3</div></div><div style="overflow:hidden;position:absolute;left:124px;width:80px;"><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="-" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">-</div><div title="1" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">1</div><div title="2" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">2</div><div title="3" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">3</div><div title="5" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">5</div><div title="9" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">9</div><div title="15" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">15</div><div title="27" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#FFFFFF;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">27</div><div title="40" class="pivotTableCellWrap cell-interactive tablixAlignRight " style="padding-top:1px;padding-right:5px;padding-bottom:1px;padding-left:5px;color:#252423;background-color:#EEEDED;box-shadow:inset 0px 0 0 0 black, inset -0px 0 0 0 black, inset 0 -0px 0 0 black, inset 0 0px 0 0 black;position:relative;box-sizing:border-box;height:20px;">40</div></div></div></div></div><div class="floatingRowHeader" style="position: absolute; left: 0px; font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px; width: 73px; height: 0px; bottom: 0px;"></div><div class="floatingBodyCells" style="position: absolute; overflow: auto; right: 9px; font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px; left: 73px; height: 0px; bottom: 0px;"><div style="height: 0px; width: 1028px;"></div></div></div><div class="measureElement" style="position:absolute;left:0;top:0;visibility:hidden"></div><div class="scroll-bar-div" drag-resize-disabled="true" style="height: 0px; position: absolute; left: 0px; bottom: 0px; right: 9px; visibility: hidden;"><div class="scroll-bar-part-arrow unselectable" style="width: 26px; height: 0px;"><svg class="unselectable" width="26px" height="0px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(13, 0) scale(0) rotate(-180,8,8)"></polygon></svg></div><div class="scroll-bar-part-arrow unselectable" style="width: 26px; height: 0px; left: 1075px;"><svg class="unselectable" width="26px" height="0px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(13, 0) scale(0) rotate(0,8,8)"></polygon></svg></div><div class="scroll-bar-part-bar" style="width: 1047px; height: 0px; left: 27px;"></div></div><div class="scroll-bar-div" drag-resize-disabled="true" style="width: 9px; position: absolute; right: 0px; top: 0px; bottom: 9px;"><div class="scroll-bar-part-arrow unselectable" style="width: 9px; height: 26px;"><svg class="unselectable" width="9px" height="26px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(0, 8.5) scale(0.5625) rotate(-90,8,8)"></polygon></svg></div><div class="scroll-bar-part-arrow unselectable" style="width: 9px; height: 26px; top: 147px;"><svg class="unselectable" width="9px" height="26px" style="position: absolute; left: 0px; top: 0px;"><polygon points="3,3 6,3 13,8 6,13 3,13 10,8" fill="#404040" class="unselectable" transform="translate(0, 8.5) scale(0.5625) rotate(90,8,8)"></polygon></svg></div><div class="scroll-bar-part-bar" style="width: 9px; height: 14.45px; top: 33.1389px;"></div></div></div></div></div></visual-modern><!----></div></detail-visual-modern><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 79px; width: 273px; transform: translate(0px, 365px); z-index: 6000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="New Fatalities Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 59px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="New Fatalities" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">New Fatalities</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="21.65625" class="card" tabindex="0" focusable="true" aria-label="New Fatalities 5."><g transform="translate(131.5,30.161458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">5</tspan><title>5</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 82px; width: 273px; transform: translate(0px, 301px); z-index: 5000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Total Fatalities Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 62px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Total Fatalities" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">Total Fatalities</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="24.65625" class="card" tabindex="0" focusable="true" aria-label="Total Fatalities 155."><g transform="translate(131.5,31.661458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">155</tspan><title>155</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 81px; width: 273px; transform: translate(0px, 238px); z-index: 4000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="New Positive Cases Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 61px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="New Positive Cases" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">New Positive Cases</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="23.65625" class="card" tabindex="0" focusable="true" aria-label="New Positive Cases 339."><g transform="translate(131.5,31.161458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">339</tspan><title>339</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 81px; width: 273px; transform: translate(0px, 174px); z-index: 3000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Total Positive Cases Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 61px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Total Positive Cases" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">Total Positive Cases</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="23.65625" class="card" tabindex="0" focusable="true" aria-label="Total Positive Cases 5,090."><g transform="translate(131.5,31.161458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">5,090</tspan><title>5,090</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 82px; width: 273px; transform: translate(0px, 110px); z-index: 2000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Total Negative Cases Card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 273px; height: 62px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Total Negative Cases" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); text-align: center; height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 263px;">Total Negative Cases</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-card allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="caption"></div><svg width="263" height="24.65625" class="card" tabindex="0" focusable="true" aria-label="Total Negative Cases 31,990."><g transform="translate(131.5,31.661458333333332)"><text class="value" style="text-anchor: middle; fill: rgb(254, 198, 0); font-family: Verdana; font-size: 46.6667px; white-space: pre;"><tspan x="0" dy="0">31,990</tspan><title>31,990</title></text></g><g></g></svg></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 79px; width: 646px; transform: translate(277px, 365px); z-index: 11000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable droppableElement ui-droppable readMode hideBorder" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label="Hospitalization Data Multi-row card" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 646px; height: 59px; background-color: rgb(1, 79, 139);"><!----><div _ngcontent-beq-c13="" class="visualTitle themableBackgroundColor themableColor" title="Hospitalization Data" style="visibility: visible; font-size: 17pt; font-family: Verdana; color: rgb(255, 255, 255); background-color: rgb(1, 79, 139); height: 27.3438px;"><!----><div _ngcontent-beq-c13=""><div _ngcontent-beq-c13="" class="preTextWithEllipsis" style="width: 636px;">Hospitalization Data</div></div></div><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-multiRowCard allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="multiRowCard" style="height: 21.6563px;"><div class="scroll-wrapper scrollbar-inner" style="position: relative;"><div class="scrollbar-inner scroll-content scroll-scrolly_visible" style="margin-bottom: 0px; margin-right: 0px; height: 22px;"><div class="scrollRegion" height="53" style="height: 53px;"><div class="visibleGroup" style="transform: translate(0px, 0px);"><div class="row" style="margin-bottom: 0px;"><div class="card" tabindex="0" aria-label="Current Hospitalized 272. Currently in ICU 62. On Ventilator 45. Hospital Discharges 267. 1 of 1."><div class="cardItemContainer" style="padding-right: 20px; width: 25%;"><div class="caption" title="272" style="line-height: 35.3438px; font-size: 29.3333px; font-family: Verdana; color: rgb(254, 198, 0);">272</div><div class="details" title="Current Hospitalized" style="font-size: 14.6667px; font-family: Verdana; line-height: 17.6719px; color: rgb(255, 255, 255);">Current Hospitalized</div></div><div class="cardItemContainer" style="padding-right: 20px; width: 25%;"><div class="caption" title="62" style="line-height: 35.3438px; font-size: 29.3333px; font-family: Verdana; color: rgb(254, 198, 0);">62</div><div class="details" title="Currently in ICU" style="font-size: 14.6667px; font-family: Verdana; line-height: 17.6719px; color: rgb(255, 255, 255);">Currently in ICU</div></div><div class="cardItemContainer" style="padding-right: 20px; width: 25%;"><div class="caption" title="45" style="line-height: 35.3438px; font-size: 29.3333px; font-family: Verdana; color: rgb(254, 198, 0);">45</div><div class="details" title="On Ventilator" style="font-size: 14.6667px; font-family: Verdana; line-height: 17.6719px; color: rgb(255, 255, 255);">On Ventilator</div></div><div class="cardItemContainer" style="padding-right: 0px; width: 25%;"><div class="caption" title="267" style="line-height: 35.3438px; font-size: 29.3333px; font-family: Verdana; color: rgb(254, 198, 0);">267</div><div class="details" title="Hospital Discharges" style="font-size: 14.6667px; font-family: Verdana; line-height: 17.6719px; color: rgb(255, 255, 255);">Hospital Discharges</div></div></div></div></div></div></div><div class="scroll-element scroll-x scroll-scrolly_visible" drag-resize-disabled="true"><div class="scroll-element_outer">    <div class="scroll-element_size"></div>    <div class="scroll-element_track"></div>    <div class="scroll-bar" style="width: 88px;"></div></div></div><div class="scroll-element scroll-y scroll-scrolly_visible" drag-resize-disabled="true"><div class="scroll-element_outer">    <div class="scroll-element_size"></div>    <div class="scroll-element_track"></div>    <div class="scroll-bar" style="height: 9px; top: 0px;"></div></div></div></div></div></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern><visual-container-modern class="visual-container-component" _nghost-beq-c13=""><transform _ngcontent-beq-c13="" _nghost-beq-c17="" drag-resize-disabled="true" preserve-aspect-ratio="false" style="height: 84px; width: 663px; transform: translate(260px, -20px); z-index: 10000;"><div _ngcontent-beq-c13="" class="visualContainer unselectable readMode hideBorder noVisualTitle droppableElement ui-droppable" skip-children-focus="" toolbar-anchor="" tabindex="0" aria-label=" Text box" touch-action="pan-y pan-x"><div _ngcontent-beq-c13="" class="visualContainerBorder themableBorderColor"></div><div _ngcontent-beq-c13="" class="visualContainerScreen"></div><!----><!----><!----><!----><!----><!----><div _ngcontent-beq-c13="" class="vcBody themableBackgroundColor themableBorderColorSolid " style="width: 663px; height: 64px; background-color: rgb(1, 79, 139);"><!----><!----><visual-modern _ngcontent-beq-c13="" _nghost-beq-c21=""><div _ngcontent-beq-c21="" class="visual visual-textbox allow-deferred-rendering" focus-nav-mode="Group" initialized=""><div class="scrollWrapper" tabindex="0" role="document" focus-nav-mode="Browser" style="height: 54px; overflow: hidden auto;"><div class="textbox" style="color: rgb(37, 36, 35); font-family: &quot;Segoe UI&quot;, wf_segoe-ui_normal, helvetica, arial, sans-serif; font-size: 13.3333px;"><p style="text-align: center;"><span class="textRun" style="font-family: Verdana; font-size: 24pt; font-weight: bold; color: rgb(255, 255, 255);">Rhode Island Department of Health COVID-19 Data Tracker</span></p></div></div></div></visual-modern><!----><!----><!----><!----></div><!----><!----></div></transform></visual-container-modern></visual-container-repeat></div><!----></div><!----><div class="ResizeSensor ResizeSensor__resizeTriggers"><div class="ResizeSensor__expandTrigger"><div style="width: 1141px; height: 465px;"></div></div><div class="ResizeSensor__contractTrigger"></div></div></div><!----></div></div></explore-canvas-modern></div></exploration><!----><!----><!----><!----></div><!----></div></exploration-host></div><!----><!----></div></exploration-container-legacy><!----></exploration-container><!----></div></div></div></div><!----><!----></div><div class="logoBarWrapper" ng-keydown="keyDown($event)" tabindex="0"><!----><logo-bar ng-if="showLogoBar" _nghost-beq-c2="" ng-version="8.2.6"><div _ngcontent-beq-c2="" class="unselectable"><div _ngcontent-beq-c2="" class="logoBar"><div _ngcontent-beq-c2="" class="logo"><!----><!----><a _ngcontent-beq-c2="" tab-order-child="" target="_blank" href="https://go.microsoft.com/fwlink/?LinkID=722383&amp;clcid=0x409"><span _ngcontent-beq-c2="" class="text" localize="Embed_Logobar_MarketingText">Microsoft Power BI</span></a><logo-bar-navigation _ngcontent-beq-c2="" is-full-screen="isFullScreen()" is-small-screen="isSmallScreen" mail-to-link="mailToLink" show-about-dialog="showAboutDialog()" show-full-screen="showFullScreen" toggle-full-screen-mode="toggleFullScreenMode()"><span class="navigation-wrapper navigation-wrapper-big" keyboard-shortcuts="ctrl-F6"><a><i class="glyphicon glyph-small pbi-glyph-chevronleftmedium middleIcon inactive pbi-focus-outline" focus-element="" tabindex="0" title="Previous Page" hidden=""></i></a><!----><a class="middleText" hidden=""><!----><span><span class="innerText">1</span><span class="innerText" localize="Of">of</span><span class="innerText">1</span></span><!----></a><a><i class="glyphicon glyph-small pbi-glyph-chevronrightmedium middleIcon pbi-focus-outline inactive" focus-element="" tabindex="0" title="Next Page" hidden=""></i></a><!----></span><!----><!----><section class="navFlyout" flyout-visible="false" id="flyoutElement" style="height: 69px;"><div class="wrapper"><div class="textContainer"><div class="flyoutSections"><ul class="list"><!----><li class="sectionItemHidden animated"><a class="sectionItem selected" title="Page 1">Page 1</a></li></ul></div></div></div><div class="arrow"></div></section></logo-bar-navigation><span _ngcontent-beq-c2="" class="socialSharing"><!----><span _ngcontent-beq-c2=""><logo-bar-social-sharing _ngcontent-beq-c2="" _nghost-beq-c3=""><!----><span _ngcontent-beq-c3="" class="navigation-wrapper"><!----><!----><!----><!----><button _ngcontent-beq-c3="" localizetooltip="ReportEmbed_Logobar_Share" title="Share"><i _ngcontent-beq-c3="" class="glyphicon pbi-glyph-share glyph-small socialIcon"></i></button></span><!----><!----></logo-bar-social-sharing></span><!----><!----><!----><button _ngcontent-beq-c2="" id="fullScreenIcon"><!----><i _ngcontent-beq-c2="" class="glyphicon glyph-small pbi-glyph-fullscreen icon" localizetooltip="ReportEmbed_Logobar_FullScreen_Enter" title="Enter Full Screen Mode"></i><!----></button></span></div></div></div></logo-bar><!----></div></div></ui-view>
+        <root ng-version="8.2.6"><!----></root>
+    </div>
+
+    <script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['globalize.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./globalize.min.js(1).download" defer=""></script>
+<script type="text/javascript">this.parseTimeMarkers['globalize.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['globalize.culture.en-US.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./globalize.culture.en-US.js.download" defer=""></script>
+<script type="text/javascript">this.parseTimeMarkers['globalize.culture.en-US.js'].end = Date.now();</script>    <script>
+
+        powerbi.common.localizedStrings = '';
+    </script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['hash-manifest.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./hash-manifest.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['hash-manifest.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['reportembed.externals.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./reportembed.externals.bundle.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['reportembed.externals.bundle.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['powerbiportal.dependencies.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./powerbiportal.dependencies.bundle.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['powerbiportal.dependencies.bundle.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['reportembed.common.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./reportembed.common.bundle.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['reportembed.common.bundle.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['powerbiportal.explore.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./powerbiportal.explore.bundle.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['powerbiportal.explore.bundle.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['reportembed.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./reportembed.bundle.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['reportembed.bundle.min.js'].end = Date.now();</script><script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {};this.parseTimeMarkers['reportEmbed.min.js'] = { nominalStart: Date.now(), start: Date.now()};</script><script type="text/javascript" src="./reportEmbed.min.js.download"></script>
+<script type="text/javascript">this.parseTimeMarkers['reportEmbed.min.js'].end = Date.now();</script>
+
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><div id="svgProviderContainer" style="display: none;"></div><span></span><svg style="height: 0px; width: 0px; position: absolute;"><text visibility="hidden" font-family="&#39;Segoe UI Semibold&#39;, wf_segoe-ui_semibold, helvetica, arial, sans-serif" font-size="12px" white-space="nowrap">M</text></svg><div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"><div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div></div><style type="text/css" media="print"></style><div class="tooltip-container themeableElement right" style="top: 218px; right: 318.667px; opacity: 0; display: none;"><div class="arrow top right" style="border-right-color: rgb(51, 51, 51); border-left-color: rgb(51, 51, 51); opacity: 1;"></div><visual-tooltip-modern [tooltip-data]="tooltipData" [tooltip-data-sources]="tooltipDataSources" [tooltip-data-items]="tooltipDataItems" (on-hide)="onHide()" (on-move)="onMove()" [actions-provider]="actionsProvider" [exploration-contract]="explorationContract" [exploration-capabilities]="explorationCapabilities" [show-action-bar]="showActionBar" [section-display-option]="sectionDisplayOption" [tooltip-shown]="tooltipShown" _nghost-beq-c25="" ng-version="8.2.6" class="tooltip-content"><div _ngcontent-beq-c25="" class="visual-tooltip-container"><!----><canvas-tooltip _ngcontent-beq-c25="" _nghost-beq-c26="" hidden=""><!----></canvas-tooltip><div _ngcontent-beq-c25=""><div class="tooltip-content-container" style="background-color: rgb(51, 51, 51); opacity: 1;"><div class="tooltip-data-container"><div class="tooltip-header">3/27/2020</div><div class="tooltip-row"><div class="tooltip-icon-cell" style="max-width: 31px;"><svg height="15px" width="31"><path class="tooltip-line-icon" transform="translate(15.5,8) scale(1)" d="M 0 0 M -15.5 0 L 15.5 0" style="stroke-opacity: 1; stroke-width: 2; stroke: rgb(254, 198, 0);"></path><path class="tooltip-marker-icon" transform="translate(15.5,8) scale(1)" style="fill: rgb(254, 198, 0); stroke: rgb(254, 198, 0); fill-opacity: 1; stroke-opacity: 1;"></path></svg></div><div class="tooltip-title-cell"><div>Total Positive Cases</div></div><div class="tooltip-value-cell"><div>239</div></div></div><div class="tooltip-row"><div class="tooltip-icon-cell" style="max-width: 31px;"><svg height="15px" width="31"><path class="tooltip-line-icon" transform="translate(15.5,8) scale(1)" d="M 0 0 M -15.5 0 L 15.5 0" style="stroke-opacity: 1; stroke-width: 2; stroke: rgb(1, 79, 139);"></path><path class="tooltip-marker-icon" transform="translate(15.5,8) scale(1)" style="fill: rgb(1, 79, 139); stroke: rgb(1, 79, 139); fill-opacity: 1; stroke-opacity: 1;"></path></svg></div><div class="tooltip-title-cell"><div>Total Tested</div></div><div class="tooltip-value-cell"><div>2,780</div></div></div></div></div></div><!----><!----></div></visual-tooltip-modern></div></body></html>
