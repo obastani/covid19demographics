@@ -1,6 +1,6 @@
 # COVID 19 Demographics Dataset
 
-This repository contains data regarding key COVID-19 metrics across 35 US States, Iceland and South Korea. This data was collected from online reports given by state authorities.
+This repository contains data regarding key COVID-19 metrics across 36 US States, Iceland and South Korea. This data was collected from online reports given by state authorities.
 
 ## Getting Started
 
