@@ -1,0 +1,106 @@
+Report Date,Health District,Sex,Number of Cases,Number of Hospitalizations,Number of Deaths
+7/3/2020,Southside,Not Reported,4,0,0
+7/3/2020,Chesapeake,Female,560,77,10
+7/3/2020,Richmond,Female,1074,101,8
+7/3/2020,Roanoke,Male,214,7,3
+7/3/2020,Fairfax,Not Reported,105,3,3
+7/3/2020,Thomas Jefferson,Female,512,53,13
+7/3/2020,Chesapeake,Not Reported,1,0,0
+7/3/2020,Cumberland Plateau,Male,27,1,0
+7/3/2020,Eastern Shore,Female,658,59,23
+7/3/2020,Lord Fairfax,Not Reported,7,0,0
+7/3/2020,Rappahannock,Not Reported,6,1,0
+7/3/2020,Central Shenandoah,Not Reported,1,0,0
+7/3/2020,Peninsula,Male,474,64,13
+7/3/2020,Norfolk,Male,487,58,8
+7/3/2020,Alexandria,Female,1201,108,30
+7/3/2020,Lenowisco,Male,28,8,3
+7/3/2020,Pittsylvania-Danville,Female,126,21,2
+7/3/2020,New River,Not Reported,3,0,0
+7/3/2020,Chesterfield,Not Reported,77,0,2
+7/3/2020,Loudoun,Male,2037,154,34
+7/3/2020,Rappahannock Rapidan,Female,716,44,9
+7/3/2020,Piedmont,Female,306,41,4
+7/3/2020,Richmond,Male,1135,124,20
+7/3/2020,Crater,Female,647,81,22
+7/3/2020,Portsmouth,Female,255,43,11
+7/3/2020,Arlington,Not Reported,1,0,0
+7/3/2020,Mount Rogers,Not Reported,2,0,0
+7/3/2020,Thomas Jefferson,Not Reported,0,0,0
+7/3/2020,Three Rivers,Not Reported,18,0,0
+7/3/2020,Hampton,Male,157,26,3
+7/3/2020,Alleghany,Male,245,21,5
+7/3/2020,Roanoke,Female,244,7,7
+7/3/2020,Loudoun,Not Reported,16,0,1
+7/3/2020,Fairfax,Female,7128,725,251
+7/3/2020,Western Tidewater,Male,413,55,30
+7/3/2020,Peninsula,Not Reported,4,0,0
+7/3/2020,New River,Male,130,14,4
+7/3/2020,Central Shenandoah,Male,975,81,19
+7/3/2020,Southside,Male,168,25,12
+7/3/2020,Chesterfield,Male,1569,78,35
+7/3/2020,Arlington,Female,1231,191,63
+7/3/2020,Rappahannock,Male,1170,124,26
+7/3/2020,Central Virginia,Male,215,9,4
+7/3/2020,Alleghany,Not Reported,3,0,0
+7/3/2020,Henrico,Male,1177,135,76
+7/3/2020,Thomas Jefferson,Male,448,46,12
+7/3/2020,Lord Fairfax,Male,985,95,35
+7/3/2020,Three Rivers,Male,431,18,2
+7/3/2020,Richmond,Not Reported,39,2,2
+7/3/2020,Pittsylvania-Danville,Male,95,20,1
+7/3/2020,Portsmouth,Not Reported,3,0,0
+7/3/2020,Norfolk,Not Reported,0,0,0
+7/3/2020,Chesapeake,Male,411,66,11
+7/3/2020,Chickahominy,Female,369,56,19
+7/3/2020,Prince William,Male,4627,449,98
+7/3/2020,Eastern Shore,Not Reported,9,0,0
+7/3/2020,Eastern Shore,Male,646,54,19
+7/3/2020,Rappahannock Rapidan,Male,739,64,12
+7/3/2020,Henrico,Not Reported,8,0,1
+7/3/2020,Cumberland Plateau,Female,38,1,0
+7/3/2020,West Piedmont,Male,234,22,4
+7/3/2020,Hampton,Not Reported,3,0,0
+7/3/2020,Alexandria,Not Reported,6,0,0
+7/3/2020,Western Tidewater,Not Reported,2,0,0
+7/3/2020,Cumberland Plateau,Not Reported,0,0,0
+7/3/2020,Virginia Beach,Male,576,65,16
+7/3/2020,Alleghany,Female,283,10,10
+7/3/2020,Lenowisco,Female,27,9,1
+7/3/2020,Virginia Beach,Not Reported,9,0,0
+7/3/2020,Western Tidewater,Female,426,33,25
+7/3/2020,Mount Rogers,Male,335,50,18
+7/3/2020,Lord Fairfax,Female,1068,88,34
+7/3/2020,Piedmont,Not Reported,5,0,0
+7/3/2020,Alexandria,Male,1131,130,27
+7/3/2020,Pittsylvania-Danville,Not Reported,2,0,0
+7/3/2020,West Piedmont,Not Reported,5,0,0
+7/3/2020,Loudoun,Female,2060,125,56
+7/3/2020,Hampton,Female,194,15,2
+7/3/2020,Henrico,Female,1444,123,80
+7/3/2020,Prince William,Not Reported,67,1,0
+7/3/2020,Chickahominy,Male,296,55,20
+7/3/2020,Rappahannock Rapidan,Not Reported,2,1,1
+7/3/2020,Peninsula,Female,541,63,21
+7/3/2020,Lenowisco,Not Reported,0,0,0
+7/3/2020,Crater,Not Reported,13,1,0
+7/3/2020,Chickahominy,Not Reported,4,0,0
+7/3/2020,Portsmouth,Male,268,30,7
+7/3/2020,New River,Female,119,8,1
+7/3/2020,Rappahannock,Female,1313,101,18
+7/3/2020,Central Virginia,Female,203,7,1
+7/3/2020,Roanoke,Not Reported,7,0,0
+7/3/2020,West Piedmont,Female,262,23,3
+7/3/2020,Mount Rogers,Female,406,24,14
+7/3/2020,Piedmont,Male,754,48,9
+7/3/2020,Chesterfield,Female,1557,71,36
+7/3/2020,Fairfax,Male,6856,940,255
+7/3/2020,Crater,Male,902,72,16
+7/3/2020,Central Virginia,Not Reported,0,0,0
+7/3/2020,Prince William,Female,4612,370,72
+7/3/2020,Virginia Beach,Female,669,56,14
+7/3/2020,Norfolk,Female,513,53,3
+7/3/2020,Three Rivers,Female,199,32,7
+7/3/2020,Arlington,Male,1268,230,69
+7/3/2020,Central Shenandoah,Female,1135,92,21
+7/3/2020,Southside,Female,242,24,18
