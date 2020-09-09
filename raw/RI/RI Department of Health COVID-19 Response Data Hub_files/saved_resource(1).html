@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://datawrapper.dwcdn.net/scKlw/5/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>COVID-19 cases in Rhode Island Cities and Towns</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=0.95, user-scalable=0">
+    <script type="text/javascript">
+    if (window.parent && window.parent.postMessage) {
+        window.parent.postMessage('datawrapper:vis:reload', '*');
+    }
+    </script>
+            <!--[if lt IE 9]>
+    <script src="/static/vendor/json-js/json2.min.js"></script>
+    <script type="text/javascript">
+        window.__ltie9 = true;
+    </script>
+    <![endif]-->
+    
+        <link rel="alternate" type="application/json+oembed" href="https://app.datawrapper.de/api/plugin/oembed?url=%2F%2Fdatawrapper.dwcdn.net%2FscKlw%2F5%2F&amp;format=json" title="COVID-19 cases in Rhode Island Cities and Towns">
+
+
+    <script type="text/javascript" charset="utf-8">
+    window.__locale = 'en-US';
+    </script>
+
+      <script type="text/javascript" charset="utf-8" src="./underscore-min.js(1).download"></script>
+        <script type="text/javascript" charset="utf-8" src="./globalize.min.js(2).download"></script>
+        <script type="text/javascript" charset="utf-8" src="./globalize.culture.en-US.js(1).download"></script>
+        <script type="text/javascript" charset="utf-8" src="./jquery.min.js(1).download"></script>
+        <script type="text/javascript" charset="utf-8" src="./d3-bars-8ec33d32fe5834e8519d58186abc7f46.min.js.download"></script>
+        <script type="text/javascript" charset="utf-8" src="./chart-61e2c71412141871942c0de6c1051c69ca80e945.min.js(1).download"></script>
+  
+    <script type="text/javascript">
+        (function() {
+            dw.theme.register('datawrapper', {"typography":{"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#0088CC","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},"colors":{"general":{"background":"transparent","padding":0},"palette":["#18a1cd","#1d81a2","#15607a","#00dca6","#09bb9f","#009076","#c4c4c4","#c71e1d","#fa8c00","#ffca76","#ffe59c"],"picker":{"rowCount":6}},"options":{"footer":{"logo":{"enabled":0,"height":30,"position":"right"},"getTheData":{"enabled":0,"caption":"Get the data"},"embed":{"enabled":0,"caption":"Embed"},"staticImage":{"enabled":0,"caption":"Download Image"},"createdWithDatawrapper":1,"sourcePosition":"left","sourceCaption":"Source","chartCaption":"Chart:","createdWithCaption":"Created with","mapCaption":"Map:","tableCaption":"Table:","forkCaption":"Based on"}},"pdf":{"fonts":{"Roboto Bold":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Bold.ttf","Roboto Light":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Light.ttf","Roboto Medium":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Medium.ttf","Roboto Regular":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Regular.ttf","Roboto Bold Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-BoldItalic.ttf","Roboto Light Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-LightItalic.ttf","Roboto Medium Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-MediumItalic.ttf","Roboto Regular Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Italic.ttf"},"fontStack":true,"cmykColors":[],"defaultFont":"Roboto Regular"},"vis":{"d3-maps-symbols":{"regionFill":"#ededed"}}});
+        }).call(this);
+    </script>
+
+
+    <style type="text/css">
+        @import 'https://static.dwcdn.net/css/roboto.css';
+.chart {
+  font-family: Roboto,sans-serif;
+  color: #181818;
+  font-size: 12px;
+  background: transparent;
+  margin: 0 0px;
+  height: 100%;
+}
+.chart.vis-height-fit {
+  overflow: hidden;
+}
+.chart a {
+  color: #0088CC;
+  text-decoration: none;
+}
+.chart .dw-chart-header {
+  min-height: 1px;
+  position: relative;
+  overflow: auto;
+}
+.chart .dw-chart-header .header-right {
+  position: absolute;
+  right: 10px;
+  z-index: 20;
+}
+.chart .dw-chart-header h1 {
+  font-family: Roboto,sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 0 10px;
+}
+.chart .dw-chart-header p {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  text-decoration: none;
+  margin: 5px 0 10px !important;
+}
+.chart .dw-chart-body.dark-bg .label span {
+  color: #181818;
+  fill: #181818;
+}
+.chart .dw-chart-body .bc-grid-line {
+  border-left-style: solid;
+}
+.chart .dw-chart-body.content-below-chart {
+  margin: 0px 0px 20px 0px;
+}
+.chart .labels text {
+  font-size: 12px;
+}
+.chart .label {
+  font-size: 12px;
+}
+.chart .label span,
+.chart .label tspan {
+  color: #181818;
+  fill: #181818;
+}
+.chart .label.inverted span {
+  text-shadow: 0 0px 2px #000000;
+  color: #ffffff;
+}
+.chart .label.inside:not(.inverted) span {
+  text-shadow: 0 0px 2px #ffffff;
+  color: #333333;
+}
+.chart .label sup {
+  text-shadow: none;
+}
+.chart .label.highlighted {
+  font-weight: bold;
+}
+.chart .label.highlighted,
+.chart .label .label.axis {
+  font-size: 12px;
+  z-index: 100;
+}
+.chart .label.hover {
+  font-weight: bold;
+}
+.chart .label.smaller span {
+  font-size: 80%;
+}
+.chart .dw-chart-notes {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  color: #656565;
+  margin: 0px 0px 5px 0px;
+  position: relative;
+}
+.chart #footer,
+.chart .dw-chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  font-style: normal;
+  text-decoration: none;
+  color: #888;
+}
+.chart #footer > div > .footer-block,
+.chart .dw-chart-footer > div > .footer-block {
+  display: inline-block;
+}
+.chart #footer > div > .footer-block.hidden,
+.chart .dw-chart-footer > div > .footer-block.hidden {
+  display: none;
+}
+.chart #footer > div > .footer-block a[href=""],
+.chart .dw-chart-footer > div > .footer-block a[href=""] {
+  color: #888;
+  pointer-events: none;
+  text-decoration: none;
+  padding: 0;
+  border-bottom: 0;
+}
+.chart #footer > div > .footer-block .separator,
+.chart .dw-chart-footer > div > .footer-block .separator {
+  display: inline-block;
+  font-style: initial;
+}
+.chart #footer > div > .footer-block .separator:before,
+.chart .dw-chart-footer > div > .footer-block .separator:before {
+  content: "•";
+  display: inline-block;
+}
+.chart #footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator {
+  display: none;
+}
+.chart #footer > div > a:first-child::before,
+.chart #footer > div > .source-block:first-child::before,
+.chart #footer > div > .footer-block:first-child::before,
+.chart .dw-chart-footer > div > a:first-child::before,
+.chart .dw-chart-footer > div > .source-block:first-child::before,
+.chart .dw-chart-footer > div > .footer-block:first-child::before {
+  content: "";
+  display: none;
+}
+.chart .dw-chart-notes a,
+.chart .dw-chart-footer a {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0088CC;
+}
+.chart a img {
+  border: 0px;
+}
+.chart .embed-code {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 15px;
+  background: #eee;
+  color: #000;
+  border-radius: 6px;
+  text-transform: none;
+  font-size: 1em;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+.chart .embed-code textarea {
+  width: 90%;
+  margin-top: 2%;
+  height: 7em;
+}
+.chart .hide {
+  display: none;
+}
+.chart .embed-code .close {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 1.125em;
+  opacity: 0.7;
+}
+.chart .embed-code .close:hover {
+  opacity: 1;
+}
+.chart .dw-tooltip {
+  color: #333333;
+}
+.chart .tooltip {
+  z-index: 200;
+  padding-bottom: 0px;
+}
+.chart .tooltip .content {
+  background-color: #fff;
+  border: 1px solid #888;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  padding: 5px 8px;
+}
+.chart .tooltip label {
+  font-weight: 700;
+}
+.chart .tooltip label:after {
+  content: ": ";
+}
+.chart .logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.chart .logo .big {
+  display: none;
+}
+.chart svg .axis,
+.chart svg .tick,
+.chart svg .grid,
+.chart svg rect {
+  shape-rendering: crispEdges;
+}
+.chart .filter-links {
+  height: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.chart .filter-links a {
+  color: #666;
+  height: 28px;
+  line-height: 28px;
+  padding: 10px;
+  text-decoration: none;
+}
+.chart .filter-links a:hover {
+  color: #222;
+}
+.chart .filter-links a.active {
+  font-weight: bold;
+  color: #000;
+  box-shadow: none;
+  cursor: default;
+  text-decoration: none;
+  border-bottom: 3px solid #555;
+  padding: 10px 10px 6px 10px;
+}
+.chart .filter-select {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px 4px 4px 4px;
+  padding: 4px 6px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.chart.plain #footer {
+  height: 10px;
+}
+.chart.js .noscript {
+  display: none;
+}
+.chart .hidden {
+  display: none;
+}
+.chart .label.annotation span {
+  background: transparent;
+}
+.chart .legend-item.hover .label {
+  font-weight: bold;
+}
+.chart .watermark {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform-origin: top left;
+  opacity: 0.182;
+  font-weight: bold;
+  font-size: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.point {
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  z-index: 100;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+}
+.point:hover {
+  background: #ebebeb;
+}
+.point.active {
+  background: #ccc;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+  border-color: #888;
+}
+.point-label {
+  position: absolute;
+}
+.line {
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 1;
+}
+.vis-pie-chart path,
+.vis-donut-chart path,
+.vis-election-donut-chart path {
+  stroke-width: 0.5;
+}
+.chart.vis-d3-bars .label.bc-group-title,
+.chart.vis-d3-bars .label.bc-group-title span,
+.chart.vis-d3-bars .bc-compact-group-label,
+.chart.vis-d3-bars .bc-compact-group-label span {
+  font-weight: bold;
+}
+.chart.vis-d3-bars .label.bc-row-label,
+.chart.vis-d3-bars .label.bc-row-label span {
+  line-height: 1.2;
+}
+.chart.vis-d3-bars .category-legend svg {
+  overflow: visible;
+}
+.chart.vis-d3-bars .category-legend text.buffer {
+  fill: #fff;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 6px;
+}
+.chart.vis-d3-bars .category-legend .legend-title {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.chart.vis-d3-bars .category-legend .legend-categories {
+  line-height: 1.4;
+}
+.chart.vis-d3-bars .category-legend .legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.chart.vis-d3-bars .category-legend .legend-no-break {
+  white-space: nowrap;
+  display: inline-block;
+}
+.chart.vis-d3-bars .category-legend .legend-label {
+  display: inline;
+  white-space: normal;
+  vertical-align: middle;
+}
+.chart.vis-d3-bars .category-legend.horizontal .legend-swatch {
+  display: inline;
+  margin-right: 10px;
+}
+.chart.vis-d3-bars .category-legend.horizontal .legend-swatch .legend-color {
+  display: inline-block;
+}
+.chart.vis-d3-bars .category-legend .highlighted .legend-swatch {
+  opacity: 0.2;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+.chart.vis-d3-bars .category-legend .highlighted .legend-swatch.highlight {
+  opacity: 1;
+}
+.chart.vis-d3-bars #chart {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.chart.vis-d3-bars .dw-bold {
+  font-weight: bold;
+}
+.chart.vis-d3-bars .bc-groups {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.chart.vis-d3-bars .bc-group-content {
+  position: relative;
+}
+.chart.vis-d3-bars .bc-label-align-right .bc-row-label {
+  text-align: right;
+}
+.chart.vis-d3-bars .bc-row {
+  display: flex;
+  align-items: center;
+}
+.chart.vis-d3-bars #chart .bc-row-label {
+  display: inline-block;
+  width: 40%;
+  box-sizing: border-box;
+  padding-right: 5px;
+}
+.chart.vis-d3-bars .bc-label-block .bc-row {
+  display: block;
+}
+.chart.vis-d3-bars .bc-label-block .bc-row-label {
+  width: 100% !important;
+  display: block !important;
+  margin-bottom: 4px;
+}
+.chart.vis-d3-bars .bc-row-highlight .bc-row-label span {
+  font-weight: bold;
+  color: #222;
+}
+.chart.vis-d3-bars .bc-bars {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60%;
+  overflow: hidden;
+}
+.chart.vis-d3-bars .bc-label-block .bc-bars {
+  width: 100% !important;
+}
+.chart.vis-d3-bars .bc-bar-bg {
+  position: relative;
+  height: 20px;
+}
+.chart.vis-d3-bars .label.bc-bar-label {
+  white-space: nowrap;
+  line-height: 20px;
+  padding: 0px 5px;
+}
+.chart.vis-d3-bars .bc-row:last-child {
+  margin-bottom: 0px;
+}
+.chart.vis-d3-bars #chart.bc-thick .bc-bar-bg {
+  height: 27px;
+}
+.chart.vis-d3-bars #chart.bc-thick .bc-bar-label {
+  line-height: 27px;
+}
+.chart.vis-d3-bars .bc-hr .bc-row + .bc-row {
+  border-top: 1px;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-top-style: dotted;
+}
+.chart.vis-d3-bars #chart:not(.bc-hr) .bc-row {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.chart.vis-d3-bars #chart:not(.bc-hr) .bc-row.first-row {
+  margin-top: 0px;
+}
+.chart.vis-d3-bars #chart:not(.bc-hr) .bc-row:last-child {
+  margin-bottom: 0px;
+}
+.chart.vis-d3-bars .bc-bar-inner {
+  background: #ddd;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.chart.vis-d3-bars .label.bc-bar-label span {
+  text-shadow: none !important;
+}
+.chart.vis-d3-bars #footer {
+  position: relative;
+}
+.chart.vis-d3-bars .legend-container {
+  padding-bottom: 2px;
+}
+.chart.vis-d3-bars sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -3px;
+}
+.chart.vis-d3-bars .bc-grid {
+  position: absolute;
+  top: 0;
+}
+.chart.vis-d3-bars #chart .bc-grid-line {
+  position: absolute;
+  top: 0px;
+  width: 0px;
+  height: 100%;
+  border-left-width: 1px;
+}
+.chart.vis-d3-bars #chart .bc-grid-line.bc-grid-baseline {
+  border-left-style: solid;
+}
+.chart.vis-d3-bars .bc-grid-label {
+  width: 50px;
+  position: absolute;
+  left: -25px;
+  text-align: center;
+}
+.chart.vis-d3-bars .hidden-labels .bc-grid-line.bc-grid-line-left .bc-grid-label {
+  text-align: left;
+  left: 0;
+}
+.chart.vis-d3-bars .bc-grid-line.bc-grid-line-right .bc-grid-label {
+  text-align: right;
+  left: -50px;
+}
+.chart.vis-d3-bars .bc-grid-lines .bc-group-title {
+  position: relative;
+}
+.chart.vis-d3-bars .bc-grid-line.bc-grid-baseline {
+  z-index: 10;
+}
+.chart.png-export .dw-chart-footer .static-image,
+.chart.png-export .dw-chart-footer .chart-action-data,
+.chart.png-export .dw-chart-footer .dw-data-link {
+  display: none !important;
+}
+.chart.png-export a {
+  color: unset !important;
+}
+.map-key {
+  pointer-events: none;
+}
+
+        
+            </style>
+
+    
+
+</head>
+<body class="dw-chart chart vis-height-fixed theme-datawrapper vis-d3-bars">
+    
+
+                            
+    <div class="dw-chart-header" id="header">
+                    <h1>
+                <span class="chart-title">COVID-19 cases in Rhode Island Cities and Towns</span>
+            </h1>
+
+            <p class="chart-intro hidden"></p>
+            </div>
+
+    <div class="dw-chart-body content-below-chart bc-hr bc-color-bg bc-label-align-left bc-hide-dots bc-grid-bottom" id="chart"><div class="bc-groups"><div class="bc-group"><div class="bc-group-title group-title chart-text label" data-row="27,25,6,23,9,34,3,38,7,30,15,5,22,36,31,16,2,1,32,37,0,21,8,24,18,26,19,29,10,33,17,35,11,12,4,14,28,13,20" style="margin-bottom: 0px;"><span></span></div><div class="bc-group-content"><div class="bc-row first-row"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="27" style="width: 9.00311%;"><span>Providence</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 0%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>1,399</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="25" style="width: 9.00311%;"><span>Pawtucket</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 66.8335%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>464</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="6" style="width: 9.00311%;"><span>Cranston</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 77.9128%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>309</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="23" style="width: 9.00311%;"><span>North Providence</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 78.4846%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>301</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="9" style="width: 9.00311%;"><span>East Providence</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 82.416%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>246</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="34" style="width: 9.00311%;"><span>Warwick</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 86.6333%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>187</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="3" style="width: 9.00311%;"><span>Central Falls</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 87.9199%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>169</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="38" style="width: 9.00311%;"><span>Woonsocket</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 88.7062%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>158</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="7" style="width: 9.00311%;"><span>Cumberland</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 91.065%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>125</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="30" style="width: 9.00311%;"><span>Smithfield</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 93.138%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>96</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="15" style="width: 9.00311%;"><span>Johnston</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 93.9242%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>85</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="5" style="width: 9.00311%;"><span>Coventry</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 94.639%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>75</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="22" style="width: 9.00311%;"><span>North Kingstown</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 94.639%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>75</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="36" style="width: 9.00311%;"><span>West Warwick</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 94.782%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>73</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="31" style="width: 9.00311%;"><span>South Kingstown</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 96.7119%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>46</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="16" style="width: 9.00311%;"><span>Lincoln</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 96.8549%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>44</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="2" style="width: 9.00311%;"><span>Burrillville</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 96.9979%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside inverted" style="text-align: left;"><span>42</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="1" style="width: 9.00311%;"><span>Bristol</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 97.7841%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 22.9479px;"><span>31</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="32" style="width: 9.00311%;"><span>Tiverton</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 97.7841%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 22.9479px;"><span>31</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="37" style="width: 9.00311%;"><span>Westerly</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 97.8556%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 22.2083px;"><span>30</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="0" style="width: 9.00311%;"><span>Barrington</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.213%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 18.5052px;"><span>25</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="21" style="width: 9.00311%;"><span>Newport</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.356%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 17.026px;"><span>23</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="8" style="width: 9.00311%;"><span>East Greenwich</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.4274%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 16.2865px;"><span>22</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="24" style="width: 9.00311%;"><span>North Smithfield</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.4274%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 16.2865px;"><span>22</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="18" style="width: 9.00311%;"><span>Middletown</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.6419%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 14.0677px;"><span>19</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="26" style="width: 9.00311%;"><span>Portsmouth</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.6419%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 14.0677px;"><span>19</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="19" style="width: 9.00311%;"><span>Narragansett</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.7134%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 13.3281px;"><span>18</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="29" style="width: 9.00311%;"><span>Scituate</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 98.9278%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 11.1042px;"><span>15</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="10" style="width: 9.00311%;"><span>Exeter</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.2137%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 8.14583px;"><span>11</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="33" style="width: 9.00311%;"><span>Warren</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.2137%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 8.14583px;"><span>11</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="17" style="width: 9.00311%;"><span>Little Compton</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.3567%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 6.66667px;"><span>9</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="35" style="width: 9.00311%;"><span>West Greenwich</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.3567%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 6.66667px;"><span>9</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="11" style="width: 9.00311%;"><span>Foster</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.4282%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 5.92188px;"><span>8</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="12" style="width: 9.00311%;"><span>Glocester</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.4282%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 5.92188px;"><span>8</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="4" style="width: 9.00311%;"><span>Charlestown</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.4996%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 5.18229px;"><span>7</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="14" style="width: 9.00311%;"><span>Jamestown</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.5711%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 4.44271px;"><span>6</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="28" style="width: 9.00311%;"><span>Richmond</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.5711%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 4.44271px;"><span>6</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="13" style="width: 9.00311%;"><span>Hopkinton</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 99.6426%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 3.70313px;"><span>5</span></div></div></div></div></div><div class="bc-row row-divider" style="border-top-color: rgb(224, 224, 224);"><div class="bc-row-label row-label chart-text label" data-column="CityName" data-row="20" style="width: 9.00311%;"><span>New Shoreham</span></div><div class="bc-bars" style="width: 90.9969%;"><div class="bc-bar-bg dw-rect" style="background: rgba(51, 51, 51, 0.05);"><div class="bc-bar-inner dw-rect" style="left: 0%; right: 100%; background: rgb(1, 79, 139);"><div class="bc-bar-label chart-text value label inside" style="text-align: left; margin-left: 0px;"><span>0</span></div></div></div></div></div></div></div></div></div>
+
+                        <div class="dw-chart-notes ">
+                Note: Zero in a category indicates either zero patients or less than five patients. There may be slight discrepancies between the statewide total and the data at the city and town level because additional time is sometimes needed to identify the permanent place of residence of some COVID-19 patients.
+            </div>
+            
+    
+    
+            <div class="dw-chart-footer" id="footer">
+            <div class="footer-left">
+                
+                                    
+                                                <span class="footer-block byline-block ">
+                            <span class="byline-caption">
+                            Chart:
+                            </span>
+
+                            <span class="chart-byline">Rhode Island Department of Health</span>
+
+                            <span class="byline-append"></span>
+                        </span>
+                        
+
+                                                <span class="footer-block source-block ">
+                                                        <span class="separator"></span>
+                            <span class="source-caption">Source:</span>
+                            <a href="https://datawrapper.dwcdn.net/scKlw/5/" rel="nofollow noopener noreferrer" target="_blank">RI HEALTH</a>
+                        </span>
+                        
+                        
+
+                                                
+                                                
+                                                
+                                                                        <span class="footer-block attribution">
+                            <span class="separator"></span>
+                            <a href="https://www.datawrapper.de/_/scKlw/" target="_blank">Created with  Datawrapper</a>
+                        </span>
+                        
+                                                                        </div>
+            <div class="footer-right">
+                
+                            </div>
+        </div>
+    
+                
+
+    
+    <script type="text/javascript">
+    setTimeout(function() {
+        var img = document.createElement('img');
+        img.setAttribute('width', 1);
+        img.setAttribute('height', 1);
+        img.style.float = "right";
+        img.setAttribute('src', '//stats.datawrapper.de/scKlw/datawrapper.gif?r='+escape(document.referrer || ''));
+        document.body.appendChild(img);
+    },10);
+</script>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+
+    (function() {
+
+        /*!  */
+var render=function(){"use strict";function e(e){return function(t){var n=t.toLowerCase().match(e);return!!n&&parseInt(n[1],10)}}var t={chrome:e(/chrom(?:e|ium)\/([0-9]+)\./),firefox:e(/firefox\/([0-9]+\.*[0-9]*)/),safari:e(/version\/([0-9]+).[0-9]+.[0-9]+ safari/),ie:e(/(?:msie |rv:)([0-9]+).[0-9]+/),edge:e(/edge\/([0-9]+).[0-9]+.[0-9]+/)};var n,i=(function(e){!function(){function t(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function i(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+t+";"}function o(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t&&(e.g=t,!0)}function r(e,n){function i(){var e=r;o(e)&&e.a.parentNode&&n(e.g)}var r=e;t(e.b,i),t(e.c,i),o(e)}function a(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}var s=null,d=null,c=null,l=null;function h(){return null===l&&(l=!!document.fonts),l}function f(e,t){return[e.style,e.weight,function(){if(null===c){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(e){}c=""!==e.style.font}return c}()?e.stretch:"","100px",t].join(" ")}a.prototype.load=function(e,t){var o=this,a=e||"BESbswy",c=0,l=t||3e3,u=(new Date).getTime();return new Promise(function(e,t){if(h()&&!function(){if(null===d)if(h()&&/Apple/.test(window.navigator.vendor)){var e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);d=!!e&&603>parseInt(e[1],10)}else d=!1;return d}()){var p=new Promise(function(e,t){!function n(){(new Date).getTime()-u>=l?t(Error(l+"ms timeout exceeded")):document.fonts.load(f(o,'"'+o.family+'"'),a).then(function(t){1<=t.length?e():setTimeout(n,25)},t)}()}),m=new Promise(function(e,t){c=setTimeout(function(){t(Error(l+"ms timeout exceeded"))},l)});Promise.race([m,p]).then(function(){clearTimeout(c),e(o)},t)}else!function(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function t(){"interactive"!=document.readyState&&"complete"!=document.readyState||(document.detachEvent("onreadystatechange",t),e())})}(function(){function d(){var t;(t=-1!=w&&-1!=v||-1!=w&&-1!=g||-1!=v&&-1!=g)&&((t=w!=v&&w!=g&&v!=g)||(null===s&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),s=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=s&&(w==y&&v==y&&g==y||w==x&&v==x&&g==x||w==b&&v==b&&g==b)),t=!t),t&&(E.parentNode&&E.parentNode.removeChild(E),clearTimeout(c),e(o))}var h=new n(a),p=new n(a),m=new n(a),w=-1,v=-1,g=-1,y=-1,x=-1,b=-1,E=document.createElement("div");E.dir="ltr",i(h,f(o,"sans-serif")),i(p,f(o,"serif")),i(m,f(o,"monospace")),E.appendChild(h.a),E.appendChild(p.a),E.appendChild(m.a),document.body.appendChild(E),y=h.a.offsetWidth,x=p.a.offsetWidth,b=m.a.offsetWidth,function e(){if((new Date).getTime()-u>=l)E.parentNode&&E.parentNode.removeChild(E),t(Error(l+"ms timeout exceeded"));else{var n=document.hidden;!0!==n&&void 0!==n||(w=h.a.offsetWidth,v=p.a.offsetWidth,g=m.a.offsetWidth,d()),c=setTimeout(e,50)}}(),r(h,function(e){w=e,d()}),i(h,f(o,'"'+o.family+'",sans-serif')),r(p,function(e){v=e,d()}),i(p,f(o,'"'+o.family+'",serif')),r(m,function(e){g=e,d()}),i(m,f(o,'"'+o.family+'",monospace'))})})},e.exports=a}()}(n={exports:{}},n.exports),n.exports);return function(e){var n=e.visJSON,o=e.chartJSON,r=e.chartData,a=e.isPreview,s=e.chartLocale,d=e.metricPrefix,c=e.themeId,l=e.templateJS,h=e.fontsJSON,f=e.typographyJSON,u=e.locales,p=e.assetDomain;window.visJSON=n;var m,w,v,g,y,x,b,E,N={firefox:[30,51],chrome:[20,54],ie:[6,11],edge:[12,18],safari:[6,12]},S=(m=navigator.userAgent,w="undefined"!=typeof InstallTrigger,v=/constructor/i.test(window.HTMLElement)||"[object SafariRemoteNotification]"===(!window.safari||window.safari.pushNotification).toString(),g=!!document.documentMode,y=!g&&!!window.StyleMedia,x=!!window.chrome&&!!window.chrome.loadTimes,b=/; wv/.test(m)&&/Chrome/.test(m),{browser:E=x||b?"chrome":w?"firefox":v?"safari":g?"ie":!!y&&"edge",version:!(!E||!t[E])&&t[E](m)}),T=document.createElement("script");if(T.type="text/javascript",T.async=!0,T.onload=C,T.onerror=C,S.browser&&N[S.browser]&&S.version>=N[S.browser][0]){if(S.version>N[S.browser][1])return C();T.src="https://"+p+"/assets/polyfills/"+S.browser+"-"+S.version+".js"}else T.src="https://"+p+"/assets/polyfills/all.js";function C(){__dw.init(Object.assign({visJSON:n,chartJSON:o,data:r,preview:a,chartLocale:s,locales:u,themeId:c,visId:o.type,lang:s.substr(0,2),metricPrefix:d},window.__dwParams||{})),function(e,t){var n=Array.isArray(e)?[]:Object.keys(e),o=new Set(n);Object.keys(t).forEach(function(e){var n=t[e].typeface;n&&n.split(",").map(function(e){return e.trim()}).forEach(function(e){return o.add(e)})});var r=[];return o.forEach(function(e){var t=new i(e);r.push(t.load(null,5e3))}),Promise.all(r)}(h,f).then(function(){return __dw.render()}).catch(function(){}),/iP(hone|od|ad)/.test(navigator.platform)&&(window.onload=__dw.render());var e=!1,t=n.id,p=dw.theme(c);p&&t&&("d3-pies"===t||"d3-donuts"===t||"d3-multiple-pies"===t||"d3-multiple-donuts"===t)&&(e=function(e,t,n){if(void 0===t&&(t=null),void 0===n&&(n=null),!t)return e;for(var i=t.split("."),o=e,r=0;r<i.length&&null!==o&&void 0!==o;r++)o=o[i[r]];return void 0===o||null===o?n:o}(p,"vis.d3-pies.fitchart",0));var m="1"===new URLSearchParams(window.location.search).get("fitchart")||1===e||!0===e;setInterval(function(){var e,t;if("fixed"!==n.height||m){if(__dw.params.preview||!__dw.vis.chart().get("metadata.publish.chart-height"))return;t=dw.utils.getNonChartHeight()+__dw.vis.chart().get("metadata.publish.chart-height")}else t=$("html").outerHeight(!0);window.parent.postMessage({"datawrapper-height":(e={},e[o.id]=t,e)},"*"),window.parent.postMessage({sentinel:"amp",type:"embed-size",height:t},"*"),window.parent.postMessage(JSON.stringify({src:window.location.toString(),context:"iframe.resize",height:t}),"*")},1e3),"function"==typeof l&&l()}document.getElementsByTagName("head")[0].appendChild(T)}}();
+
+        render({
+            visJSON: {"id":"d3-bars","title":"Bar Chart","order":-3,"height":"fixed","less":"\/var\/www\/datawrapper\/plugins\/d3-bars\/less\/d3-bars.less","dependencies":{"globalize":true,"jquery":true,"numeral":true,"dayjs":true},"axes":{"labels":{"accepts":["text","date"]},"groups":{"accepts":["text"],"optional":true,"overrideOptionalKey":"visualize.group-by-column"},"bars":{"accepts":["number"],"multiple":false},"colors":{"accepts":["text"],"optional":true}},"svelte-controls":true,"__static_path":"assets\/plugins\/d3-bars\/","__static_path_fs":"..\/\/www\/static\/plugins\/d3-bars\/","__plugin":"d3-bars","version":"2b4ee3b8","workflow":[{"id":"upload","title":"Upload Data"},{"id":"describe","title":"Check & Describe"},{"id":"visualize","title":"Visualize"},{"id":"publish","title":"Publish & Embed"}],"svelte-workflow":"chart","locale":[]},
+            chartJSON: {"id":"scKlw","title":"COVID-19 cases in Rhode Island Cities and Towns","theme":"datawrapper","createdAt":"2020-04-13 15:59:56","lastModifiedAt":"2020-04-16 02:27:34","type":"d3-bars","metadata":{"data":{"transpose":false,"vertical-header":true,"horizontal-header":true,"changes":[],"column-format":{"City\/Town":{"type":"text","ignore":false,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""},"Age data last updated 4\/11\/2020":{"type":"auto","ignore":true,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""},"Sex data last updated 4\/11\/2020":{"type":"auto","ignore":true,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""},"City\/Town data last updated 4\/10\/2020":{"type":"auto","ignore":false,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""},"Rhode Island COVID-19 patients by sex":{"type":"auto","ignore":false,"number-append":"","number-format":"s6","number-divisor":0,"number-prepend":""},"Rhode Island COVID-19 patients by age:":{"type":"number","ignore":false,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""}},"external-data":"https:\/\/docs.google.com\/spreadsheets\/d\/19klQtWKIGcAG4qW66rmjR03j4BkX1GrUhjf5fpe8kh8\/export?format=csv&id=19klQtWKIGcAG4qW66rmjR03j4BkX1GrUhjf5fpe8kh8&gid=1265052746","upload-method":"external-data","google-spreadsheet":"https:\/\/docs.google.com\/spreadsheets\/d\/1BLc9g7P11pkB7dnvxQ-hjAAa2e9-IGw093nA90pOZdI\/edit#gid=231554382","use-datawrapper-cdn":true,"google-spreadsheet-src":"https:\/\/docs.google.com\/spreadsheets\/d\/1BLc9g7P11pkB7dnvxQ-hjAAa2e9-IGw093nA90pOZdI\/export?format=csv&id=1BLc9g7P11pkB7dnvxQ-hjAAa2e9-IGw093nA90pOZdI&gid=231554382"},"visualize":{"highlighted-series":[],"highlighted-values":[],"rows":{"row--1":{"style":{"bold":false,"color":false,"italic":false,"fontSize":1,"underline":false,"background":false},"format":"0,0.[00]","moveTo":"top","sticky":false,"moveRow":false,"stickTo":"top","borderTop":"none","borderBottom":"none","borderTopColor":"#333333","overrideFormat":false,"borderBottomColor":"#333333"}},"group":{"text":"Other","num_slices":5},"rules":true,"thick":false,"header":{"style":{"bold":true,"color":false,"italic":false,"fontSize":1.1,"background":false},"borderTop":"none","borderBottom":"2px","borderTopColor":"#333333","borderBottomColor":"#333333"},"sortBy":"City\/Town","x-grid":"off","y-grid":"on","columns":[],"perPage":20,"scale-y":"linear","sort-by":"Rhode Island COVID-19 patients by age:","striped":false,"category":"direct","labeling":"right","markdown":false,"pie_size":{"inside_labels":75,"outside_labels":50},"showRank":false,"color-key":true,"color_key":{"stack":false,"enabled":true,"position":"top","label_values":false},"sort-bars":true,"sortTable":false,"background":true,"base-color":"#014f8b","base_color":0,"force-grid":false,"grid-lines":"show","pagination":true,"resortable":true,"searchable":false,"showHeader":true,"sort-range":{"by":"start","enabled":false},"bar-padding":24,"compactMode":false,"label-space":30,"mirror-bars":false,"slice_order":"descending","sort-values":false,"swap-labels":false,"valueLabels":{"show":"hover","enabled":true,"placement":"outside"},"yAxisLabels":{"enabled":true,"alignment":"left","placement":"outside"},"block-labels":false,"custom-range":["",""],"custom-ticks":"","fill-between":false,"grid-lines-x":{"type":"ticks","enabled":false},"label-colors":false,"label-margin":0,"line-symbols":false,"range-extent":"nice","show_percent":false,"inside_labels":{"enabled":true},"interpolation":"linear","reverse-order":false,"rotate-labels":"auto","show-tooltips":true,"sortDirection":"desc","tick-position":"bottom","x-grid-format":"YYYY","x-tick-format":"YYYY","y-grid-format":"0,0.[00]","y-grid-labels":"auto","absolute-scale":false,"categoryLabels":{"enabled":true,"position":"direct"},"chart-type-set":true,"color-category":{"map":[],"categoryOrder":["Barrington","Bristol","Burrillville","Central Falls","Charlestown","Coventry","Cranston","Cumberland","East Greenwich","East Providence","Exeter","Foster","Glocester","Hopkinton","Jamestown","Johnston","Lincoln","Little Compton","Middletown","Narragansett","New Shoreham","Newport","North Kingstown","North Providence","North Smithfield","Pawtucket","Portsmouth","Providence","Richmond","Scituate","Smithfield","South Kingstown","Tiverton","Warren","Warwick","West Greenwich","West Warwick","Westerly","Woonsocket"],"categoryLabels":[]},"custom-range-x":["",""],"custom-ticks-x":"","mobileFallback":false,"negative-color":false,"outside_labels":{"edge":false,"color":false,"enabled":false},"rotation_angle":0,"series-padding":60,"show-color-key":false,"color-by-column":false,"connector-lines":true,"donut_hole_size":50,"group-by-column":false,"label-alignment":"left","line-symbols-on":"both","mergeEmptyCells":false,"small_multiples":{"group_value_label":{"type":"total","enabled":false,"total_text":"Total","single_selected_row":0},"min_col_grid_width":120},"value-label-row":false,"firstRowIsHeader":false,"y-grid-subdivide":true,"custom-area-fills":[],"custom-grid-lines":"","date-label-format":"YYYY","label_text_slices":true,"line-symbols-size":3.5,"line-value-labels":false,"show-group-labels":true,"show-value-labels":true,"donut_center_label":{"type":"total","enabled":false,"total_text":"Total","custom_text":"","single_selected_row":0},"independent-scales":false,"line-symbols-shape":"circle","range-value-labels":"start","space-between-cols":10,"value-label-format":"0,0.[00]","y-grid-label-align":"left","label_values_slices":true,"compact-group-labels":false,"line-symbols-opacity":1,"show-category-labels":true,"area-fill-color-below":"#cccccc","tooltip-number-format":"0,0.[00]","value-label-alignment":"left","value-label-visibility":"always","area-fill-color-between":"#cccccc"},"describe":{"source-name":"RI HEALTH","source-url":"","number-format":"-","number-divisor":0,"number-append":"","number-prepend":"","intro":"","byline":"Rhode Island Department of Health"},"publish":{"embed-width":400,"embed-height":1383,"text":"#333333","background":"#ffffff","embed-codes":{"embed-method-iframe":"<iframe title=\"COVID-19 cases in Rhode Island Cities and Towns\" aria-label=\"Bar Chart\" src=\"\/\/datawrapper.dwcdn.net\/scKlw\/5\/\" scrolling=\"no\" frameborder=\"0\" style=\"border: none;\" width=\"400\" height=\"1383\"><\/iframe>","embed-method-responsive":"<iframe title=\"COVID-19 cases in Rhode Island Cities and Towns\" aria-label=\"Bar Chart\" id=\"datawrapper-chart-scKlw\" src=\"\/\/datawrapper.dwcdn.net\/scKlw\/5\/\" scrolling=\"no\" frameborder=\"0\" style=\"width: 0; min-width: 100% !important; border: none;\" height=\"1383\"><\/iframe><script type=\"text\/javascript\">!function(){\"use strict\";window.addEventListener(\"message\",function(a){if(void 0!==a.data[\"datawrapper-height\"])for(var e in a.data[\"datawrapper-height\"]){var t=document.getElementById(\"datawrapper-chart-\"+e)||document.querySelector(\"iframe[src*='\"+e+\"']\");t&&(t.style.height=a.data[\"datawrapper-height\"][e]+\"px\")}})}();\n<\/script>"},"chart-height":1198,"embed-heights":{"100":1690,"200":1467,"300":1397,"400":1383,"500":1342,"700":1327,"800":1313,"900":1313,"1000":1313}},"annotate":{"notes":"Note: Zero in a category indicates either zero patients or less than five patients. There may be slight discrepancies between the statewide total and the data at the city and town level because additional time is sometimes needed to identify the permanent place of residence of some COVID-19 patients."},"axes":{"labels":"CityName","slices":"Barrington"},"json_error":null},"authorId":219100,"showInGallery":false,"language":"en-US","guestSession":null,"lastEditStep":5,"publishedAt":"2020-04-16 02:27:39","publicUrl":"\/\/datawrapper.dwcdn.net\/scKlw\/5\/","publicVersion":5,"organizationId":null,"forkedFrom":"PUeLW","externalData":"https:\/\/static.dwcdn.net\/data\/scKlw.csv","forkable":false,"isFork":false,"inFolder":null,"utf8":false,"author":{"id":219100,"email":"jcigna@sos.ri.gov","name":null,"website":null,"socialmedia":null,"isLoggedIn":true,"isGuest":false,"isActivated":true,"isAdmin":false}},
+            chartData: "NAME,CityName,Rhode Island COVID-19 cases by city\/town of residence,CityOrder\r\nBARRINGTON,Barrington,22,1\r\nBRISTOL,Bristol,21,2\r\nBURRILLVILLE,Burrillville,31,3\r\nCENTRAL FALLS,Central Falls,79,4\r\nCHARLESTOWN,Charlestown,5,5\r\nCOVENTRY,Coventry,55,6\r\nCRANSTON,Cranston,199,7\r\nCUMBERLAND,Cumberland,85,8\r\nEAST GREENWICH,East Greenwich,16,9\r\nEAST PROVIDENCE,East Providence,131,10\r\nEXETER,Exeter,8,11\r\nFOSTER,Foster,7,12\r\nGLOCESTER,Glocester,0,13\r\nHOPKINTON,Hopkinton,5,14\r\nJAMESTOWN,Jamestown,6,15\r\nJOHNSTON,Johnston,55,16\r\nLINCOLN,Lincoln,26,17\r\nLITTLE COMPTON,Little Compton,7,18\r\nMIDDLETOWN,Middletown,18,19\r\nNARRAGANSETT,Narragansett,17,20\r\nNEW SHOREHAM,New Shoreham,0,21\r\nNEWPORT,Newport,21,22\r\nNORTH KINGSTOWN,North Kingstown,66,23\r\nNORTH PROVIDENCE,North Providence,192,24\r\nNORTH SMITHFIELD,North Smithfield,10,25\r\nPAWTUCKET,Pawtucket,299,26\r\nPORTSMOUTH,Portsmouth,16,27\r\nPROVIDENCE,Providence,827,28\r\nRICHMOND,Richmond,0,29\r\nSCITUATE,Scituate,12,30\r\nSMITHFIELD,Smithfield,48,31\r\nSOUTH KINGSTOWN,South Kingstown,38,32\r\nTIVERTON,Tiverton,26,33\r\nWARREN,Warren,7,34\r\nWARWICK,Warwick,126,35\r\nWEST GREENWICH,West Greenwich,6,36\r\nWEST WARWICK,West Warwick,46,37\r\nWESTERLY,Westerly,23,38\r\nWOONSOCKET,Woonsocket,71,39",
+            assetDomain: 'datawrapper.dwcdn.net',
+            isPreview: false,
+            chartLocale: 'en-US',
+            locales: {
+dayjs: {name: 'en',weekdays: 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),months: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_')
+},},
+            metricPrefix: {"3":"k","6":"m","9":"b","12":"t"},
+            themeId: "datawrapper",
+            fontsJSON: {"Roboto":{"type":"font","import":"https:\/\/static.dwcdn.net\/css\/roboto.css","method":"import"}},
+            typographyJSON: {"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#0088CC","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},
+            templateJS: false
+        });
+
+    })();
+
+    </script>
+
+
+
+<img width="1" height="1" src="./datawrapper(1).gif" style="float: right;"></body></html>

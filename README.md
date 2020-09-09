@@ -15,7 +15,7 @@ The JSON follows the following structure:
 	File {
 		"USA":
 			{
-				"AR": [...],
+				"AL": [...],
 				...
 				"WY": [...]
 			},
@@ -75,7 +75,7 @@ Within /key/ there is an.xlsx file with all the field names, mapped by state. Th
 
 ## Updates
 
-The data will be updated twice a week on Mondays and Thursdays around 12PM EST. The raw data will be updated once a week on Monday around 12PM EST.
+The data will be updated once a week on Mondays around 12PM EST. The raw data will be updated once a week on Monday, as well.
 
 ## Contributors
 
